@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="actions.png" width="32" height="32"/>
+        <image name="alert_notification.png" width="32" height="32"/>
+        <image name="back.png" width="16" height="16"/>
+        <image name="background_landscape.jpg" width="1222" height="698"/>
+        <image name="background_portrait.jpg" width="510" height="860"/>
+        <image name="btn_check_off_disabled_focused_holo_light.png" width="32" height="32"/>
+        <image name="btn_check_off_disabled_holo_light.png" width="32" height="32"/>
+        <image name="btn_check_off_focused_holo_light.png" width="32" height="32"/>
+        <image name="btn_check_off_holo_light.png" width="32" height="32"/>
+        <image name="btn_check_off_pressed_holo_light.png" width="32" height="32"/>
+        <image name="btn_check_on_disabled_focused_holo_light.png" width="32" height="32"/>
+        <image name="btn_check_on_disabled_holo_light.png" width="32" height="32"/>
+        <image name="btn_check_on_focused_holo_light.png" width="32" height="32"/>
+        <image name="btn_check_on_holo_light.png" width="32" height="32"/>
+        <image name="btn_check_on_pressed_holo_light.png" width="32" height="32"/>
+        <image name="btn_default_disabled_focused_holo_light.9.png" width="28" height="34"/>
+        <image name="btn_default_disabled_holo_light.9.png" width="28" height="34"/>
+        <image name="btn_default_focused_holo_light.9.png" width="28" height="34"/>
+        <image name="btn_default_normal_holo_light.9.png" width="28" height="34"/>
+        <image name="btn_default_pressed_holo_light.9.png" width="28" height="34"/>
+        <image name="btn_radio_off_disabled_focused_holo_light.png" width="32" height="32"/>
+        <image name="btn_radio_off_disabled_holo_light.png" width="32" height="32"/>
+        <image name="btn_radio_off_focused_holo_light.png" width="32" height="32"/>
+        <image name="btn_radio_off_holo_light.png" width="32" height="32"/>
+        <image name="btn_radio_off_pressed_holo_light.png" width="32" height="32"/>
+        <image name="btn_radio_on_disabled_focused_holo_light.png" width="32" height="32"/>
+        <image name="btn_radio_on_disabled_holo_light.png" width="32" height="32"/>
+        <image name="btn_radio_on_focused_holo_light.png" width="32" height="32"/>
+        <image name="btn_radio_on_holo_light.png" width="32" height="32"/>
+        <image name="btn_radio_on_pressed_holo_light.png" width="32" height="32"/>
+        <image name="calendar.png" width="48" height="48"/>
+        <image name="check.png" width="24" height="24"/>
+        <image name="clock.png" width="32" height="32"/>
+        <image name="close.png" width="32" height="32"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-Landscape.png" width="1024" height="748"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="default_account_profile.png" width="462" height="462"/>
+        <image name="delete.png" width="32" height="32"/>
+        <image name="dollar.png" width="32" height="32"/>
+        <image name="drawer_header.jpg" width="1280" height="720"/>
+        <image name="drawer_header_2.jpg" width="1600" height="1200"/>
+        <image name="driving.png" width="32" height="32"/>
+        <image name="driving_distance.png" width="32" height="32"/>
+        <image name="entities.png" width="32" height="32"/>
+        <image name="fuel.png" width="32" height="32"/>
+        <image name="gauge.png" width="32" height="32"/>
+        <image name="gray_top_border.9.png" width="5" height="5"/>
+        <image name="green_borders.9.png" width="5" height="7"/>
+        <image name="hamburger.png" width="14" height="15"/>
+        <image name="ic_accident_count.png" width="32" height="32"/>
+        <image name="ic_accident_count_green.png" width="32" height="32"/>
+        <image name="ic_accident_count_red.png" width="32" height="32"/>
+        <image name="ic_action_actions.png" width="96" height="96"/>
+        <image name="ic_action_alert_notifcations.png" width="96" height="96"/>
+        <image name="ic_action_delete.png" width="32" height="32"/>
+        <image name="ic_action_entities.png" width="32" height="32"/>
+        <image name="ic_action_graph.png" width="32" height="32"/>
+        <image name="ic_action_map_type.png" width="32" height="32"/>
+        <image name="ic_action_marker.png" width="32" height="32"/>
+        <image name="ic_action_menu_fuel.png" width="96" height="96"/>
+        <image name="ic_action_menu_map.png" width="96" height="96"/>
+        <image name="ic_action_menu_star.png" width="96" height="96"/>
+        <image name="ic_action_menu_vehicle.png" width="32" height="32"/>
+        <image name="ic_action_refresh.png" width="32" height="32"/>
+        <image name="ic_action_settings.png" width="32" height="32"/>
+        <image name="ic_action_share.png" width="32" height="32"/>
+        <image name="ic_action_star.png" width="32" height="32"/>
+        <image name="ic_alert_notifications.png" width="64" height="64"/>
+        <image name="ic_arrow_drop_down.png" width="32" height="32"/>
+        <image name="ic_arrow_drop_down_circle.png" width="24" height="24"/>
+        <image name="ic_arrow_drop_up.png" width="32" height="32"/>
+        <image name="ic_back_button.png" width="38" height="38"/>
+        <image name="ic_behaviour_exception_acceleration.png" width="48" height="48"/>
+        <image name="ic_behaviour_exception_cornering.png" width="48" height="48"/>
+        <image name="ic_behaviour_exception_freewheeling.png" width="48" height="48"/>
+        <image name="ic_behaviour_exception_harsh_breaking.png" width="48" height="48"/>
+        <image name="ic_behaviour_exception_idle.png" width="48" height="48"/>
+        <image name="ic_behaviour_exception_lane_change.png" width="48" height="48"/>
+        <image name="ic_behaviour_exception_reckless_driving.png" width="48" height="48"/>
+        <image name="ic_behaviour_exception_rpm.png" width="48" height="48"/>
+        <image name="ic_behaviour_exception_speeding.png" width="48" height="48"/>
+        <image name="ic_behaviour_exception_swerving.png" width="48" height="48"/>
+        <image name="ic_calendar.png" width="56" height="56"/>
+        <image name="ic_close_button.png" width="36" height="36"/>
+        <image name="ic_decrease.png" width="32" height="32"/>
+        <image name="ic_distance_driven_green.png" width="32" height="32"/>
+        <image name="ic_distance_driven_red.png" width="32" height="32"/>
+        <image name="ic_distance_duration_green.png" width="32" height="32"/>
+        <image name="ic_distance_duration_red.png" width="32" height="32"/>
+        <image name="ic_done_black_24dp.png" width="24" height="24"/>
+        <image name="ic_entities_dlt_card_reader.png" width="64" height="64"/>
+        <image name="ic_entities_driver_route_activity.png" width="64" height="64"/>
+        <image name="ic_entities_per_variable_display.png" width="64" height="64"/>
+        <image name="ic_entities_poi_activity.png" width="64" height="64"/>
+        <image name="ic_exception_accident.png" width="48" height="48"/>
+        <image name="ic_exception_counts_green.png" width="32" height="32"/>
+        <image name="ic_exception_counts_red.png" width="32" height="32"/>
+        <image name="ic_explore_white_24dp.png" width="24" height="24"/>
+        <image name="ic_fleet_accident.png" width="64" height="64"/>
+        <image name="ic_fleet_custom_data_summary.png" width="64" height="64"/>
+        <image name="ic_fleet_dtc_code_maintenance.png" width="64" height="64"/>
+        <image name="ic_fleet_exception_summary.png" width="64" height="64"/>
+        <image name="ic_fleet_fleet_utilization.png" width="64" height="64"/>
+        <image name="ic_fleet_obd_route_data.png" width="64" height="64"/>
+        <image name="ic_fleet_route_activity.png" width="64" height="64"/>
+        <image name="ic_fleet_total_cost_of_ownership.png" width="64" height="64"/>
+        <image name="ic_fleet_vehicle_scroe_rating.png" width="64" height="64"/>
+        <image name="ic_forward_button.png" width="38" height="38"/>
+        <image name="ic_fuel_consumption_green.png" width="32" height="32"/>
+        <image name="ic_fuel_consumption_measures.png" width="64" height="64"/>
+        <image name="ic_fuel_consumption_red.png" width="32" height="32"/>
+        <image name="ic_fuel_fuel_entry_consumption.png" width="64" height="64"/>
+        <image name="ic_fuel_fuel_entry_costs.png" width="64" height="64"/>
+        <image name="ic_fuel_fuel_entry_summary_.png" width="64" height="64"/>
+        <image name="ic_fuel_level_monitor.png" width="64" height="64"/>
+        <image name="ic_fuel_theft_green.png" width="32" height="32"/>
+        <image name="ic_fuel_theft_red.png" width="32" height="32"/>
+        <image name="ic_hybrid_white.png" width="36" height="36"/>
+        <image name="ic_idle_time_green.png" width="32" height="32"/>
+        <image name="ic_idle_time_red.png" width="32" height="32"/>
+        <image name="ic_increase.png" width="32" height="32"/>
+        <image name="ic_launcher.png" width="48" height="48"/>
+        <image name="ic_loading.png" width="140" height="140"/>
+        <image name="ic_loop_white_24dp.png" width="24" height="24"/>
+        <image name="ic_loop_white_36dp.png" width="36" height="36"/>
+        <image name="ic_map_legend.png" width="32" height="32"/>
+        <image name="ic_map_marker_black.png" width="32" height="32"/>
+        <image name="ic_map_marker_green.png" width="32" height="32"/>
+        <image name="ic_map_marker_purple.png" width="32" height="32"/>
+        <image name="ic_map_marker_red.png" width="32" height="32"/>
+        <image name="ic_map_marker_yellow.png" width="32" height="32"/>
+        <image name="ic_marker_finish.png" width="32" height="32"/>
+        <image name="ic_marker_start.png" width="32" height="32"/>
+        <image name="ic_non_reporting_green.png" width="32" height="32"/>
+        <image name="ic_non_reporting_red.png" width="32" height="32"/>
+        <image name="ic_risk_management.png" width="64" height="64"/>
+        <image name="ic_same.png" width="32" height="32"/>
+        <image name="ic_sat_icon.png" width="48" height="48"/>
+        <image name="ic_satellite.png" width="36" height="36"/>
+        <image name="ic_satellite_black.png" width="36" height="36"/>
+        <image name="ic_satellite_white.png" width="36" height="36"/>
+        <image name="ic_search.png" width="24" height="24"/>
+        <image name="ic_slideout.png" width="200" height="200"/>
+        <image name="ic_stopped_time_green.png" width="32" height="32"/>
+        <image name="ic_stopped_time_red.png" width="32" height="32"/>
+        <image name="ic_streetview.png" width="36" height="36"/>
+        <image name="ic_streetview_black.png" width="36" height="36"/>
+        <image name="ic_streetview_white.png" width="36" height="36"/>
+        <image name="ic_terrain.png" width="36" height="36"/>
+        <image name="ic_terrain_black.png" width="36" height="36"/>
+        <image name="ic_terrain_white.png" width="36" height="36"/>
+        <image name="ic_timer_white_24dp.png" width="24" height="24"/>
+        <image name="ic_truck.png" width="56" height="56"/>
+        <image name="ic_truck_white.png" width="32" height="32"/>
+        <image name="ic_vehicle_dtc_green.png" width="32" height="32"/>
+        <image name="ic_vehicle_dtc_red.png" width="32" height="32"/>
+        <image name="ic_vg_icon.png" width="32" height="32"/>
+        <image name="icon.png" width="48" height="48"/>
+        <image name="idle.png" width="32" height="32"/>
+        <image name="list_activated_holo.9.png" width="8" height="8"/>
+        <image name="list_focused_holo.9.png" width="8" height="8"/>
+        <image name="list_longpressed_holo.9.png" width="8" height="8"/>
+        <image name="list_pressed_holo_light.9.png" width="8" height="8"/>
+        <image name="list_selector_disabled_holo_light.9.png" width="15" height="43"/>
+        <image name="loading.png" width="512" height="512"/>
+        <image name="login_background.png" width="1920" height="988"/>
+        <image name="login_logo.png" width="300" height="82"/>
+        <image name="logo.png" width="144" height="144"/>
+        <image name="logo_border.9.png" width="40" height="40"/>
+        <image name="logo_login.png" width="1600" height="488"/>
+        <image name="logo_placeholder.png" width="258" height="245"/>
+        <image name="map.png" width="1693" height="949"/>
+        <image name="marker.png" width="32" height="32"/>
+        <image name="marker_amber.png" width="32" height="32"/>
+        <image name="marker_exception.png" width="16" height="16"/>
+        <image name="marker_finish.png" width="32" height="32"/>
+        <image name="marker_gray.png" width="32" height="32"/>
+        <image name="marker_green.png" width="32" height="32"/>
+        <image name="marker_red.png" width="32" height="32"/>
+        <image name="marker_start.png" width="32" height="32"/>
+        <image name="menu_fuel.png" width="32" height="32"/>
+        <image name="menu_fuel_active.png" width="32" height="32"/>
+        <image name="menu_map.png" width="32" height="32"/>
+        <image name="menu_map_active.png" width="32" height="32"/>
+        <image name="menu_star.png" width="32" height="32"/>
+        <image name="menu_star_active.png" width="32" height="32"/>
+        <image name="menu_vehicle.png" width="32" height="32"/>
+        <image name="menu_vehicle_active.png" width="32" height="32"/>
+        <image name="mzonelogo.png" width="306" height="98"/>
+        <image name="nav_header.png" width="1152" height="648"/>
+        <image name="overtime.png" width="32" height="32"/>
+        <image name="report_border.9.png" width="59" height="59"/>
+        <image name="report_border_selected.9.png" width="59" height="59"/>
+        <image name="slideout.png" width="32" height="77"/>
+        <image name="speed.png" width="32" height="32"/>
+        <image name="spinner_default_holo_light.9.png" width="24" height="34"/>
+        <image name="spinner_disabled_holo_light.9.png" width="24" height="34"/>
+        <image name="spinner_focused_holo_light.9.png" width="24" height="34"/>
+        <image name="spinner_pressed_holo_light.9.png" width="24" height="34"/>
+        <image name="star_disabled.png" width="32" height="32"/>
+        <image name="sum.png" width="32" height="32"/>
+        <image name="textfield_activated_holo_light.9.png" width="28" height="34"/>
+        <image name="textfield_default_holo_light.9.png" width="28" height="34"/>
+        <image name="textfield_disabled_focused_holo_light.9.png" width="28" height="34"/>
+        <image name="textfield_disabled_holo_light.9.png" width="28" height="34"/>
+        <image name="textfield_focused_holo_light.9.png" width="28" height="34"/>
+        <image name="timer.png" width="32" height="32"/>
+        <image name="truck.png" width="32" height="32"/>
+        <image name="update.png" width="16" height="16"/>
+        <image name="vehicle_icon.png" width="32" height="32"/>
+        <image name="warning.png" width="32" height="32"/>
+        <image name="white.png" width="16" height="16"/>
+    </resources>
+    <color key="tintColor" colorSpace="calibratedRGB" red="0.058823529411764705" green="0.45882352941176469" blue="0.72941176470588232" alpha="1"/>
+</document>

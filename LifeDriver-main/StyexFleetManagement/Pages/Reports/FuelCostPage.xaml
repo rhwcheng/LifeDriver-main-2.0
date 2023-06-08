@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CustomControls:ReportPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyexFleetManagement.Pages.Reports.FuelCostPage"
+             xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+             xmlns:CustomControls="clr-namespace:StyexFleetManagement.CustomControls">
+    <ScrollView>
+    <StackLayout x:Name="MainStack" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid x:Name="MainGrid" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Column="0" Grid.Row="0" x:Name="GraphStack" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                <StackLayout x:Name="fuelEfficiencyGraphStack" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                    <Label Text="{i18n:Translate title_fuel_efficiency_graph}" x:Name="fuelEfficiencyLabel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+
+                </StackLayout>
+                <StackLayout x:Name="fuelConsumptionGraphStack" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                    <Label Text="{i18n:Translate title_fuel_consumption_graph}" x:Name="fuelConsumptionLabel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1" x:Name="TableStack" HorizontalOptions="FillAndExpand">
+                <Label Text="{i18n:Translate most_fuel_efficient}" x:Name="TableLabel" FontAttributes="Bold" Margin="6"></Label>
+            </StackLayout>
+
+        </Grid>
+        </StackLayout>
+    </ScrollView>
+</CustomControls:ReportPage>

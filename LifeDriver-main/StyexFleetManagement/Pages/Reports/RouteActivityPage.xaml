@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CustomControls:ReportPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyexFleetManagement.Pages.Reports.RouteActivityPage"
+             xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+             xmlns:converters="clr-namespace:StyexFleetManagement.Converters"
+             xmlns:CustomControls="clr-namespace:StyexFleetManagement.CustomControls">
+    <CustomControls:ReportPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBooleanConverter x:Key="inverseBooleanConverter" />
+        </ResourceDictionary>
+    </CustomControls:ReportPage.Resources>
+    <ScrollView x:Name="scrollView">
+        <StackLayout Padding="5" x:Name="mainStack" Orientation="Vertical" VerticalOptions="Fill">
+
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions ="FillAndExpand" x:Name="MainGrid">
+                <Grid.ColumnSpacing>
+                    <OnIdiom x:TypeArguments="x:Double"
+                 Phone="10"
+                 Tablet="10"/>
+                </Grid.ColumnSpacing>
+                <Grid.RowSpacing>
+                    <OnIdiom x:TypeArguments="x:Double"
+                 Phone="10"
+                 Tablet="10"/>
+                </Grid.RowSpacing>
+                <Grid.Padding>
+                    <OnIdiom x:TypeArguments="Thickness"
+                 Phone="10, 10, 10, 0"
+                 Tablet="10, 10, 10, 0"/>
+                </Grid.Padding>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.Column="0" x:Name="fuelGraphStack" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                    <Label Text="{i18n:Translate title_vehicle_trip_activity_chart}" x:Name="tripActivityChartLabel" IsVisible="{Binding TotalExceptionChartOverlayIsVisible, Converter={StaticResource inverseBooleanConverter}}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+                </StackLayout>
+
+                <StackLayout x:Name="TableStack"  Grid.Row="1" Grid.Column="0" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+                    <Button Text="{i18n:Translate back_button}" IsVisible="false" x:Name="graphToggleButton" HorizontalOptions="Start"></Button>
+                    <Label Text="{i18n:Translate most_exceptions}" x:Name="TableLabel" FontAttributes="Bold" Margin="6"></Label>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+
+    </ScrollView>
+</CustomControls:ReportPage>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomControls:ReportPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="StyexFleetManagement.Pages.Reports.FuelEntryConsumption" 
+             xmlns:Gestures="clr-namespace:StyexFleetManagement.CustomControls;assembly=StyexFleetManagement"
+             xmlns:CustomControls="clr-namespace:StyexFleetManagement.CustomControls"
+             xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement">
+    <CustomControls:ReportPage.Content>
+        <ScrollView>
+            <StackLayout Padding="5" Orientation="Vertical" VerticalOptions="Fill" x:Name="Container">
+                <Label Text="{i18n:Translate select_y_axis}"></Label>
+                <Picker x:Name="AxisPicker">
+                </Picker>
+
+
+            </StackLayout>
+
+
+        </ScrollView>
+    </CustomControls:ReportPage.Content>
+</CustomControls:ReportPage>

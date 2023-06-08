@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B99F8499-C495-476C-A6A7-41F932DFE488}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{65C0771A-452F-423B-995C-F0AE46E643BA}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StyexFleetManagement.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>StyexFleetManagement.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <ProvisioningType>manual</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchExtraArgs>--registrar:static</MtouchExtraArgs>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFastDev>true</MtouchFastDev>
+    <CodesignProvision>KD3</CodesignProvision>
+    <CodesignKey>Apple Development: Luke Van kempen (PF7QZSVL34)</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>GouravKD</CodesignProvision>
+    <CodesignKey>Apple Distribution: Glaze pty ltd (6EF67N3VW7)</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>Apple Development: Luke Van kempen (PF7QZSVL34)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+    <CodesignProvision>KD3</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>Apple Distribution: Glaze pty ltd (6EF67N3VW7)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>GouravKD</CodesignProvision>
+    <BuildIpa>true</BuildIpa>
+    <IpaPackageName>com.aw.lifedriver</IpaPackageName>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CredentialsService.cs" />
+    <Compile Include="CustomControls\BorderlessEntryRenderer.cs" />
+    <Compile Include="CustomControls\EntryPopup.cs" />
+    <Compile Include="CustomControls\ExtendedWebViewRenderer.cs" />
+    <Compile Include="CustomControls\GestureFrameRenderer.cs" />
+    <Compile Include="Localize.cs" />
+    <Compile Include="LocationManager.cs" />
+    <Compile Include="LocationUpdatedEventArgs.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="MapRenderer.cs" />
+    <Compile Include="Services\DeviceOrientationService.cs" />
+    <Compile Include="Services\DeviceService.cs" />
+    <Compile Include="Services\FlicService.cs" />
+    <Compile Include="Services\InfoService.cs" />
+    <Compile Include="Services\iOSTimerTask.cs" />
+    <Compile Include="Services\NotificationService.cs" />
+    <Compile Include="Services\OrientationService.cs" />
+    <Compile Include="Services\SQLite.cs" />
+    <Compile Include="UIColorExtensions.cs" />
+    <None Include="app.config" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="MapController\CustomMKPinAnnotationView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Resources\LaunchScreen1.storyboard" />
+    <None Include="StyexFleetManagement.iOS.csproj.bak" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.1.0.481</Version>
+    </PackageReference>
+    <PackageReference Include="akavache">
+      <Version>7.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="akavache.core">
+      <Version>7.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="akavache.sqlite3">
+      <Version>7.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="FubarCoder.RestSharp.Portable">
+      <Version>3.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="FubarCoder.RestSharp.Portable.Core">
+      <Version>4.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="FubarCoder.RestSharp.Portable.HttpClient">
+      <Version>4.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>4.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>4.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="morelinq">
+      <Version>3.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="NETStandard.Library">
+      <Version>2.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.NFC">
+      <Version>0.1.19</Version>
+    </PackageReference>
+    <PackageReference Include="protobuf-net">
+      <Version>3.0.101</Version>
+    </PackageReference>
+    <PackageReference Include="Refractored.MvvmHelpers">
+      <Version>1.6.2</Version>
+    </PackageReference>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>2.0.0.10</Version>
+    </PackageReference>
+    <PackageReference Include="Serilog">
+      <Version>2.10.0</Version>
+    </PackageReference>
+    <PackageReference Include="Shiny.Core">
+      <Version>2.0.0.2348-preview</Version>
+    </PackageReference>
+    <PackageReference Include="Splat">
+      <Version>10.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3">
+      <Version>2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.bundle_green">
+      <Version>2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.core">
+      <Version>2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfChart">
+      <Version>18.4.0.48</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid">
+      <Version>18.4.0.48</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker">
+      <Version>18.4.0.48</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar">
+      <Version>18.4.0.48</Version>
+    </PackageReference>
+    <PackageReference Include="UniversalBeaconLibrary">
+      <Version>3.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Validation">
+      <Version>2.4.22</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Build.Download">
+      <Version>0.10.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Forms.GoogleMaps">
+      <Version>3.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\StyexFleetManagement\StyexFleetManagement.csproj">
+      <Project>{593CD7EC-5B1C-427F-B6E8-E186C006629A}</Project>
+      <Name>StyexFleetManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_nfc.svg" />
+    <BundleResource Include="Resources\white%402x.png" />
+    <BundleResource Include="Resources\textfield_activated_holo_light.9.png" />
+    <BundleResource Include="Resources\textfield_activated_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\textfield_default_holo_light.9.png" />
+    <BundleResource Include="Resources\textfield_default_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\textfield_disabled_focused_holo_light.9.png" />
+    <BundleResource Include="Resources\textfield_disabled_focused_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\textfield_disabled_holo_light.9.png" />
+    <BundleResource Include="Resources\textfield_disabled_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\textfield_focused_holo_light.9.png" />
+    <BundleResource Include="Resources\textfield_focused_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\timer.png" />
+    <BundleResource Include="Resources\timer%402x.png" />
+    <BundleResource Include="Resources\truck.png" />
+    <BundleResource Include="Resources\truck%402x.png" />
+    <BundleResource Include="Resources\truck%403x.png" />
+    <BundleResource Include="Resources\update.png" />
+    <BundleResource Include="Resources\update%402x.png" />
+    <BundleResource Include="Resources\vehicle_icon.png" />
+    <BundleResource Include="Resources\vehicle_icon%402x.png" />
+    <BundleResource Include="Resources\warning.png" />
+    <BundleResource Include="Resources\warning%402x.png" />
+    <BundleResource Include="Resources\white.png" />
+    <BundleResource Include="Resources\sum%402x.png" />
+    <BundleResource Include="Resources\list_activated_holo.9.png" />
+    <BundleResource Include="Resources\list_activated_holo.9%402x.png" />
+    <BundleResource Include="Resources\list_focused_holo.9.png" />
+    <BundleResource Include="Resources\list_focused_holo.9%402x.png" />
+    <BundleResource Include="Resources\list_longpressed_holo.9.png" />
+    <BundleResource Include="Resources\list_longpressed_holo.9%402x.png" />
+    <BundleResource Include="Resources\list_pressed_holo_light.9.png" />
+    <BundleResource Include="Resources\list_pressed_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\list_selector_disabled_holo_light.9.png" />
+    <BundleResource Include="Resources\list_selector_disabled_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\loading.png" />
+    <BundleResource Include="Resources\login_logo.png" />
+    <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\logo%402x.png" />
+    <BundleResource Include="Resources\logo%403x.png" />
+    <BundleResource Include="Resources\logo_border.9.png" />
+    <BundleResource Include="Resources\logo_border.9%402x.png" />
+    <BundleResource Include="Resources\logo_login.png" />
+    <BundleResource Include="Resources\logo_placeholder.png" />
+    <BundleResource Include="Resources\map.png" />
+    <BundleResource Include="Resources\marker.png" />
+    <BundleResource Include="Resources\marker%402x.png" />
+    <BundleResource Include="Resources\marker_amber.png" />
+    <BundleResource Include="Resources\marker_amber%402x.png" />
+    <BundleResource Include="Resources\marker_exception.png" />
+    <BundleResource Include="Resources\marker_exception%402x.png" />
+    <BundleResource Include="Resources\marker_finish.png" />
+    <BundleResource Include="Resources\marker_finish%402x.png" />
+    <BundleResource Include="Resources\marker_gray.png" />
+    <BundleResource Include="Resources\marker_gray%402x.png" />
+    <BundleResource Include="Resources\marker_green.png" />
+    <BundleResource Include="Resources\marker_green%402x.png" />
+    <BundleResource Include="Resources\marker_red.png" />
+    <BundleResource Include="Resources\marker_red%402x.png" />
+    <BundleResource Include="Resources\marker_start.png" />
+    <BundleResource Include="Resources\marker_start%402x.png" />
+    <BundleResource Include="Resources\menu_fuel.png" />
+    <BundleResource Include="Resources\menu_fuel%402x.png" />
+    <BundleResource Include="Resources\menu_fuel_active.png" />
+    <BundleResource Include="Resources\menu_fuel_active%402x.png" />
+    <BundleResource Include="Resources\menu_map.png" />
+    <BundleResource Include="Resources\menu_map%402x.png" />
+    <BundleResource Include="Resources\menu_map_active.png" />
+    <BundleResource Include="Resources\menu_map_active%402x.png" />
+    <BundleResource Include="Resources\menu_star.png" />
+    <BundleResource Include="Resources\menu_star%402x.png" />
+    <BundleResource Include="Resources\menu_star_active.png" />
+    <BundleResource Include="Resources\menu_star_active%402x.png" />
+    <BundleResource Include="Resources\menu_vehicle.png" />
+    <BundleResource Include="Resources\menu_vehicle%402x.png" />
+    <BundleResource Include="Resources\menu_vehicle%403x.png" />
+    <BundleResource Include="Resources\menu_vehicle_active.png" />
+    <BundleResource Include="Resources\menu_vehicle_active%402x.png" />
+    <BundleResource Include="Resources\mzonelogo.png" />
+    <BundleResource Include="Resources\mzonelogo%402x.png" />
+    <BundleResource Include="Resources\nav_header.png" />
+    <BundleResource Include="Resources\nav_header%402x.png" />
+    <BundleResource Include="Resources\nav_header%403x.png" />
+    <BundleResource Include="Resources\overtime.png" />
+    <BundleResource Include="Resources\overtime%402x.png" />
+    <BundleResource Include="Resources\report_border.9.png" />
+    <BundleResource Include="Resources\report_border.9%402x.png" />
+    <BundleResource Include="Resources\report_border_selected.9.png" />
+    <BundleResource Include="Resources\report_border_selected.9%402x.png" />
+    <BundleResource Include="Resources\slideout.png" />
+    <BundleResource Include="Resources\speed.png" />
+    <BundleResource Include="Resources\speed%402x.png" />
+    <BundleResource Include="Resources\spinner_default_holo_light.9.png" />
+    <BundleResource Include="Resources\spinner_default_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\spinner_disabled_holo_light.9.png" />
+    <BundleResource Include="Resources\spinner_disabled_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\spinner_focused_holo_light.9.png" />
+    <BundleResource Include="Resources\spinner_focused_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\spinner_pressed_holo_light.9.png" />
+    <BundleResource Include="Resources\spinner_pressed_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\star_disabled.png" />
+    <BundleResource Include="Resources\star_disabled%402x.png" />
+    <BundleResource Include="Resources\sum.png" />
+    <BundleResource Include="Resources\actions.png" />
+    <BundleResource Include="Resources\actions%402x.png" />
+    <BundleResource Include="Resources\alert_notification.png" />
+    <BundleResource Include="Resources\alert_notification%402x.png" />
+    <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\back%402x.png" />
+    <BundleResource Include="Resources\background_landscape.jpg" />
+    <BundleResource Include="Resources\background_portrait.jpg" />
+    <BundleResource Include="Resources\baseline_exit_to_app_white_18.png" />
+    <BundleResource Include="Resources\baseline_exit_to_app_white_18%402x.png" />
+    <BundleResource Include="Resources\baseline_exit_to_app_white_18%403x.png" />
+    <BundleResource Include="Resources\baseline_notification_important_black_24.png" />
+    <BundleResource Include="Resources\baseline_notification_important_black_24%402x.png" />
+    <BundleResource Include="Resources\baseline_notification_important_black_24%403x.png" />
+    <BundleResource Include="Resources\baseline_notification_important_black_24dp.png" />
+    <BundleResource Include="Resources\baseline_notification_important_black_24dp%402x.png" />
+    <BundleResource Include="Resources\baseline_search_white_36.png" />
+    <BundleResource Include="Resources\baseline_search_white_36%402x.png" />
+    <BundleResource Include="Resources\baseline_search_white_36%403x.png" />
+    <BundleResource Include="Resources\baseline_warning_black_24.png" />
+    <BundleResource Include="Resources\baseline_warning_black_24%402x.png" />
+    <BundleResource Include="Resources\baseline_warning_black_24%403x.png" />
+    <BundleResource Include="Resources\btn_check_off_disabled_focused_holo_light.png" />
+    <BundleResource Include="Resources\btn_check_off_disabled_focused_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_check_off_disabled_holo_light.png" />
+    <BundleResource Include="Resources\btn_check_off_disabled_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_check_off_focused_holo_light.png" />
+    <BundleResource Include="Resources\btn_check_off_focused_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_check_off_holo_light.png" />
+    <BundleResource Include="Resources\btn_check_off_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_check_off_pressed_holo_light.png" />
+    <BundleResource Include="Resources\btn_check_off_pressed_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_check_on_disabled_focused_holo_light.png" />
+    <BundleResource Include="Resources\btn_check_on_disabled_focused_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_check_on_disabled_holo_light.png" />
+    <BundleResource Include="Resources\btn_check_on_disabled_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_check_on_focused_holo_light.png" />
+    <BundleResource Include="Resources\btn_check_on_focused_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_check_on_holo_light.png" />
+    <BundleResource Include="Resources\btn_check_on_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_check_on_pressed_holo_light.png" />
+    <BundleResource Include="Resources\btn_check_on_pressed_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_default_disabled_focused_holo_light.9.png" />
+    <BundleResource Include="Resources\btn_default_disabled_focused_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\btn_default_disabled_holo_light.9.png" />
+    <BundleResource Include="Resources\btn_default_disabled_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\btn_default_focused_holo_light.9.png" />
+    <BundleResource Include="Resources\btn_default_focused_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\btn_default_normal_holo_light.9.png" />
+    <BundleResource Include="Resources\btn_default_normal_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\btn_default_pressed_holo_light.9.png" />
+    <BundleResource Include="Resources\btn_default_pressed_holo_light.9%402x.png" />
+    <BundleResource Include="Resources\btn_radio_off_disabled_focused_holo_light.png" />
+    <BundleResource Include="Resources\btn_radio_off_disabled_focused_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_radio_off_disabled_holo_light.png" />
+    <BundleResource Include="Resources\btn_radio_off_disabled_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_radio_off_focused_holo_light.png" />
+    <BundleResource Include="Resources\btn_radio_off_focused_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_radio_off_holo_light.png" />
+    <BundleResource Include="Resources\btn_radio_off_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_radio_off_pressed_holo_light.png" />
+    <BundleResource Include="Resources\btn_radio_off_pressed_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_radio_on_disabled_focused_holo_light.png" />
+    <BundleResource Include="Resources\btn_radio_on_disabled_focused_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_radio_on_disabled_holo_light.png" />
+    <BundleResource Include="Resources\btn_radio_on_disabled_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_radio_on_focused_holo_light.png" />
+    <BundleResource Include="Resources\btn_radio_on_focused_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_radio_on_holo_light.png" />
+    <BundleResource Include="Resources\btn_radio_on_holo_light%402x.png" />
+    <BundleResource Include="Resources\btn_radio_on_pressed_holo_light.png" />
+    <BundleResource Include="Resources\btn_radio_on_pressed_holo_light%402x.png" />
+    <BundleResource Include="Resources\calendar.png" />
+    <BundleResource Include="Resources\calendar%402x.png" />
+    <BundleResource Include="Resources\check.png" />
+    <BundleResource Include="Resources\check%402x.png" />
+    <BundleResource Include="Resources\clock.png" />
+    <BundleResource Include="Resources\clock%402x.png" />
+    <BundleResource Include="Resources\close.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Landscape.png" />
+    <BundleResource Include="Resources\Default-Landscape%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\default_account_profile.png" />
+    <BundleResource Include="Resources\delete.png" />
+    <BundleResource Include="Resources\delete%402x.png" />
+    <BundleResource Include="Resources\dollar.png" />
+    <BundleResource Include="Resources\dollar%402x.png" />
+    <BundleResource Include="Resources\drawer_header.jpg" />
+    <BundleResource Include="Resources\drawer_header_2.jpg" />
+    <BundleResource Include="Resources\driving.png" />
+    <BundleResource Include="Resources\driving%402x.png" />
+    <BundleResource Include="Resources\driving_distance.png" />
+    <BundleResource Include="Resources\driving_distance%402x.png" />
+    <BundleResource Include="Resources\entities.png" />
+    <BundleResource Include="Resources\entities%402x.png" />
+    <BundleResource Include="Resources\fms_fuel_mock.jpg" />
+    <BundleResource Include="Resources\fuel.png" />
+    <BundleResource Include="Resources\fuel%402x.png" />
+    <BundleResource Include="Resources\gauge.png" />
+    <BundleResource Include="Resources\gauge%402x.png" />
+    <BundleResource Include="Resources\gray_top_border.9.png" />
+    <BundleResource Include="Resources\gray_top_border.9%402x.png" />
+    <BundleResource Include="Resources\green_borders.9.png" />
+    <BundleResource Include="Resources\green_borders.9%402x.png" />
+    <BundleResource Include="Resources\hamburger.png" />
+    <BundleResource Include="Resources\hamburger%402x.png" />
+    <BundleResource Include="Resources\ic_accident_count.png" />
+    <BundleResource Include="Resources\ic_accident_count%402x.png" />
+    <BundleResource Include="Resources\ic_accident_count%403x.png" />
+    <BundleResource Include="Resources\ic_accident_count_green.png" />
+    <BundleResource Include="Resources\ic_accident_count_green%402x.png" />
+    <BundleResource Include="Resources\ic_accident_count_green%403x.png" />
+    <BundleResource Include="Resources\ic_accident_count_red.png" />
+    <BundleResource Include="Resources\ic_accident_count_red%402x.png" />
+    <BundleResource Include="Resources\ic_accident_count_red%403x.png" />
+    <BundleResource Include="Resources\ic_action_actions.png" />
+    <BundleResource Include="Resources\ic_action_actions%402x.png" />
+    <BundleResource Include="Resources\ic_action_actions%403x.png" />
+    <BundleResource Include="Resources\ic_action_alert_notifcations.png" />
+    <BundleResource Include="Resources\ic_action_alert_notifcations%402x.png" />
+    <BundleResource Include="Resources\ic_action_alert_notifcations%403x.png" />
+    <BundleResource Include="Resources\ic_action_delete.png" />
+    <BundleResource Include="Resources\ic_action_delete%402x.png" />
+    <BundleResource Include="Resources\ic_action_entities.png" />
+    <BundleResource Include="Resources\ic_action_entities%402x.png" />
+    <BundleResource Include="Resources\ic_action_entities%403x.png" />
+    <BundleResource Include="Resources\ic_action_graph.png" />
+    <BundleResource Include="Resources\ic_action_graph%402x.png" />
+    <BundleResource Include="Resources\ic_action_map_type.png" />
+    <BundleResource Include="Resources\ic_action_map_type%402x.png" />
+    <BundleResource Include="Resources\ic_action_marker.png" />
+    <BundleResource Include="Resources\ic_action_marker%402x.png" />
+    <BundleResource Include="Resources\ic_action_menu_fuel.png" />
+    <BundleResource Include="Resources\ic_action_menu_fuel%402x.png" />
+    <BundleResource Include="Resources\ic_action_menu_fuel%403x.png" />
+    <BundleResource Include="Resources\ic_action_menu_map.png" />
+    <BundleResource Include="Resources\ic_action_menu_map%402x.png" />
+    <BundleResource Include="Resources\ic_action_menu_map%403x.png" />
+    <BundleResource Include="Resources\ic_action_menu_star.png" />
+    <BundleResource Include="Resources\ic_action_menu_star%402x.png" />
+    <BundleResource Include="Resources\ic_action_menu_star%403x.png" />
+    <BundleResource Include="Resources\ic_action_menu_vehicle.png" />
+    <BundleResource Include="Resources\ic_action_menu_vehicle%402x.png" />
+    <BundleResource Include="Resources\ic_action_menu_vehicle%403x.png" />
+    <BundleResource Include="Resources\ic_action_refresh.png" />
+    <BundleResource Include="Resources\ic_action_refresh%402x.png" />
+    <BundleResource Include="Resources\ic_action_settings.png" />
+    <BundleResource Include="Resources\ic_action_settings%402x.png" />
+    <BundleResource Include="Resources\ic_action_settings%403x.png" />
+    <BundleResource Include="Resources\ic_action_share.png" />
+    <BundleResource Include="Resources\ic_action_share%402x.png" />
+    <BundleResource Include="Resources\ic_action_star.png" />
+    <BundleResource Include="Resources\ic_action_star%402x.png" />
+    <BundleResource Include="Resources\ic_alert_notifications.png" />
+    <BundleResource Include="Resources\ic_alert_notifications%402x.png" />
+    <BundleResource Include="Resources\ic_alert_notifications%403x.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_down.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_down%402x.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_down%403x.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_down_circle.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_down_circle%402x.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_down_circle%403x.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_up.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_up%402x.png" />
+    <BundleResource Include="Resources\ic_arrow_drop_up%403x.png" />
+    <BundleResource Include="Resources\ic_back_button.png" />
+    <BundleResource Include="Resources\ic_back_button%402x.png" />
+    <BundleResource Include="Resources\ic_back_button%403x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_acceleration.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_acceleration%402x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_acceleration%403x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_cornering.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_cornering%402x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_cornering%403x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_freewheeling.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_freewheeling%402x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_freewheeling%403x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_harsh_breaking.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_harsh_breaking%402x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_harsh_breaking%403x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_idle.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_idle%402x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_idle%403x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_lane_change.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_lane_change%402x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_lane_change%403x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_reckless_driving.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_reckless_driving%402x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_reckless_driving%403x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_rpm.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_rpm%402x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_rpm%403x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_speeding.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_speeding%402x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_speeding%403x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_swerving.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_swerving%402x.png" />
+    <BundleResource Include="Resources\ic_behaviour_exception_swerving%403x.png" />
+    <BundleResource Include="Resources\ic_calendar.png" />
+    <BundleResource Include="Resources\ic_calendar%402x.png" />
+    <BundleResource Include="Resources\ic_calendar%403x.png" />
+    <BundleResource Include="Resources\ic_close_button.png" />
+    <BundleResource Include="Resources\ic_close_button%402x.png" />
+    <BundleResource Include="Resources\ic_close_button%403x.png" />
+    <BundleResource Include="Resources\ic_decrease.png" />
+    <BundleResource Include="Resources\ic_decrease%402x.png" />
+    <BundleResource Include="Resources\ic_decrease%403x.png" />
+    <BundleResource Include="Resources\ic_distance_driven_green.png" />
+    <BundleResource Include="Resources\ic_distance_driven_green%402x.png" />
+    <BundleResource Include="Resources\ic_distance_driven_green%403x.png" />
+    <BundleResource Include="Resources\ic_distance_driven_red.png" />
+    <BundleResource Include="Resources\ic_distance_driven_red%402x.png" />
+    <BundleResource Include="Resources\ic_distance_driven_red%403x.png" />
+    <BundleResource Include="Resources\ic_distance_duration_green.png" />
+    <BundleResource Include="Resources\ic_distance_duration_green%402x.png" />
+    <BundleResource Include="Resources\ic_distance_duration_green%403x.png" />
+    <BundleResource Include="Resources\ic_distance_duration_red.png" />
+    <BundleResource Include="Resources\ic_distance_duration_red%402x.png" />
+    <BundleResource Include="Resources\ic_distance_duration_red%403x.png" />
+    <BundleResource Include="Resources\ic_done_black_24dp.png" />
+    <BundleResource Include="Resources\ic_done_black_24dp%402x.png" />
+    <BundleResource Include="Resources\ic_done_black_24dp%403x.png" />
+    <BundleResource Include="Resources\ic_entities_dlt_card_reader.png" />
+    <BundleResource Include="Resources\ic_entities_dlt_card_reader%402x.png" />
+    <BundleResource Include="Resources\ic_entities_dlt_card_reader%403x.png" />
+    <BundleResource Include="Resources\ic_entities_driver_route_activity.png" />
+    <BundleResource Include="Resources\ic_entities_driver_route_activity%402x.png" />
+    <BundleResource Include="Resources\ic_entities_driver_route_activity%403x.png" />
+    <BundleResource Include="Resources\ic_entities_per_variable_display.png" />
+    <BundleResource Include="Resources\ic_entities_per_variable_display%402x.png" />
+    <BundleResource Include="Resources\ic_entities_per_variable_display%403x.png" />
+    <BundleResource Include="Resources\ic_entities_poi_activity.png" />
+    <BundleResource Include="Resources\ic_entities_poi_activity%402x.png" />
+    <BundleResource Include="Resources\ic_entities_poi_activity%403x.png" />
+    <BundleResource Include="Resources\ic_exception_accident.png" />
+    <BundleResource Include="Resources\ic_exception_accident%402x.png" />
+    <BundleResource Include="Resources\ic_exception_accident%403x.png" />
+    <BundleResource Include="Resources\ic_exception_counts_green.png" />
+    <BundleResource Include="Resources\ic_exception_counts_green%402x.png" />
+    <BundleResource Include="Resources\ic_exception_counts_green%403x.png" />
+    <BundleResource Include="Resources\ic_exception_counts_red.png" />
+    <BundleResource Include="Resources\ic_exception_counts_red%402x.png" />
+    <BundleResource Include="Resources\ic_exception_counts_red%403x.png" />
+    <BundleResource Include="Resources\ic_explore_white_24dp.png" />
+    <BundleResource Include="Resources\ic_explore_white_24dp%402x.png" />
+    <BundleResource Include="Resources\ic_explore_white_24dp%403x.png" />
+    <BundleResource Include="Resources\ic_fleet_accident.png" />
+    <BundleResource Include="Resources\ic_fleet_accident%402x.png" />
+    <BundleResource Include="Resources\ic_fleet_accident%403x.png" />
+    <BundleResource Include="Resources\ic_fleet_custom_data_summary.png" />
+    <BundleResource Include="Resources\ic_fleet_custom_data_summary%402x.png" />
+    <BundleResource Include="Resources\ic_fleet_custom_data_summary%403x.png" />
+    <BundleResource Include="Resources\ic_fleet_dtc_code_maintenance.png" />
+    <BundleResource Include="Resources\ic_fleet_dtc_code_maintenance%402x.png" />
+    <BundleResource Include="Resources\ic_fleet_dtc_code_maintenance%403x.png" />
+    <BundleResource Include="Resources\ic_fleet_exception_summary.png" />
+    <BundleResource Include="Resources\ic_fleet_exception_summary%402x.png" />
+    <BundleResource Include="Resources\ic_fleet_exception_summary%403x.png" />
+    <BundleResource Include="Resources\ic_fleet_fleet_utilization.png" />
+    <BundleResource Include="Resources\ic_fleet_fleet_utilization%402x.png" />
+    <BundleResource Include="Resources\ic_fleet_fleet_utilization%403x.png" />
+    <BundleResource Include="Resources\ic_fleet_obd_route_data.png" />
+    <BundleResource Include="Resources\ic_fleet_obd_route_data%402x.png" />
+    <BundleResource Include="Resources\ic_fleet_obd_route_data%403x.png" />
+    <BundleResource Include="Resources\ic_fleet_route_activity.png" />
+    <BundleResource Include="Resources\ic_fleet_route_activity%402x.png" />
+    <BundleResource Include="Resources\ic_fleet_route_activity%403x.png" />
+    <BundleResource Include="Resources\ic_fleet_total_cost_of_ownership.png" />
+    <BundleResource Include="Resources\ic_fleet_total_cost_of_ownership%402x.png" />
+    <BundleResource Include="Resources\ic_fleet_total_cost_of_ownership%403x.png" />
+    <BundleResource Include="Resources\ic_fleet_vehicle_scroe_rating.png" />
+    <BundleResource Include="Resources\ic_fleet_vehicle_scroe_rating%402x.png" />
+    <BundleResource Include="Resources\ic_fleet_vehicle_scroe_rating%403x.png" />
+    <BundleResource Include="Resources\ic_forward_button.png" />
+    <BundleResource Include="Resources\ic_forward_button%402x.png" />
+    <BundleResource Include="Resources\ic_forward_button%403x.png" />
+    <BundleResource Include="Resources\ic_fuel_consumption_green.png" />
+    <BundleResource Include="Resources\ic_fuel_consumption_green%402x.png" />
+    <BundleResource Include="Resources\ic_fuel_consumption_green%403x.png" />
+    <BundleResource Include="Resources\ic_fuel_consumption_measures.png" />
+    <BundleResource Include="Resources\ic_fuel_consumption_measures%402x.png" />
+    <BundleResource Include="Resources\ic_fuel_consumption_measures%403x.png" />
+    <BundleResource Include="Resources\ic_fuel_consumption_red.png" />
+    <BundleResource Include="Resources\ic_fuel_consumption_red%402x.png" />
+    <BundleResource Include="Resources\ic_fuel_consumption_red%403x.png" />
+    <BundleResource Include="Resources\ic_fuel_fuel_entry_consumption.png" />
+    <BundleResource Include="Resources\ic_fuel_fuel_entry_consumption%402x.png" />
+    <BundleResource Include="Resources\ic_fuel_fuel_entry_consumption%403x.png" />
+    <BundleResource Include="Resources\ic_fuel_fuel_entry_costs.png" />
+    <BundleResource Include="Resources\ic_fuel_fuel_entry_costs%402x.png" />
+    <BundleResource Include="Resources\ic_fuel_fuel_entry_costs%403x.png" />
+    <BundleResource Include="Resources\ic_fuel_fuel_entry_summary_.png" />
+    <BundleResource Include="Resources\ic_fuel_fuel_entry_summary_%402x.png" />
+    <BundleResource Include="Resources\ic_fuel_fuel_entry_summary_%403x.png" />
+    <BundleResource Include="Resources\ic_fuel_level_monitor.png" />
+    <BundleResource Include="Resources\ic_fuel_level_monitor%402x.png" />
+    <BundleResource Include="Resources\ic_fuel_level_monitor%403x.png" />
+    <BundleResource Include="Resources\ic_fuel_theft_green.png" />
+    <BundleResource Include="Resources\ic_fuel_theft_green%402x.png" />
+    <BundleResource Include="Resources\ic_fuel_theft_green%403x.png" />
+    <BundleResource Include="Resources\ic_fuel_theft_red.png" />
+    <BundleResource Include="Resources\ic_fuel_theft_red%402x.png" />
+    <BundleResource Include="Resources\ic_fuel_theft_red%403x.png" />
+    <BundleResource Include="Resources\ic_fuel_used_tile.png" />
+    <BundleResource Include="Resources\ic_fuel_used_tile%402x.png" />
+    <BundleResource Include="Resources\ic_fuel_used_tile%403x.png" />
+    <BundleResource Include="Resources\ic_hybrid_white.png" />
+    <BundleResource Include="Resources\ic_hybrid_white%402x.png" />
+    <BundleResource Include="Resources\ic_hybrid_white%403x.png" />
+    <BundleResource Include="Resources\ic_idle_time_green.png" />
+    <BundleResource Include="Resources\ic_idle_time_green%402x.png" />
+    <BundleResource Include="Resources\ic_idle_time_green%403x.png" />
+    <BundleResource Include="Resources\ic_idle_time_red.png" />
+    <BundleResource Include="Resources\ic_idle_time_red%402x.png" />
+    <BundleResource Include="Resources\ic_idle_time_red%403x.png" />
+    <BundleResource Include="Resources\ic_increase.png" />
+    <BundleResource Include="Resources\ic_increase%402x.png" />
+    <BundleResource Include="Resources\ic_increase%403x.png" />
+    <BundleResource Include="Resources\ic_launcher.png" />
+    <BundleResource Include="Resources\ic_launcher%402x.png" />
+    <BundleResource Include="Resources\ic_launcher%403x.png" />
+    <BundleResource Include="Resources\ic_loading.png" />
+    <BundleResource Include="Resources\ic_loading%402x.png" />
+    <BundleResource Include="Resources\ic_loading%403x.png" />
+    <BundleResource Include="Resources\ic_loop_white_24dp.png" />
+    <BundleResource Include="Resources\ic_loop_white_24dp%402x.png" />
+    <BundleResource Include="Resources\ic_loop_white_24dp%403x.png" />
+    <BundleResource Include="Resources\ic_loop_white_36dp.png" />
+    <BundleResource Include="Resources\ic_loop_white_36dp%402x.png" />
+    <BundleResource Include="Resources\ic_loop_white_36dp%403x.png" />
+    <BundleResource Include="Resources\ic_loop_white_36dp_rotated.png" />
+    <BundleResource Include="Resources\ic_loop_white_36dp_rotated%402x.png" />
+    <BundleResource Include="Resources\ic_loop_white_36dp_rotated%403x.png" />
+    <BundleResource Include="Resources\ic_map_legend.png" />
+    <BundleResource Include="Resources\ic_map_legend%402x.png" />
+    <BundleResource Include="Resources\ic_map_legend%403x.png" />
+    <BundleResource Include="Resources\ic_map_marker_black.png" />
+    <BundleResource Include="Resources\ic_map_marker_black%402x.png" />
+    <BundleResource Include="Resources\ic_map_marker_black%403x.png" />
+    <BundleResource Include="Resources\ic_map_marker_green.png" />
+    <BundleResource Include="Resources\ic_map_marker_green%402x.png" />
+    <BundleResource Include="Resources\ic_map_marker_green%403x.png" />
+    <BundleResource Include="Resources\ic_map_marker_purple.png" />
+    <BundleResource Include="Resources\ic_map_marker_purple%402x.png" />
+    <BundleResource Include="Resources\ic_map_marker_purple%403x.png" />
+    <BundleResource Include="Resources\ic_map_marker_red.png" />
+    <BundleResource Include="Resources\ic_map_marker_red%402x.png" />
+    <BundleResource Include="Resources\ic_map_marker_red%403x.png" />
+    <BundleResource Include="Resources\ic_map_marker_yellow.png" />
+    <BundleResource Include="Resources\ic_map_marker_yellow%402x.png" />
+    <BundleResource Include="Resources\ic_map_marker_yellow%403x.png" />
+    <BundleResource Include="Resources\ic_marker_finish.png" />
+    <BundleResource Include="Resources\ic_marker_finish%402x.png" />
+    <BundleResource Include="Resources\ic_marker_finish%403x.png" />
+    <BundleResource Include="Resources\ic_marker_start.png" />
+    <BundleResource Include="Resources\ic_marker_start%402x.png" />
+    <BundleResource Include="Resources\ic_marker_start%403x.png" />
+    <BundleResource Include="Resources\ic_non_reporting_green.png" />
+    <BundleResource Include="Resources\ic_non_reporting_green%402x.png" />
+    <BundleResource Include="Resources\ic_non_reporting_green%403x.png" />
+    <BundleResource Include="Resources\ic_non_reporting_red.png" />
+    <BundleResource Include="Resources\ic_non_reporting_red%402x.png" />
+    <BundleResource Include="Resources\ic_non_reporting_red%403x.png" />
+    <BundleResource Include="Resources\ic_recent_exceptions_cell.png" />
+    <BundleResource Include="Resources\ic_recent_exceptions_cell%402x.png" />
+    <BundleResource Include="Resources\ic_recent_exceptions_cell%403x.png" />
+    <BundleResource Include="Resources\ic_risk_management.png" />
+    <BundleResource Include="Resources\ic_risk_management%402x.png" />
+    <BundleResource Include="Resources\ic_risk_management%403x.png" />
+    <BundleResource Include="Resources\ic_same.png" />
+    <BundleResource Include="Resources\ic_same%402x.png" />
+    <BundleResource Include="Resources\ic_same%403x.png" />
+    <BundleResource Include="Resources\ic_sat_icon.png" />
+    <BundleResource Include="Resources\ic_sat_icon%402x.png" />
+    <BundleResource Include="Resources\ic_sat_icon%403x.png" />
+    <BundleResource Include="Resources\ic_satellite.png" />
+    <BundleResource Include="Resources\ic_satellite%402x.png" />
+    <BundleResource Include="Resources\ic_satellite%403x.png" />
+    <BundleResource Include="Resources\ic_satellite_black.png" />
+    <BundleResource Include="Resources\ic_satellite_black%402x.png" />
+    <BundleResource Include="Resources\ic_satellite_black%403x.png" />
+    <BundleResource Include="Resources\ic_satellite_white.png" />
+    <BundleResource Include="Resources\ic_satellite_white%402x.png" />
+    <BundleResource Include="Resources\ic_satellite_white%403x.png" />
+    <BundleResource Include="Resources\ic_search.png" />
+    <BundleResource Include="Resources\ic_search%402x.png" />
+    <BundleResource Include="Resources\ic_search%403x.png" />
+    <BundleResource Include="Resources\ic_slideout.png" />
+    <BundleResource Include="Resources\ic_slideout%402x.png" />
+    <BundleResource Include="Resources\ic_slideout%403x.png" />
+    <BundleResource Include="Resources\ic_stopped_time_green.png" />
+    <BundleResource Include="Resources\ic_stopped_time_green%402x.png" />
+    <BundleResource Include="Resources\ic_stopped_time_green%403x.png" />
+    <BundleResource Include="Resources\ic_stopped_time_red.png" />
+    <BundleResource Include="Resources\ic_stopped_time_red%402x.png" />
+    <BundleResource Include="Resources\ic_stopped_time_red%403x.png" />
+    <BundleResource Include="Resources\ic_streetview.png" />
+    <BundleResource Include="Resources\ic_streetview%402x.png" />
+    <BundleResource Include="Resources\ic_streetview%403x.png" />
+    <BundleResource Include="Resources\ic_streetview_black.png" />
+    <BundleResource Include="Resources\ic_streetview_black%402x.png" />
+    <BundleResource Include="Resources\ic_streetview_black%403x.png" />
+    <BundleResource Include="Resources\ic_streetview_white.png" />
+    <BundleResource Include="Resources\ic_streetview_white%402x.png" />
+    <BundleResource Include="Resources\ic_streetview_white%403x.png" />
+    <BundleResource Include="Resources\ic_terrain.png" />
+    <BundleResource Include="Resources\ic_terrain%402x.png" />
+    <BundleResource Include="Resources\ic_terrain%403x.png" />
+    <BundleResource Include="Resources\ic_terrain_black.png" />
+    <BundleResource Include="Resources\ic_terrain_black%402x.png" />
+    <BundleResource Include="Resources\ic_terrain_black%403x.png" />
+    <BundleResource Include="Resources\ic_terrain_white.png" />
+    <BundleResource Include="Resources\ic_terrain_white%402x.png" />
+    <BundleResource Include="Resources\ic_terrain_white%403x.png" />
+    <BundleResource Include="Resources\ic_timer_white_24dp.png" />
+    <BundleResource Include="Resources\ic_timer_white_24dp%402x.png" />
+    <BundleResource Include="Resources\ic_timer_white_24dp%403x.png" />
+    <BundleResource Include="Resources\ic_trip_summary_cell.png" />
+    <BundleResource Include="Resources\ic_trip_summary_cell%402x.png" />
+    <BundleResource Include="Resources\ic_trip_summary_cell%403x.png" />
+    <BundleResource Include="Resources\ic_truck.png" />
+    <BundleResource Include="Resources\ic_truck%402x.png" />
+    <BundleResource Include="Resources\ic_truck%403x.png" />
+    <BundleResource Include="Resources\ic_truck_marker_black.png" />
+    <BundleResource Include="Resources\ic_truck_marker_black%402x.png" />
+    <BundleResource Include="Resources\ic_truck_marker_black%403x.png" />
+    <BundleResource Include="Resources\ic_truck_marker_green.png" />
+    <BundleResource Include="Resources\ic_truck_marker_green%402x.png" />
+    <BundleResource Include="Resources\ic_truck_marker_green%403x.png" />
+    <BundleResource Include="Resources\ic_truck_marker_purple.png" />
+    <BundleResource Include="Resources\ic_truck_marker_purple%402x.png" />
+    <BundleResource Include="Resources\ic_truck_marker_purple%403x.png" />
+    <BundleResource Include="Resources\ic_truck_marker_red.png" />
+    <BundleResource Include="Resources\ic_truck_marker_red%402x.png" />
+    <BundleResource Include="Resources\ic_truck_marker_red%403x.png" />
+    <BundleResource Include="Resources\ic_truck_marker_yellow.png" />
+    <BundleResource Include="Resources\ic_truck_marker_yellow%402x.png" />
+    <BundleResource Include="Resources\ic_truck_marker_yellow%403x.png" />
+    <BundleResource Include="Resources\ic_truck_white.png" />
+    <BundleResource Include="Resources\ic_truck_white%402x.png" />
+    <BundleResource Include="Resources\ic_truck_white%403x.png" />
+    <BundleResource Include="Resources\ic_vehicle_dtc_green.png" />
+    <BundleResource Include="Resources\ic_vehicle_dtc_green%402x.png" />
+    <BundleResource Include="Resources\ic_vehicle_dtc_green%403x.png" />
+    <BundleResource Include="Resources\ic_vehicle_dtc_red.png" />
+    <BundleResource Include="Resources\ic_vehicle_dtc_red%402x.png" />
+    <BundleResource Include="Resources\ic_vehicle_dtc_red%403x.png" />
+    <BundleResource Include="Resources\ic_vehicle_exception_cell.png" />
+    <BundleResource Include="Resources\ic_vehicle_exception_cell%402x.png" />
+    <BundleResource Include="Resources\ic_vehicle_exception_cell%403x.png" />
+    <BundleResource Include="Resources\ic_vehicle_information_cell.png" />
+    <BundleResource Include="Resources\ic_vehicle_information_cell%402x.png" />
+    <BundleResource Include="Resources\ic_vehicle_information_cell%403x.png" />
+    <BundleResource Include="Resources\ic_vg_icon.png" />
+    <BundleResource Include="Resources\ic_vg_icon%402x.png" />
+    <BundleResource Include="Resources\ic_vg_icon%403x.png" />
+    <BundleResource Include="Resources\icon%402x.png" />
+    <BundleResource Include="Resources\icon%403x.png" />
+    <BundleResource Include="Resources\idle.png" />
+    <BundleResource Include="Resources\idle%402x.png" />
+    <BundleResource Include="Resources\ic_guardian%403x.png" />
+    <BundleResource Include="Resources\ic_nfc.png" />
+    <BundleResource Include="Resources\ic_nfc%402x.png" />
+    <BundleResource Include="Resources\ic_nfc%403x.png" />
+    <BundleResource Include="Resources\ic_qr_code.png" />
+    <BundleResource Include="Resources\ic_qr_code%402x.png" />
+    <BundleResource Include="Resources\ic_qr_code%403x.png" />
+    <BundleResource Include="Resources\ic_send_position.png" />
+    <BundleResource Include="Resources\ic_send_position%402x.png" />
+    <BundleResource Include="Resources\ic_send_position%403x.png" />
+    <BundleResource Include="Resources\ic_sos.png" />
+    <BundleResource Include="Resources\ic_sos%402x.png" />
+    <BundleResource Include="Resources\ic_sos%403x.png" />
+    <BundleResource Include="Resources\ic_amber.png" />
+    <BundleResource Include="Resources\ic_amber%402x.png" />
+    <BundleResource Include="Resources\ic_amber%403x.png" />
+    <BundleResource Include="Resources\ic_beacon_tagging.png" />
+    <BundleResource Include="Resources\ic_beacon_tagging%402x.png" />
+    <BundleResource Include="Resources\ic_beacon_tagging%403x.png" />
+    <BundleResource Include="Resources\ic_covid.png" />
+    <BundleResource Include="Resources\ic_covid%402x.png" />
+    <BundleResource Include="Resources\ic_covid%403x.png" />
+    <BundleResource Include="Resources\ic_flic.png" />
+    <BundleResource Include="Resources\ic_flic%402x.png" />
+    <BundleResource Include="Resources\ic_flic%403x.png" />
+    <BundleResource Include="Resources\ic_guardian.png" />
+    <BundleResource Include="Resources\ic_guardian%402x.png" />
+    <BundleResource Include="Resources\login_background_salus.jpg" />
+    <BundleResource Include="Resources\login_background_mzone.jpg" />
+    <BundleResource Include="Resources\mzone_icon.png" />
+    <BundleResource Include="Resources\mzone_icon%402x.png" />
+    <BundleResource Include="Resources\mzone_icon%403x.png" />
+    <BundleResource Include="Resources\salus_icon.png" />
+    <BundleResource Include="Resources\salus_icon%402x.png" />
+    <BundleResource Include="Resources\salus_icon%403x.png" />
+    <Content Include="StyexFleetManagement.iOS.sln" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties TriggeredFromHotReload="False" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CustomControls:ReportPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyexFleetManagement.Pages.Reports.ExceptionSummaryPage"
+             xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+             xmlns:converters="clr-namespace:StyexFleetManagement.Converters"
+             xmlns:CustomControls="clr-namespace:StyexFleetManagement.CustomControls">
+    <CustomControls:ReportPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBooleanConverter x:Key="inverseBooleanConverter" />
+        </ResourceDictionary>
+    </CustomControls:ReportPage.Resources>
+    <ScrollView>
+        <StackLayout Padding="5" Orientation="Vertical" VerticalOptions="Fill">
+            <CustomControls:ReportHeaderLayout x:Name="ReportHeader"></CustomControls:ReportHeaderLayout>
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions ="FillAndExpand" x:Name="MainGrid">
+                <Grid.ColumnSpacing>
+                    <OnIdiom x:TypeArguments="x:Double"
+                 Phone="10"
+                 Tablet="10"/>
+                </Grid.ColumnSpacing>
+                <Grid.RowSpacing>
+                    <OnIdiom x:TypeArguments="x:Double"
+                 Phone="10"
+                 Tablet="10"/>
+                </Grid.RowSpacing>
+                <Grid.Padding>
+                    <OnIdiom x:TypeArguments="Thickness"
+                 Phone="10, 10, 10, 0"
+                 Tablet="10, 10, 10, 0"/>
+                </Grid.Padding>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid VerticalOptions="CenterAndExpand"  Grid.Row="0" Grid.Column="0" x:Name="GraphGrid" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout x:Name="totalExceptionGraphStack" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" HeightRequest="250">
+                        <Label Text="{i18n:Translate title_total_exception_chart}" x:Name="totalExceptionLabel" IsVisible="{Binding TotalExceptionChartOverlayIsVisible, Converter={StaticResource inverseBooleanConverter}}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+
+                    </StackLayout>
+                    <StackLayout x:Name="exceptionVsDistanceGraphStack" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" HeightRequest="250">
+                        <Label Text="{i18n:Translate title_exception_vs_distance_chart}" x:Name="exceptionVsDistanceLabel" IsVisible="{Binding ExceptionVsDistanceChartOverlayIsVisible, Converter={StaticResource inverseBooleanConverter}}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+
+                    </StackLayout>
+
+                </Grid>
+
+                <StackLayout x:Name="TableStack"  Grid.Row="1" Grid.Column="0" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+                    <Label Text="{i18n:Translate most_exceptions}" x:Name="TableLabel" FontAttributes="Bold" Margin="6"></Label>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</CustomControls:ReportPage>

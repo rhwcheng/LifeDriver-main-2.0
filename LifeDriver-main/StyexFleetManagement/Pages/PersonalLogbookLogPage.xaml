@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyexFleetManagement.Pages.PersonalLogbookLogPage"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+    <pages:PopupPage.Content>
+        <StackLayout BackgroundColor="White" Padding="5,5,5,5">
+            <StackLayout>
+                <Image x:Name="backButton" Source="ic_close_button.png" HeightRequest = "24" HorizontalOptions = "StartAndExpand"></Image>
+            </StackLayout>
+            <ListView x:Name="LogView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Description}" TextColor="Black" Detail="{Binding DateString}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </pages:PopupPage.Content>
+</pages:PopupPage>

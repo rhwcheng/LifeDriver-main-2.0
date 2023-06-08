@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyexFleetManagement.Pages.DashboardPage"
+             xmlns:local="clr-namespace:StyexFleetManagement.CustomControls"
+             BackgroundColor="#ECF2F4">
+  <ScrollView>
+    <Grid VerticalOptions="FillAndExpand" x:Name="MainGrid">
+      <Grid.ColumnSpacing>
+        <OnIdiom x:TypeArguments="x:Double"
+                 Phone="10"
+                 Tablet="10"/>
+      </Grid.ColumnSpacing>
+      <Grid.RowSpacing>
+        <OnIdiom x:TypeArguments="x:Double"
+                 Phone="5"
+                 Tablet="5"/>
+      </Grid.RowSpacing>
+      <Grid.Padding>
+        <OnIdiom x:TypeArguments="Thickness"
+                 Phone="10, 10, 10, 0"
+                 Tablet="10, 10, 10, 0"/>
+      </Grid.Padding>
+
+
+      <Picker x:Name="vehiclePicker" IsVisible="false"></Picker>
+    </Grid>
+  </ScrollView>
+</ContentPage>

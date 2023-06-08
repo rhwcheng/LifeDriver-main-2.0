@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="StyexFleetManagement.Pages.AppSettings.SettingsContent"
+        xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+    xmlns:customControls="clr-namespace:StyexFleetManagement.CustomControls"
+    xmlns:local="clr-namespace:StyexFleetManagement.Models;assembly=StyexFleetManagement">
+    <ContentView.Content>
+
+        <ScrollView Padding="5">
+            <StackLayout>
+                <Label x:Name="nameLabel" FontAttributes="Bold"></Label>
+                <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                <StackLayout Padding="10">
+                    <Label x:Name="serverLabel"/>
+                    <Label Text="{i18n:Translate label_server}" TextColor="Gray"/>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                    <Label x:Name="usernameLabel"/>
+                    <Label Text="{i18n:Translate label_username}" TextColor="Gray"/>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                    <Button x:Name="addAccountButton" Text="{i18n:Translate add_salus_account}" Clicked="OnAddAccountClicked"></Button>
+
+                    <Button x:Name="logoutButton" Text="{i18n:Translate action_logout}" Clicked="OnLogoutButtonClicked"></Button>
+                </StackLayout>
+
+                <StackLayout x:Name="SalusContactSection" IsVisible="False">
+                    <Label Text="{i18n:Translate user_details}" FontAttributes="Bold"></Label>
+                    <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate first_name}"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                            <Entry x:Name ="firstNameEntry" WidthRequest="150" TextChanged="FirstName_Changed" VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14"></Entry>
+                            <Image Source="ic_done_black_24dp" x:Name="firstNameButton" IsVisible="false">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    Tapped="UpdateFirstName" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate last_name}"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                            <Entry x:Name ="lastNameEntry" WidthRequest="150" TextChanged="LastName_Changed" VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14"></Entry>
+                            <Image Source="ic_done_black_24dp" x:Name="lastNameButton" IsVisible="false">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    Tapped="UpdateLastName" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate phone_number}"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                            <Entry x:Name ="phoneNumberEntry" WidthRequest="150" TextChanged="PhoneNumber_Changed" VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14"></Entry>
+                            <Image Source="ic_done_black_24dp" x:Name="phoneNumberButton" IsVisible="true">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    Tapped="UpdatePhoneNumber" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate email_address}"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                            <Entry x:Name ="emailAddressEntry" WidthRequest="150" TextChanged="EmailAddress_Changed" VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14"></Entry>
+                            <Image Source="ic_done_black_24dp" x:Name="emailAddressButton" IsVisible="false">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="UpdateEmailAddress" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                    <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate sos_number}" FontAttributes="Bold" TextColor="Black"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                            <Entry TextColor="Black" x:Name ="sosNumberEntry" WidthRequest="150" TextChanged="SosNumber_Changed" VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14"></Entry>
+                            <Image Source="ic_done_black_24dp" x:Name="sosNumberButton" IsVisible="false">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    Tapped="UpdateSosNumber" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate priority_number}" FontAttributes="Bold" TextColor="Black"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                            <Entry TextColor="Black" x:Name ="priorityNumberEntry" WidthRequest="150" TextChanged="PriorityNumber_Changed" VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14"></Entry>
+                            <Image Source="ic_done_black_24dp" x:Name="priorityNumberButton" IsVisible="false">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    Tapped="UpdatePriorityNumber" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+
+                </StackLayout>
+
+                <Label Text="{i18n:Translate landing_page_title}" FontAttributes="Bold"></Label>
+                <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                <StackLayout Padding="10">
+                    <Picker x:Name="LandingPagePicker" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                    </Picker>
+
+                </StackLayout>
+
+
+                <Label Text="Map Marker" FontAttributes="Bold"></Label>
+                <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                <StackLayout Padding="10">
+                    <Picker x:Name="MapPinPicker" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                    </Picker>
+
+                </StackLayout>
+
+                <Label Text="{i18n:Translate default_vehicle_group_title}" FontAttributes="Bold"></Label>
+                <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                <StackLayout Padding="10">
+                    <Picker x:Name="VehicleGroupPicker" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                    </Picker>
+
+                </StackLayout>
+
+                <Label Text="{i18n:Translate title_units_of_measure}" FontAttributes="Bold"></Label>
+                <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                <StackLayout Padding="10">
+                    <Label x:Name="currencyLabel"/>
+                    <Label Text="{i18n:Translate pref_currency}" TextColor="Gray"/>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                    <Label x:Name="distanceLabel"/>
+                    <Label Text="{i18n:Translate pref_distance_measurement_unit}" TextColor="Gray"/>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                    <Label x:Name="fluidLabel"/>
+                    <Label Text="{i18n:Translate pref_fluid_measurement_unit}" TextColor="Gray"/>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+
+                    <Button Text="{i18n:Translate action_refresh_user_settings}" Clicked="OnRefreshButtonClicked"></Button>
+                </StackLayout>
+
+                <!--Trip Logbook Settings-->
+                <Label Text="{i18n:Translate trip_logbook_title}" FontAttributes="Bold"></Label>
+                <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                <StackLayout Padding="10">
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate phone_id}"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                            <Entry x:Name ="phoneIdEntry" WidthRequest="50" TextChanged="PhoneId_Changed" Completed="LimitChanged" VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14"></Entry>
+                            <Image Source="ic_done_black_24dp" x:Name="phoneIdButton" IsVisible="false">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                            Tapped="UpdatePhoneId" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate driver_code}"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                            <Entry x:Name ="driverCodeEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="DriverCode_Changed" Completed="LimitChanged" VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14"></Entry>
+                            <Image Source="ic_done_black_24dp" x:Name="driverCodeButton" IsVisible="false">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                            Tapped="UpdateDriverCode" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate reporting_interval}"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                            <Entry x:Name ="reportingIntervalEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="ReportingInterval_Changed" Completed="LimitChanged" VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14"></Entry>
+                            <Image Source="ic_done_black_24dp" x:Name="reportingIntervalButton" IsVisible="false">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                            Tapped="UpdateReportingInterval" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate trip_recording}"/>
+                        <Switch x:Name ="tripReportingSwitch" HorizontalOptions="EndAndExpand"></Switch>
+                    </StackLayout>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate location_updates}"/>
+                        <Switch x:Name ="locationUpdatesSwitch" HorizontalOptions="EndAndExpand"></Switch>
+                    </StackLayout>
+
+                </StackLayout>
+
+                <Label Text="{i18n:Translate title_trip_plotting}" FontAttributes="Bold"></Label>
+                <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                <StackLayout Padding="10">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label x:Name="ubi_exceptions_label" Text="{i18n:Translate ubi_exceptions}"/>
+                        <Switch x:Name ="ubiSwitch" HorizontalOptions="EndAndExpand"></Switch>
+                    </StackLayout>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label x:Name="fleet_exceptions_label" Text="{i18n:Translate fleet_exceptions}" />
+                        <Switch x:Name ="fleetSwitch" HorizontalOptions="EndAndExpand"></Switch>
+                    </StackLayout>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label x:Name="multipleTripPlottingLable" Text="{i18n:Translate allow_multiple_trip_plotting_lable}" />
+                        <Switch x:Name ="multipleTripPlottingSwitch" HorizontalOptions="EndAndExpand"></Switch>
+                    </StackLayout>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label x:Name="snapTripToRoadLabel" Text="{i18n:Translate snap_trip_to_road_label}" />
+                        <Switch x:Name ="snapTripToRoadSwitch" HorizontalOptions="EndAndExpand"></Switch>
+                    </StackLayout>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                </StackLayout>
+
+                <!--Dashboard Settings-->
+                <Label Text="{i18n:Translate dashboard_title}" FontAttributes="Bold"></Label>
+                <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                <StackLayout Padding="10">
+                    <Label Text="{i18n:Translate operational_alerts_title}" FontAttributes="Bold"></Label>
+                    <StackLayout Padding="10">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label x:Name="nonReportingLabel" Text="{i18n:Translate non_reporting_label}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                                <Label Text="{i18n:Translate limit_label}" VerticalOptions="Center"/>
+                                <Entry x:Name ="nonReportingEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="Entry_LimitChanged" Completed="LimitChanged" VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14" Placeholder="nonReporting"></Entry>
+                                <Image Source="ic_done_black_24dp" x:Name="nonReportingButton" IsVisible="false">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                              Tapped="UpdateNonReportingThreshold" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <customControls:CustomDashboardSwitch Report="{x:Static local:DashboardReport.NonReporting}" x:Name ="nonReportingSwitch" HorizontalOptions="EndAndExpand"></customControls:CustomDashboardSwitch>
+
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label x:Name="exceptionAlertsLabel" Text="{i18n:Translate exception_alerts_label}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                                <Label Text="{i18n:Translate limit_label}" VerticalOptions="Center"/>
+                                <Entry x:Name ="exceptionAlertsEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="Entry_LimitChanged" Completed="LimitChanged"  VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14" Placeholder="exceptionAlerts"></Entry>
+                                <Image Source="ic_done_black_24dp" x:Name="exceptionAlertsButton" IsVisible="false">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                              Tapped="UpdateExceptionAlertsThreshold" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <customControls:CustomDashboardSwitch  Report="{x:Static local:DashboardReport.ExceptionCounts}" x:Name ="exceptionAlertsSwitch" HorizontalOptions="EndAndExpand"></customControls:CustomDashboardSwitch>
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label x:Name="fuelConsumptionLabel" Text="{i18n:Translate fuel_cons_dashboard_label}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                                <Label Text="{i18n:Translate limit_label}" VerticalOptions="Center"/>
+                                <Entry x:Name ="fuelConsumptionEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="Entry_LimitChanged" Completed="LimitChanged"  VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14" Placeholder="fuelConsumption"></Entry>
+                                <Image Source="ic_done_black_24dp" x:Name="fuelConsumptionButton" IsVisible="false">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                              Tapped="UpdateFuelConsumptionThreshold" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <customControls:CustomDashboardSwitch Report="{x:Static local:DashboardReport.FuelConsumption}"  x:Name ="fuelConsumptionSwitch" HorizontalOptions="EndAndExpand"></customControls:CustomDashboardSwitch>
+
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label x:Name="fuelTheftLabel" Text="{i18n:Translate fuel_theft_dashboard_label}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                                <Label Text="{i18n:Translate limit_label}" VerticalOptions="Center"/>
+                                <Entry x:Name ="fuelTheftEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="Entry_LimitChanged" Completed="LimitChanged"  VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14" Placeholder="fuelTheft"></Entry>
+                                <Image Source="ic_done_black_24dp" x:Name="fuelTheftButton" IsVisible="false">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                              Tapped="UpdateFuelTheftThreshold" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <customControls:CustomDashboardSwitch Report="{x:Static local:DashboardReport.FuelTheft}"  x:Name ="fuelTheftSwitch" HorizontalOptions="EndAndExpand"></customControls:CustomDashboardSwitch>
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label x:Name="accidentCountLabel" Text="{i18n:Translate accident_count_dashboard}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                                <Label Text="{i18n:Translate limit_label}" VerticalOptions="Center"/>
+                                <Entry x:Name ="accidentCountEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="Entry_LimitChanged" Completed="LimitChanged"  VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14" Placeholder="accidentCount"></Entry>
+                                <Image Source="ic_done_black_24dp" x:Name="accidentCountButton" IsVisible="false">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                              Tapped="UpdateAccidentCountThreshold" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <customControls:CustomDashboardSwitch Report="{x:Static local:DashboardReport.AccidentCount}"  x:Name ="accidentCountSwitch" HorizontalOptions="EndAndExpand"></customControls:CustomDashboardSwitch>
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label x:Name="vehicleDTCLabel" Text="{i18n:Translate vehicle_dtc_dashboard}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                                <Label Text="{i18n:Translate limit_label}" VerticalOptions="Center"/>
+                                <Entry x:Name ="vehicleDTCEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="Entry_LimitChanged" Completed="LimitChanged"  VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14" Placeholder="vehicleDTC"></Entry>
+                                <Image Source="ic_done_black_24dp" x:Name="vehicleDTCButton" IsVisible="false">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                              Tapped="UpdateVehicleDTCThreshold" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <customControls:CustomDashboardSwitch Report="{x:Static local:DashboardReport.VehicleDTC}"  x:Name ="vehicleDTCSwitch" HorizontalOptions="EndAndExpand"></customControls:CustomDashboardSwitch>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <!--End of operational Alerts-->
+                    <Label Text="{i18n:Translate kpi_alerts_title}" FontAttributes="Bold"></Label>
+                    <StackLayout Padding="10">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label x:Name="stoppedTime" Text="{i18n:Translate stopped_time_dashboard}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                                <Label Text="{i18n:Translate limit_label}" VerticalOptions="Center"/>
+                                <Entry x:Name ="stoppedTimeEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="Entry_LimitChanged" Completed="LimitChanged"  VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14" Placeholder="stoppedTime"></Entry>
+                                <Image Source="ic_done_black_24dp" x:Name="stoppedTimeButton" IsVisible="false">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                              Tapped="UpdateStoppedTimeThreshold" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <customControls:CustomDashboardSwitch Report="{x:Static local:DashboardReport.StoppedTime}"  x:Name ="stoppedTimeSwitch" HorizontalOptions="EndAndExpand"></customControls:CustomDashboardSwitch>
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label x:Name="idleTimeLabel" Text="{i18n:Translate idle_time_dashboard}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                                <Label Text="{i18n:Translate limit_label}" VerticalOptions="Center"/>
+                                <Entry x:Name ="idleTimeEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="Entry_LimitChanged" Completed="LimitChanged"  VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14" Placeholder="idleTime"></Entry>
+                                <Image Source="ic_done_black_24dp" x:Name="idleTimeButton" IsVisible="false">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                              Tapped="UpdateIdleTimeThreshold" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <customControls:CustomDashboardSwitch Report="{x:Static local:DashboardReport.IdleTime}"  x:Name ="idleTimeSwitch" HorizontalOptions="EndAndExpand"></customControls:CustomDashboardSwitch>
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label x:Name="distDrivenLabel" Text="{i18n:Translate dist_driven_dashboard}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                                <Label Text="{i18n:Translate limit_label}" VerticalOptions="Center"/>
+                                <Entry x:Name ="distDrivenEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="Entry_LimitChanged" Completed="LimitChanged"  VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14" Placeholder="distanceDriven"></Entry>
+                                <Image Source="ic_done_black_24dp" x:Name="distDrivenButton" IsVisible="false">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                              Tapped="UpdateDistDrivenThreshold" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <customControls:CustomDashboardSwitch Report="{x:Static local:DashboardReport.DistanceDriven}"  x:Name ="distDrivenSwitch" HorizontalOptions="EndAndExpand"></customControls:CustomDashboardSwitch>
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label x:Name="driveDurationLabel" Text="{i18n:Translate drive_duration_dashboard}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0">
+                                <Label Text="{i18n:Translate limit_label}" VerticalOptions="Center"/>
+                                <Entry x:Name ="driveDurationEntry" WidthRequest="50" Keyboard="Numeric" TextChanged="Entry_LimitChanged" Completed="LimitChanged"  VerticalOptions="StartAndExpand" HeightRequest="36" FontSize="14" Placeholder="driveDuration"></Entry>
+                                <Image Source="ic_done_black_24dp" x:Name="driveDurButton" IsVisible="false">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                              Tapped="UpdateDriveDurationThreshold" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <customControls:CustomDashboardSwitch Report="{x:Static local:DashboardReport.DriveDuration}"  x:Name ="driveDurationSwitch" HorizontalOptions="EndAndExpand"></customControls:CustomDashboardSwitch>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </StackLayout>
+                    <Button Text="{i18n:Translate action_reset_dashboard_settings}" Clicked="OnResetDashboardSettingsClicked"></Button>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                </StackLayout>
+
+                <Label Text="{i18n:Translate title_application}" FontAttributes="Bold"></Label>
+                <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                <StackLayout Padding="10">
+
+                    <Label x:Name="versionLabel" Text="{i18n:Translate version}" TextColor="Gray"/>
+                    <Label Text="{i18n:Translate copyright}" TextColor="Gray" LineBreakMode="WordWrap"/>
+                    <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                    <Button Text="{i18n:Translate action_clear_cache}" Clicked="OnClearCacheButtonClicked"></Button>
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

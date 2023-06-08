@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="StyexFleetManagement.CustomControls.DashboardTile"
+       xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+       xmlns:local="clr-namespace:StyexFleetManagement.CustomControls"
+			 xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+             BackgroundColor="#F8F8F8">
+    <ContentView.Content>
+        <Frame BackgroundColor="White" Margin="0" Padding="0" CornerRadius="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="False" OutlineColor="Black" HeightRequest="240">
+            <StackLayout BackgroundColor="Transparent" Margin="0" Spacing="0" Padding="0" x:Name="mainStack">
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <StackLayout  BackgroundColor="White" Padding="3,0,0,1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" x:Name="header">
+                            <ffimageloading:CachedImage Source="fuel.png" WidthRequest ="24" HorizontalOptions="Start" x:Name="headerImage"></ffimageloading:CachedImage>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Idle Time" x:Name="titleLabel" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                                <Label Text="Daily Avg" x:Name="subTitleLabel" TextColor="Black" FontSize="10" VerticalTextAlignment="Center"></Label>
+                            </StackLayout>
+                            <ffimageloading:CachedImage x:Name="calloutButton" Source="entities.png" WidthRequest ="48" HorizontalOptions="EndAndExpand"></ffimageloading:CachedImage>
+                            <local:DatePickerLayout x:Name="datePicker" IsVisible="false">
+                                <x:Arguments>
+                                    <x:Boolean>false</x:Boolean>
+                                    <x:Boolean>true</x:Boolean>
+                                </x:Arguments>
+                            </local:DatePickerLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Label Text="Goal: below 60 min" x:Name="goalLabel" TextColor="Black" FontSize="12" FontAttributes="Italic" HorizontalTextAlignment="Center" VerticalTextAlignment="End"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout x:Name="ContentStack" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Column="0" Grid.RowSpan="2">
+                            <Frame HorizontalOptions="Center" Margin="0" Padding="0" VerticalOptions="Center" WidthRequest="75" HeightRequest="75" OutlineColor="#607D8B">
+                                <StackLayout x:Name="complianceStack" Margin="0" Spacing="0" Padding="0" BackgroundColor="Green" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+
+                                    <Label x:Name="complianceLabel" Text="88%" FontSize="30" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" LineBreakMode="NoWrap">
+                                    </Label>
+
+                                </StackLayout>
+                            </Frame>
+                            <Label Text="{i18n:Translate compliance_label}" HorizontalOptions="CenterAndExpand"></Label>
+                        </StackLayout>
+
+
+
+
+                        <StackLayout Grid.Column="1" Grid.Row="0" Spacing="0" Padding="0" Margin="0">
+                            <chart:SfChart InputTransparent="true" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="barGraph"></chart:SfChart>
+                            <Label Text="28.98 min" x:Name="valueLabel" TextColor="Green" HorizontalTextAlignment="Center" FontSize="15"></Label>
+                        </StackLayout>
+
+
+                        <chart:SfChart Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand" HeightRequest="100" WidthRequest="200"  x:Name="lineGraph"></chart:SfChart>
+                    </Grid>
+
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

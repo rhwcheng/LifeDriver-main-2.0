@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StyexFleetManagement.Pages.VehicleOvertimeDetailPage" xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement" xmlns:Gestures="clr-namespace:StyexFleetManagement.CustomControls;assembly=StyexFleetManagement">
+	<ContentPage.Content>
+    <Gestures:GestureFrame x:Name="gestureFrame" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+		<StackLayout>
+			<ScrollView InputTransparent="true">
+				<StackLayout Padding="5" Orientation="Horizontal" VerticalOptions="Fill">
+					<Image WidthRequest="35" Source="calendar.png"></Image>
+					<Picker x:Name="datePicker" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+						<Picker.Items>
+            				<x:String>Today</x:String> 
+            				<x:String>Yesterday</x:String>
+			            	<x:String>This Week</x:String>
+			            	<x:String>Previous Week</x:String>
+			            	<x:String>This Month</x:String>
+			            	<x:String>Previous Month</x:String>
+			            	<x:String>Custom</x:String>
+        				</Picker.Items>
+					</Picker>
+					<Image WidthRequest="35" Source="truck.png"></Image>
+					<Picker x:Name="VehicleGroupPicker" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+					</Picker>
+				</StackLayout>
+
+				<Grid VerticalOptions="FillAndExpand" x:Name="MainGrid">
+				<Grid.ColumnSpacing>
+				    <OnIdiom x:TypeArguments="x:Double"
+				             Phone="20"
+				             Tablet="20"/>
+				 </Grid.ColumnSpacing>
+				  <Grid.RowSpacing>
+				    <OnIdiom x:TypeArguments="x:Double"
+				             Phone="10"
+				             Tablet="10"/>
+				  </Grid.RowSpacing>
+				  <Grid.Padding>
+				    <OnIdiom x:TypeArguments="Thickness"
+				             Phone="10, 10, 10, 0"
+				             Tablet="10, 10, 10, 0"/>
+				  </Grid.Padding>
+				
+				<StackLayout x:Name="PieChartView" HeightRequest="200" Padding="10">
+
+				</StackLayout>
+
+				<StackLayout x:Name="SummaryView" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+						<StackLayout Orientation="Horizontal" Margin="5">
+							<Image Source="clock.png"></Image>
+							<StackLayout>
+								<Label x:Name="WorkTimeLabel" TextColor="#3F51B5" Text="0h0min"></Label>
+								<Label Text="{i18n:Translate work_time_driving}" FontSize="10"></Label>
+							</StackLayout>
+						</StackLayout>
+
+						<StackLayout Orientation="Horizontal" Margin="5">
+							<Image Source="overtime.png"></Image>
+							<StackLayout>
+								<Label x:Name="OvertimeLabel" TextColor="Gray" Text="0h0min"></Label>
+								<Label Text="{i18n:Translate overtime_driving}" FontSize="10"></Label>
+							</StackLayout>
+						</StackLayout>
+
+						<StackLayout Orientation="Horizontal" Margin="5">
+							<Image Source="sum.png"></Image>
+							<StackLayout>
+								<Label x:Name="TotalDrivingLabel" Text="0h0min"></Label>
+								<Label Text="{i18n:Translate total_driving_time}" FontSize="10"></Label>
+							</StackLayout>
+						</StackLayout>
+
+						</StackLayout>
+
+			<StackLayout x:Name="MostUtilizedView" VerticalOptions="Center" HorizontalOptions="Center">
+			<Label Text="{i18n:Translate top_5_best_utilized}" TextColor="#3F51B5" Margin="3"></Label> 
+			<ScrollView Orientation="Horizontal">
+
+			<Grid Margin="8" x:Name="BestUtilizedGrid">
+
+            <Grid.RowDefinitions>
+    			<RowDefinition Height="*" />
+    			<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+  			</Grid.RowDefinitions>
+  			<Grid.ColumnDefinitions>
+    			<ColumnDefinition Width="auto" />
+    			<ColumnDefinition Width="auto" />
+    			<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+  			</Grid.ColumnDefinitions>
+				<Label Text="{i18n:Translate number}" Grid.Row="0" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="{i18n:Translate vehicle}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"></Label>
+				<Label Text="{i18n:Translate driver_count}" Grid.Row="0" Grid.Column="2" FontAttributes="Bold"></Label>
+				<Label Text="{i18n:Translate work_time_driving}"  Grid.Row="0" Grid.Column="3" FontAttributes="Bold"></Label>
+				<Label Text="{i18n:Translate overtime_driving}"  Grid.Row="0" Grid.Column="4" FontAttributes="Bold"></Label>
+				<Label Text="{i18n:Translate ratio}" Grid.Row="0" Grid.Column="5" FontAttributes="Bold"></Label>
+						
+				<Label Text="1" Grid.Row="1" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="2" Grid.Row="2" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="3" Grid.Row="3" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="4" Grid.Row="4" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="5" Grid.Row="5" Grid.Column="0" TextColor="Gray"></Label>
+						
+				<Label x:Name="VehicleFirst" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1"></Label>
+				<Label x:Name="VehicleSecond" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="1"></Label>
+				<Label x:Name="VehicleThird" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="1"></Label>
+				<Label x:Name="VehicleFourth" HorizontalTextAlignment="Center" Grid.Row="4" Grid.Column="1"></Label>
+				<Label x:Name="VehicleFifth" HorizontalTextAlignment="Center" Grid.Row="5" Grid.Column="1"></Label>
+
+				<Label x:Name="DriverCountFirst" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="2"></Label>
+				<Label x:Name="DriverCountSecond" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="2"></Label>
+				<Label x:Name="DriverCountThird" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="2"></Label>
+				<Label x:Name="DriverCountFourth" HorizontalTextAlignment="Center" Grid.Row="4" Grid.Column="2"></Label>
+				<Label x:Name="DriverCountFifth" HorizontalTextAlignment="Center" Grid.Row="5" Grid.Column="2"></Label>
+
+				<Label x:Name="WorkTimeFirst" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="1" Grid.Column="3"></Label>
+				<Label x:Name="WorkTimeSecond" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="2" Grid.Column="3"></Label>
+				<Label x:Name="WorkTimeThird" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="3" Grid.Column="3"></Label>
+				<Label x:Name="WorkTimeFourth" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="4" Grid.Column="3"></Label>
+				<Label x:Name="WorkTimeFifth" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="5" Grid.Column="3"></Label>
+
+				<Label x:Name="OvertimeFirst" Grid.Row="1" Grid.Column="4"></Label>
+				<Label x:Name="OvertimeSecond" Grid.Row="2" Grid.Column="4"></Label>
+				<Label x:Name="OvertimeThird" Grid.Row="3" Grid.Column="4"></Label>
+				<Label x:Name="OvertimeFourth" Grid.Row="4" Grid.Column="4"></Label>
+				<Label x:Name="OvertimeFifth" Grid.Row="5" Grid.Column="4"></Label>
+
+				<Label x:Name="RatioFirst" Grid.Row="1" Grid.Column="5"></Label>
+				<Label x:Name="RatioSecond" Grid.Row="2" Grid.Column="5"></Label>
+				<Label x:Name="RatioThird" Grid.Row="3" Grid.Column="5"></Label>
+				<Label x:Name="RatioFourth" Grid.Row="4" Grid.Column="5"></Label>
+				<Label x:Name="RatioFifth" Grid.Row="5" Grid.Column="5"></Label>
+
+
+			</Grid>
+
+			</ScrollView>
+		 </StackLayout>
+
+			<StackLayout x:Name="WorstUtilizedView" VerticalOptions="Center" HorizontalOptions="Center">
+			<Label Text="{i18n:Translate top_5_worst_utilized}" TextColor="#3F51B5" Margin="3"></Label> 
+			<ScrollView Orientation="Horizontal">
+			<Grid Margin="8" x:Name="WorstUtilizedGrid">
+
+            <Grid.RowDefinitions>
+    			<RowDefinition Height="*" />
+    			<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+  			</Grid.RowDefinitions>
+  			<Grid.ColumnDefinitions>
+    			<ColumnDefinition Width="auto" />
+    			<ColumnDefinition Width="auto" />
+    			<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+  			</Grid.ColumnDefinitions>
+				<Label Text="{i18n:Translate number}" Grid.Row="0" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="{i18n:Translate vehicle}" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"></Label>
+				<Label Text="{i18n:Translate driver_count}" Grid.Row="0" Grid.Column="2" FontAttributes="Bold"></Label>
+				<Label Text="{i18n:Translate work_time_driving}"  Grid.Row="0" Grid.Column="3" FontAttributes="Bold"></Label>
+				<Label Text="{i18n:Translate overtime_driving}"  Grid.Row="0" Grid.Column="4" FontAttributes="Bold"></Label>
+				<Label Text="{i18n:Translate ratio}" Grid.Row="0" Grid.Column="5" FontAttributes="Bold"></Label>
+						
+				<Label Text="1" Grid.Row="1" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="2" Grid.Row="2" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="3" Grid.Row="3" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="4" Grid.Row="4" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="5" Grid.Row="5" Grid.Column="0" TextColor="Gray"></Label>
+						
+				<Label x:Name="LeastVehicleFirst" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1"></Label>
+				<Label x:Name="LeastVehicleSecond" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="1"></Label>
+				<Label x:Name="LeastVehicleThird" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="1"></Label>
+				<Label x:Name="LeastVehicleFourth" HorizontalTextAlignment="Center" Grid.Row="4" Grid.Column="1"></Label>
+				<Label x:Name="LeastVehicleFifth" HorizontalTextAlignment="Center" Grid.Row="5" Grid.Column="1"></Label>
+
+				<Label x:Name="LeastDriverCountFirst" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="2"></Label>
+				<Label x:Name="LeastDriverCountSecond" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="2"></Label>
+				<Label x:Name="LeastDriverCountThird" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="2"></Label>
+				<Label x:Name="LeastDriverCountFourth" HorizontalTextAlignment="Center" Grid.Row="4" Grid.Column="2"></Label>
+				<Label x:Name="LeastDriverCountFifth" HorizontalTextAlignment="Center" Grid.Row="5" Grid.Column="2"></Label>
+
+				<Label x:Name="LeastWorkTimeFirst" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="1" Grid.Column="3"></Label>
+				<Label x:Name="LeastWorkTimeSecond" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="2" Grid.Column="3"></Label>
+				<Label x:Name="LeastWorkTimeThird" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="3" Grid.Column="3"></Label>
+				<Label x:Name="LeastWorkTimeFourth" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="4" Grid.Column="3"></Label>
+				<Label x:Name="LeastWorkTimeFifth" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="5" Grid.Column="3"></Label>
+
+				<Label x:Name="LeastOvertimeFirst" Grid.Row="1" Grid.Column="4"></Label>
+				<Label x:Name="LeastOvertimeSecond" Grid.Row="2" Grid.Column="4"></Label>
+				<Label x:Name="LeastOvertimeThird" Grid.Row="3" Grid.Column="4"></Label>
+				<Label x:Name="LeastOvertimeFourth" Grid.Row="4" Grid.Column="4"></Label>
+				<Label x:Name="LeastOvertimeFifth" Grid.Row="5" Grid.Column="4"></Label>
+
+				<Label x:Name="LeastRatioFirst" Grid.Row="1" Grid.Column="5"></Label>
+				<Label x:Name="LeastRatioSecond" Grid.Row="2" Grid.Column="5"></Label>
+				<Label x:Name="LeastRatioThird" Grid.Row="3" Grid.Column="5"></Label>
+				<Label x:Name="LeastRatioFourth" Grid.Row="4" Grid.Column="5"></Label>
+				<Label x:Name="LeastRatioFifth" Grid.Row="5" Grid.Column="5"></Label>
+
+
+			</Grid>
+
+			</ScrollView>
+			</StackLayout>
+		
+				</Grid>
+				</ScrollView>
+		</StackLayout>
+    </Gestures:GestureFrame>
+	</ContentPage.Content>
+</ContentPage>

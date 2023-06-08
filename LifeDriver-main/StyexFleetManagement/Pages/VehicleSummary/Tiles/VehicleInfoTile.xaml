@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" x:Class="StyexFleetManagement.Pages.VehicleSummary.Tiles.VehicleInfoTile">
+    <Frame BackgroundColor="White" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="False" OutlineColor="Black" HeightRequest="240">
+        <StackLayout BackgroundColor="Transparent" Margin="0" Spacing="0" Padding="0" x:Name="mainStack">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <StackLayout BackgroundColor="#37474F" Padding="3,0,0,1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" x:Name="header">
+                        <ffimageloading:CachedImage WidthRequest="24" HorizontalOptions="Start" x:Name="headerImage" Source="ic_vehicle_information_cell">
+                        </ffimageloading:CachedImage>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="titleLabel" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center">
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout x:Name="contentStack" Margin="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <!-- Grid Content -->
+                    <Label Text="Name:" FontAttributes="Bold" Grid.Row="0" Grid.Column="0">
+                    </Label>
+                    <Label x:Name="nameLabel" Grid.Row="0" Grid.Column="1" Text="{Binding SelectedVehicle.Description}">
+                    </Label>
+                    <Label Text="Registration:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0">
+                    </Label>
+                    <Label x:Name="regLabel" Grid.Row="1" Grid.Column="1" Text="{Binding SelectedVehicle.Registration}">
+                    </Label>
+                    <Label Text="Make:" FontAttributes="Bold" Grid.Row="2" Grid.Column="0">
+                    </Label>
+                    <Label x:Name="makeLabel" Grid.Row="2" Grid.Column="1" Text="{Binding SelectedVehicle.Make}">
+                    </Label>
+                    <Label Text="Model:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0">
+                    </Label>
+                    <Label x:Name="modelLabel" Grid.Row="3" Grid.Column="1" Text="{Binding SelectedVehicle.ModelYear}">
+                    </Label>
+                    <Label Text="Last Known Position:" FontAttributes="Bold" Grid.Row="4" Grid.Column="0">
+                    </Label>
+                    <Label x:Name="positionLabel" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LastKnownPosition.Location}">
+                    </Label>
+                    <Label x:Name="positinTimeLabel" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding LastKnownPosition.DateAsString}">
+                    </Label>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ContentView>

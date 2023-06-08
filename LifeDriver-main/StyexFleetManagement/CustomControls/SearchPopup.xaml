@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="StyexFleetManagement.CustomControls.SearchPopup"
+    xmlns:behaviours="clr-namespace:StyexFleetManagement.Behaviours;assembly=StyexFleetManagement">
+  <StackLayout x:Name="MainStack" BackgroundColor="White">
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <SearchBar x:Name="SearchBar" SearchCommand="{Binding SearchCommand}" SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}">
+                <SearchBar.Behaviors>
+                    <behaviours:TextChangedBehavior />
+                </SearchBar.Behaviors>
+            </SearchBar>
+            <ListView x:Name="listView" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Description}" TextColor="Black"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+  </StackLayout>
+</pages:PopupPage>

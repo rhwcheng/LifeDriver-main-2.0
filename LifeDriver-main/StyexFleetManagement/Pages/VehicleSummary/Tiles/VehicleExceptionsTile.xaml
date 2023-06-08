@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StyexFleetManagement.Pages.VehicleSummary.Tiles.VehicleExceptionsTile" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+    xmlns:customControls="clr-namespace:StyexFleetManagement.CustomControls" xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
+    <Frame BackgroundColor="White" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="False" OutlineColor="Black" HeightRequest="240">
+        <StackLayout BackgroundColor="Transparent" Margin="0" Spacing="0" Padding="0" x:Name="mainStack">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <StackLayout BackgroundColor="#37474F" Padding="3,0,0,1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" x:Name="header">
+                        <ffimageloading:CachedImage WidthRequest="24" HorizontalOptions="Start" x:Name="headerImage" Source="ic_vehicle_exception_cell">
+                        </ffimageloading:CachedImage>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="titleLabel" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center">
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout x:Name="contentStack" Margin="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <!-- Grid Content -->
+                         <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1">
+                            <Label Text="Max Speed" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center">
+                            </Label>
+                            <customControls:CircleLabel HorizontalOptions="Center" VerticalOptions="Center">
+                            <customControls:InnerCircleLabel HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label Text="{Binding MaxSpeed}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                                </Label>
+                                </customControls:InnerCircleLabel>
+                            </customControls:CircleLabel>
+                        </StackLayout>
+                         <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="1">
+                        <Label Text="Max RPM" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center">
+                        </Label>
+                        <customControls:CircleLabel HorizontalOptions="Center" VerticalOptions="Center">
+                            <customControls:InnerCircleLabel HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="{Binding MaxRPM}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            </Label>
+                                </customControls:InnerCircleLabel>
+                        </customControls:CircleLabel>
+                    </StackLayout>
+                    <chart:SfChart x:Name="exceptionBarGraph" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0">
+                      <chart:SfChart.PrimaryAxis>
+                          <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                              <chart:ChartAxisTitle Text="Event"/>
+                            </chart:CategoryAxis.Title>
+                          </chart:CategoryAxis>
+                        </chart:SfChart.PrimaryAxis>
+
+                        <chart:SfChart.SecondaryAxis>
+                          <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                              <chart:ChartAxisTitle Text="Count"/>
+                            </chart:NumericalAxis.Title>
+                          </chart:NumericalAxis>
+                        </chart:SfChart.SecondaryAxis>
+                    </chart:SfChart>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ContentView>

@@ -1,0 +1,127 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\covid_hotline.png" />
+    <None Remove="Images\covid_hotline.svg" />
+    <None Remove="Images\ic_splash.svg" />
+    <None Remove="Images\nfc_animation.gif" />
+    <None Remove="Images\sos_background.png" />
+    <None Remove="Images\sos_background.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\covid_hotline.png" />
+    <EmbeddedResource Include="Images\covid_hotline.svg" />
+    <EmbeddedResource Include="Images\ic_splash.svg" />
+    <EmbeddedResource Include="Images\nfc_animation.gif" />
+    <EmbeddedResource Include="Images\sos_background.png" />
+    <EmbeddedResource Include="Images\sos_background.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+  <PackageReference Include="Acr.UserDialogs" version="7.1.0.481" Version="7.1.0.481" />
+  <PackageReference Include="akavache" version="7.2.1" Version="7.2.1" />
+  <PackageReference Include="akavache.core" version="7.2.1" Version="7.2.1" />
+  <PackageReference Include="akavache.sqlite3" version="7.2.1" Version="7.2.1" />
+  <PackageReference Include="FubarCoder.RestSharp.Portable" version="3.3.0" Version="3.3.0" />
+  <PackageReference Include="FubarCoder.RestSharp.Portable.Core" version="4.0.8" Version="4.0.8" />
+  <PackageReference Include="FubarCoder.RestSharp.Portable.HttpClient" version="4.0.8" Version="4.0.8" />
+  <PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.1" />
+  <PackageReference Include="Microsoft.AppCenter.Crashes" Version="5.0.1" />
+  <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  <PackageReference Include="morelinq" version="3.4.2" Version="3.4.2" />
+  <PackageReference Include="Newtonsoft.Json" version="13.0.3" Version="13.0.3" />
+  <PackageReference Include="Plugin.NFC" Version="0.1.26" />
+  <PackageReference Include="protobuf-net" version="3.2.16" Version="3.2.16" />
+  <PackageReference Include="QRCoder" Version="1.4.3" />
+  <PackageReference Include="Refractored.MvvmHelpers" version="1.6.2" Version="1.6.2" />
+  <PackageReference Include="Rg.Plugins.Popup" version="2.1.0" Version="2.1.0" />
+  <PackageReference Include="Serilog" Version="2.12.0" />
+  <PackageReference Include="Shiny.Beacons" Version="2.0.0.2348-preview" />
+  <PackageReference Include="Shiny.BluetoothLE" Version="2.0.0.2356-preview" />
+  <PackageReference Include="Splat" version="14.6.8" Version="14.6.8" />
+  <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" version="2.1.4" Version="2.1.4" />
+  <PackageReference Include="SQLitePCLRaw.bundle_green" version="2.1.4" Version="2.1.4" />
+  <PackageReference Include="SQLitePCLRaw.core" version="2.1.4" Version="2.1.4" />
+  <PackageReference Include="Syncfusion.Xamarin.SfChart" version="18.4.0.48" Version="18.4.0.48" />
+  <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" version="21.1.39" Version="21.1.39" />
+  <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="21.1.39" />
+  <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="21.1.39" />
+  <PackageReference Include="UniversalBeaconLibrary" Version="3.2.0" />
+  <PackageReference Include="Validation" version="2.5.51" Version="2.5.51" />
+  <PackageReference Include="Xam.Plugin.Connectivity" version="3.2.0" Version="3.2.0" />
+  <PackageReference Include="Xam.Plugin.DeviceInfo" version="4.1.1" Version="4.1.1" />
+  <PackageReference Include="Xam.Plugins.Forms.ImageCircle" version="3.0.0.5" Version="3.0.0.5" />
+  <PackageReference Include="Xam.Plugins.Settings" version="3.1.1" Version="3.1.1" />
+  <PackageReference Include="Xamarin.FFImageLoading" version="2.4.11.982" Version="2.4.11.982" />
+  <PackageReference Include="Xamarin.FFImageLoading.Forms" version="2.4.11.982" Version="2.4.11.982" />
+  <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+  <PackageReference Include="Xamarin.Forms" version="5.0.0.2578" Version="5.0.0.2578" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+    <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StyexFleetManagement.MZone.Client\StyexFleetManagement.MZone.Client.csproj" />
+    <ProjectReference Include="..\StyexFleetManagement.Salus\StyexFleetManagement.Salus.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LoginPageStyex.xaml.cs">
+      <DependentUpon>LoginPageStyex.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CountdownTimerPage.xaml.cs">
+      <DependentUpon>CountdownTimerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CovidPage.xaml.cs">
+      <DependentUpon>CovidPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Resx\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\AddAccountPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\BeaconTaggingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\CountdownTimerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\CovidPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\ImagePreviewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\NfcPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\QrContactPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\SendPositionEventPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\SosPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resx\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resx\AppResources.th.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

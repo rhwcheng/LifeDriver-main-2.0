@@ -1,0 +1,1301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="above" xml:space="preserve">
+    <value>ข้างบน</value>
+  </data>
+  <data name="acceleration_label" xml:space="preserve">
+    <value>การเร่งความเร็ว</value>
+  </data>
+  <data name="acceleration_short_title" xml:space="preserve">
+    <value>เร่งความเร็ว</value>
+  </data>
+  <data name="accident_count" xml:space="preserve">
+    <value>จำนวนอุบัติเหตุ</value>
+  </data>
+  <data name="accident_count_dashboard" xml:space="preserve">
+    <value>อุบัติเหตุ(ครั้ง)</value>
+  </data>
+  <data name="accident_label" xml:space="preserve">
+    <value>อุบัติเหตุ</value>
+  </data>
+  <data name="accident_summary_description" xml:space="preserve">
+    <value>รายงานรายละเอียดข้อมูลอุบัติเหตุต่อวินาที,พื้นที่ได้รับผลกระทบ ,ตำแหน่งสถานที่เกิดอุบัติเหตุรวมทั้งค่าความเร่งความเร็ว</value>
+  </data>
+  <data name="action_account_settings" xml:space="preserve">
+    <value>การตั้งค่าบัญชี</value>
+  </data>
+  <data name="action_add_to_favourites" xml:space="preserve">
+    <value>เพิ่มในรายการโปรด</value>
+  </data>
+  <data name="action_change_map_type" xml:space="preserve">
+    <value>เปลี่ยนประเภทแผนที่</value>
+  </data>
+  <data name="action_clear_cache" xml:space="preserve">
+    <value>ล้างข้อมูลแคช</value>
+  </data>
+  <data name="action_logout" xml:space="preserve">
+    <value>ออกจากระบบ</value>
+  </data>
+  <data name="action_refresh" xml:space="preserve">
+    <value>รีเฟรช</value>
+  </data>
+  <data name="action_refresh_user_settings" xml:space="preserve">
+    <value>รีเฟรชการตั้งค่า</value>
+  </data>
+  <data name="action_remove_from_favourites" xml:space="preserve">
+    <value>ลบรายการโปรด</value>
+  </data>
+  <data name="action_reset_dashboard_settings" xml:space="preserve">
+    <value>รีเซ็ตการตั้งค่าหน้าแดชบอร์ด</value>
+  </data>
+  <data name="action_share_report" xml:space="preserve">
+    <value>แบ่งปันรายงาน</value>
+  </data>
+  <data name="alerts" xml:space="preserve">
+    <value>การแจ้งเตือน</value>
+  </data>
+  <data name="alert_summary_description" xml:space="preserve">
+    <value>รายละเอียดการแจ้งเตือนยานพาหนะ</value>
+  </data>
+  <data name="allow_multiple_trip_plotting_lable" xml:space="preserve">
+    <value>อนุญาตให้วาดหลายเส้นทางได้</value>
+  </data>
+  <data name="all_label" xml:space="preserve">
+    <value>ทั้งหมด</value>
+  </data>
+  <data name="app_is_recording" xml:space="preserve">
+    <value>แอปพลิเคชั่นกำลังบันทึก</value>
+  </data>
+  <data name="app_is_running" xml:space="preserve">
+    <value>แอปพลิเคชั่นกำลังทำงาน</value>
+  </data>
+  <data name="app_name" xml:space="preserve">
+    <value>Fleet BI</value>
+  </data>
+  <data name="authentication_error" xml:space="preserve">
+    <value>ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง</value>
+  </data>
+  <data name="average" xml:space="preserve">
+    <value>เฉลี่ย</value>
+  </data>
+  <data name="average_consumption" xml:space="preserve">
+    <value>ปริมาณการเผาผลาญเฉลี่ย</value>
+  </data>
+  <data name="average_fuel_consumption" xml:space="preserve">
+    <value>ปริมาณการเผาผลาญเฉลี่ย</value>
+  </data>
+  <data name="average_short" xml:space="preserve">
+    <value>เฉลี่ย</value>
+  </data>
+  <data name="average_speed" xml:space="preserve">
+    <value>ความเร็วเฉลี่ย</value>
+  </data>
+  <data name="back_button" xml:space="preserve">
+    <value>กลับ</value>
+  </data>
+  <data name="below" xml:space="preserve">
+    <value>ด้านล่าง</value>
+  </data>
+  <data name="brakes_title" xml:space="preserve">
+    <value>เบรค</value>
+  </data>
+  <data name="braking_label" xml:space="preserve">
+    <value>เบรค</value>
+  </data>
+  <data name="button_cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="button_login" xml:space="preserve">
+    <value>เข้าสู่ระบบ</value>
+  </data>
+  <data name="button_ok" xml:space="preserve">
+    <value>ตกลง</value>
+  </data>
+  <data name="button_plot" xml:space="preserve">
+    <value>วาดเส้นทาง</value>
+  </data>
+  <data name="button_poll" xml:space="preserve">
+    <value>ดึงข้อมูล</value>
+  </data>
+  <data name="coming_soon" xml:space="preserve">
+    <value>พร้อมใช้งานเร็ว ๆ นี้</value>
+  </data>
+  <data name="compliance_label" xml:space="preserve">
+    <value>ความสำเร็จ</value>
+  </data>
+  <data name="consumption" xml:space="preserve">
+    <value>การเผาผลาญ</value>
+  </data>
+  <data name="consumption_measures_description" xml:space="preserve">
+    <value>รายงานอัตราการสิ้นเปลืองเชื้อเพลิง ซึ่งเป็นผลจากปัจจัยต่างๆในการขับรถของคนขับ</value>
+  </data>
+  <data name="consumption_short" xml:space="preserve">
+    <value>อัตราการสิ้นเปลืองเชื้อเพลิง </value>
+  </data>
+  <data name="copyright" xml:space="preserve">
+    <value>สงวนลิขสิทธิ์© 2018, Styex Solutions cc</value>
+  </data>
+  <data name="cornering_label" xml:space="preserve">
+    <value>เข้าโค้ง</value>
+  </data>
+  <data name="cost" xml:space="preserve">
+    <value>ต้นทุน</value>
+  </data>
+  <data name="custom" xml:space="preserve">
+    <value>กำหนดเอง</value>
+  </data>
+  <data name="custom_data_summary_description" xml:space="preserve">
+    <value>รายงานช่วยวางแผนกิจลงในกราฟวิเคราะห์เหตุการณ์</value>
+  </data>
+  <data name="custom_end_date" xml:space="preserve">
+    <value>กำหนดวันที่สิ้นสุด</value>
+  </data>
+  <data name="custom_start_date" xml:space="preserve">
+    <value>กำหนดวันที่เริ่มต้น</value>
+  </data>
+  <data name="custom_value" xml:space="preserve">
+    <value>กำหนดค่าที่เลือกเอง</value>
+  </data>
+  <data name="daily_avg" xml:space="preserve">
+    <value>เฉลี่ยต่อวัน</value>
+  </data>
+  <data name="dashboard_title" xml:space="preserve">
+    <value>แผงควบคุม</value>
+  </data>
+  <data name="date_range" xml:space="preserve">
+    <value>ช่วงวันที่</value>
+  </data>
+  <data name="days" xml:space="preserve">
+    <value>วัน</value>
+  </data>
+  <data name="device_activity_dashboard" xml:space="preserve">
+    <value>รถอัพเดท</value>
+  </data>
+  <data name="device_id" xml:space="preserve">
+    <value>เครื่อง ID</value>
+  </data>
+  <data name="distance" xml:space="preserve">
+    <value>ระยะทาง</value>
+  </data>
+  <data name="distance_average_total" xml:space="preserve">
+    <value>ระยะทางรวม / เฉลี่ย</value>
+  </data>
+  <data name="distance_km" xml:space="preserve">
+    <value>กิโลเมตร</value>
+  </data>
+  <data name="distance_km_abbr" xml:space="preserve">
+    <value>หน่วย กม.</value>
+  </data>
+  <data name="distance_marker" xml:space="preserve">
+    <value>ระยะสังเกตุ,ระยะกำหนด</value>
+  </data>
+  <data name="distance_miles" xml:space="preserve">
+    <value>ไมล์นานาชาติ</value>
+  </data>
+  <data name="distance_miles_abbr" xml:space="preserve">
+    <value>ไมล์</value>
+  </data>
+  <data name="distance_nautical_miles" xml:space="preserve">
+    <value>ไมล์ทะเล</value>
+  </data>
+  <data name="distance_nautical_miles_abbr" xml:space="preserve">
+    <value>ไมล์</value>
+  </data>
+  <data name="distance_short_title" xml:space="preserve">
+    <value>ระยะทาง</value>
+  </data>
+  <data name="distance_with_value" xml:space="preserve">
+    <value>ระยะทาง: %1$s</value>
+  </data>
+  <data name="dist_driven_dashboard" xml:space="preserve">
+    <value>ระยะทางขับเคลื่อน (กม.)</value>
+  </data>
+  <data name="driver_code" xml:space="preserve">
+    <value>รหัสผู้ขับขี่</value>
+  </data>
+  <data name="driver_count" xml:space="preserve">
+    <value>จำนวนผู้ขับขี่</value>
+  </data>
+  <data name="driver_label" xml:space="preserve">
+    <value>ผู้ขับ</value>
+  </data>
+  <data name="driver_route_description" xml:space="preserve">
+    <value>รายงานการเดินทางสำหรับผู้ขับขี่รายคน </value>
+  </data>
+  <data name="driver_stats_description" xml:space="preserve">
+    <value>รายงานการขับขี่แบ่งตามกลุ่มผู้ขับขี่ ประเภทใบขับขี่</value>
+  </data>
+  <data name="drive_duration" xml:space="preserve">
+    <value>ระยะเวลาการขับขี่</value>
+  </data>
+  <data name="drive_duration_dashboard" xml:space="preserve">
+    <value>ระยะเวลาการขับรถ (นาที)</value>
+  </data>
+  <data name="driving" xml:space="preserve">
+    <value>ขับรถ</value>
+  </data>
+  <data name="driving_time" xml:space="preserve">
+    <value>เวลาขับขี่</value>
+  </data>
+  <data name="dtc_code_maintenance_description" xml:space="preserve">
+    <value>รายงานการบำรุงรักษา DTC Code และสถานะล่าสุด</value>
+  </data>
+  <data name="duration_marker" xml:space="preserve">
+    <value>กำหนดระยะเวลา</value>
+  </data>
+  <data name="duration_short_title" xml:space="preserve">
+    <value>ระยะเวลา</value>
+  </data>
+  <data name="duration_with_value" xml:space="preserve">
+    <value>ระยเวลา: %1$s</value>
+  </data>
+  <data name="end" xml:space="preserve">
+    <value>สิ้นสุด</value>
+  </data>
+  <data name="end_date" xml:space="preserve">
+    <value>วันที่สิ้นสุด</value>
+  </data>
+  <data name="end_location" xml:space="preserve">
+    <value>สิ้นสุดตำแหน่ง</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>รายการ</value>
+  </data>
+  <data name="error_dashboard_tile" xml:space="preserve">
+    <value>เกิดข้อผิดพลาดขณะตั้งค่า กรุณาลองอีกครั้ง.</value>
+  </data>
+  <data name="error_label" xml:space="preserve">
+    <value>ความผิดพลาด</value>
+  </data>
+  <data name="error_loading_report" xml:space="preserve">
+    <value>ไม่สามารถรับข้อมูลรายงาน</value>
+  </data>
+  <data name="error_position" xml:space="preserve">
+    <value>ไม่สามารถรับข้อมูลรายงาน</value>
+  </data>
+  <data name="error_trip_information" xml:space="preserve">
+    <value>ไม่สามารถรับข้อมูลรายงาน</value>
+  </data>
+  <data name="exceptions" xml:space="preserve">
+    <value>พฤติกรรมเกินกำหนด</value>
+  </data>
+  <data name="exception_acceleration" xml:space="preserve">
+    <value>เร่งความเร็วเกินกำหนด</value>
+  </data>
+  <data name="exception_accident" xml:space="preserve">
+    <value>อุบัติเหตุ</value>
+  </data>
+  <data name="exception_alerts_label" xml:space="preserve">
+    <value>การแจ้งเตือน  (จำนวน)</value>
+  </data>
+  <data name="exception_cornering" xml:space="preserve">
+    <value>เข้าโค้งอันตราย</value>
+  </data>
+  <data name="exception_count" xml:space="preserve">
+    <value>พฤติกรรมเกินกำหนด(ครั้ง)</value>
+  </data>
+  <data name="exception_freewheeling" xml:space="preserve">
+    <value>ออกตัวกระชากเกินกำหนด</value>
+  </data>
+  <data name="exception_harshbreaking" xml:space="preserve">
+    <value>เบรคกระทันหันเกินกำหนด</value>
+  </data>
+  <data name="exception_idle" xml:space="preserve">
+    <value>จอดไม่ดับเครื่องเกินกำหนด</value>
+  </data>
+  <data name="exception_lanechange" xml:space="preserve">
+    <value>เปลี่ยนช่องทางกระทันหันเกินกำหนด</value>
+  </data>
+  <data name="exception_recklessdriving" xml:space="preserve">
+    <value>ขับรถประมาทเกินกำหนด</value>
+  </data>
+  <data name="exception_rpm" xml:space="preserve">
+    <value>รอบเครื่องสูง เกินกำหนด</value>
+  </data>
+  <data name="exception_speeding" xml:space="preserve">
+    <value>ใช้ความเร็วเกิน  เกินกำหนด</value>
+  </data>
+  <data name="exception_summary_description" xml:space="preserve">
+    <value>รายงานพฤติกรรมเกินกำหนด</value>
+  </data>
+  <data name="exception_swerving" xml:space="preserve">
+    <value>เลี้ยว</value>
+  </data>
+  <data name="exception_title" xml:space="preserve">
+    <value>พฤติกรรมเกินกำหนด</value>
+  </data>
+  <data name="female" xml:space="preserve">
+    <value>เพศหญิง</value>
+  </data>
+  <data name="fleet_exceptions" xml:space="preserve">
+    <value>พฤติกรรมเกินกำหนด(แบบกลุ่ม)</value>
+  </data>
+  <data name="fleet_utilization_description" xml:space="preserve">
+    <value>การใช้งานยานพาหนะ(แบบกลุ่ม)ใช้งานแบบมากที่สุดและน้อยที่สุด</value>
+  </data>
+  <data name="fleet_utilization_report" xml:space="preserve">
+    <value>พฤติกรรมเกินกำหนด</value>
+  </data>
+  <data name="freewheeling_label" xml:space="preserve">
+    <value>ออกตัวกระชาก</value>
+  </data>
+  <data name="fuel" xml:space="preserve">
+    <value>เชื้อเพลิง</value>
+  </data>
+  <data name="fuel_consumption" xml:space="preserve">
+    <value>อัตราการสิ้นเปลืองเชื้อเพลิง </value>
+  </data>
+  <data name="fuel_cons_dashboard_label" xml:space="preserve">
+    <value>การใช้งานเชื้อเพลิง</value>
+  </data>
+  <data name="fuel_cost" xml:space="preserve">
+    <value>ต้นทุน เชื้อเพลิง</value>
+  </data>
+  <data name="fuel_cost_per_km" xml:space="preserve">
+    <value>ค่าเชื้อเพลิงต่อกิโลเมตร</value>
+  </data>
+  <data name="fuel_entry_consumption_description" xml:space="preserve">
+    <value>รายละเอียดการสิ้นเปลื่องน้ำมัน</value>
+  </data>
+  <data name="fuel_entry_costs_description" xml:space="preserve">
+    <value>รายละเอียดการสิ้นเปลืองต้นทุนน้ำมันเชื้อเพลิง</value>
+  </data>
+  <data name="fuel_entry_summary_description" xml:space="preserve">
+    <value>รายงานปริมาณน้ำมันเชื่อเพลิงรวมและเฉลี่ย</value>
+  </data>
+  <data name="fuel_level" xml:space="preserve">
+    <value>ระดับน้ำมัน</value>
+  </data>
+  <data name="fuel_level_monitor_description" xml:space="preserve">
+    <value>รายละเอียดระดับน้ำมันจาก ODB และ Analog</value>
+  </data>
+  <data name="fuel_marker" xml:space="preserve">
+    <value>ระดับน้ำมันที่กำหนด/สนใจ</value>
+  </data>
+  <data name="fuel_source" xml:space="preserve">
+    <value>แหล่งน้ำมัน</value>
+  </data>
+  <data name="fuel_theft" xml:space="preserve">
+    <value>การโจรกรรมน้ำมัน</value>
+  </data>
+  <data name="fuel_theft_dashboard_label" xml:space="preserve">
+    <value>การโจรกรรมน้ำมัน(%)</value>
+  </data>
+  <data name="fuel_used" xml:space="preserve">
+    <value>ใช้น้ำมัน</value>
+  </data>
+  <data name="fuel_used_short" xml:space="preserve">
+    <value>ใช้น้ำมัน</value>
+  </data>
+  <data name="goal" xml:space="preserve">
+    <value>เป้าหมาย</value>
+  </data>
+  <data name="gray_marker_definition" xml:space="preserve">
+    <value>รถอื่น ๆ ทั้งหมด</value>
+  </data>
+  <data name="hours" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="icon" xml:space="preserve">
+    <value>ไอคอน</value>
+  </data>
+  <data name="idle_dashboard_label" xml:space="preserve">
+    <value>จอดรถไม่ดับเครื่อง</value>
+  </data>
+  <data name="idle_dur" xml:space="preserve">
+    <value>ระยะเวลาการจอดรถไม่ดับเครื่อง</value>
+  </data>
+  <data name="idle_label" xml:space="preserve">
+    <value>จอดรถไม่ดับเครื่อง</value>
+  </data>
+  <data name="idle_time" xml:space="preserve">
+    <value>เวลาการจอดรถไม่ดับเครื่อง</value>
+  </data>
+  <data name="idle_time_dashboard" xml:space="preserve">
+    <value>จอดรถไม่ดับเครื่อง (นาที)</value>
+  </data>
+  <data name="idling" xml:space="preserve">
+    <value>เริ่มจอดรถไม่ดับเครื่อง</value>
+  </data>
+  <data name="invalid_value" xml:space="preserve">
+    <value>โมฆะ</value>
+  </data>
+  <data name="kpi_alerts_title" xml:space="preserve">
+    <value>แจ้งเตือน KPI</value>
+  </data>
+  <data name="label_birthDate" xml:space="preserve">
+    <value>วันเกิด</value>
+  </data>
+  <data name="label_canbus" xml:space="preserve">
+    <value>CANBus</value>
+  </data>
+  <data name="label_co2" xml:space="preserve">
+    <value>CO2</value>
+  </data>
+  <data name="label_driverId" xml:space="preserve">
+    <value>หมายเลขผู้ขับขี่</value>
+  </data>
+  <data name="label_driver_filtered" xml:space="preserve">
+    <value>ตรวจสอบหมายเลขผู้ขับขี่</value>
+  </data>
+  <data name="label_expiraryDate" xml:space="preserve">
+    <value>วันหมดอายุ</value>
+  </data>
+  <data name="label_fuel_meter" xml:space="preserve">
+    <value>หน่วย น้ำมัน</value>
+  </data>
+  <data name="label_gender" xml:space="preserve">
+    <value>เพศ</value>
+  </data>
+  <data name="label_in_trip" xml:space="preserve">
+    <value>กำลังเดินทาง</value>
+  </data>
+  <data name="label_is_idling" xml:space="preserve">
+    <value>กำลังจอดรถไม่ดับเครื่อง</value>
+  </data>
+  <data name="label_licenceNumber" xml:space="preserve">
+    <value>เลขที่ใบอนุญาติ</value>
+  </data>
+  <data name="label_licenceType" xml:space="preserve">
+    <value>ประเภทใบอนุญาติ</value>
+  </data>
+  <data name="label_login" xml:space="preserve">
+    <value>เข้าสู่ระบบ</value>
+  </data>
+  <data name="label_mass_airflow" xml:space="preserve">
+    <value>มวลอากาศ</value>
+  </data>
+  <data name="label_none" xml:space="preserve">
+    <value>ไม่มี</value>
+  </data>
+  <data name="label_not_in_trip" xml:space="preserve">
+    <value>ไม่มีการเดินทาง</value>
+  </data>
+  <data name="label_no_trips" xml:space="preserve">
+    <value>ไม่มีการเดินทาง ในช่วงเวลานั้นๆ</value>
+  </data>
+  <data name="label_obdii" xml:space="preserve">
+    <value>OBDII</value>
+  </data>
+  <data name="label_password" xml:space="preserve">
+    <value>รหัสผ่าน</value>
+  </data>
+  <data name="label_requires_attention" xml:space="preserve">
+    <value>ข้อมูลไม่อัพเดท โปรดตรวจสอบ</value>
+  </data>
+  <data name="label_rfe" xml:space="preserve">
+    <value>RFE</value>
+  </data>
+  <data name="label_server" xml:space="preserve">
+    <value>เซิฟเวอร์</value>
+  </data>
+  <data name="label_unknown_vehicle_group" xml:space="preserve">
+    <value>ไม่ทราบกลุ่มรถ</value>
+  </data>
+  <data name="label_updated" xml:space="preserve">
+    <value>อัพเดท</value>
+  </data>
+  <data name="label_username" xml:space="preserve">
+    <value>ชื่อผู้ใช้งาน</value>
+  </data>
+  <data name="label_vehicles" xml:space="preserve">
+    <value>คัน</value>
+  </data>
+  <data name="landing_page_title" xml:space="preserve">
+    <value>ไปยัง หน้า</value>
+  </data>
+  <data name="lane_change_label" xml:space="preserve">
+    <value>เปลี่ยนช่องทาง</value>
+  </data>
+  <data name="last_event_received" xml:space="preserve">
+    <value>สถานะสุดท้าย %1$s ผ่านมา</value>
+  </data>
+  <data name="last_known_position" xml:space="preserve">
+    <value>ตำแหน่งสุดท้ายที่รู้จัก</value>
+  </data>
+  <data name="last_location" xml:space="preserve">
+    <value>สถานที่ล่าสุด</value>
+  </data>
+  <data name="last_reported" xml:space="preserve">
+    <value>รายงานล่าสุด</value>
+  </data>
+  <data name="last_trips" xml:space="preserve">
+    <value>การเดินทางล่าลุด</value>
+  </data>
+  <data name="last_x_days" xml:space="preserve">
+    <value>เมื่อ {0} วันที่แล้ว</value>
+  </data>
+  <data name="last_x_months" xml:space="preserve">
+    <value>เมื่อ {0} เดือนที่แล้ว</value>
+  </data>
+  <data name="last_x_weeks" xml:space="preserve">
+    <value>เมื่อ {0} สัปดาห์ที่แล้ว</value>
+  </data>
+  <data name="least_exceptions" xml:space="preserve">
+    <value>พฤติกรรมเกินกำหนด น้อยที่สุด</value>
+  </data>
+  <data name="least_fuel_efficient" xml:space="preserve">
+    <value>การใช้น้ำมันอย่างมีประสิทธิภาพน้อยที่สุด</value>
+  </data>
+  <data name="limit_label" xml:space="preserve">
+    <value>จำกัด</value>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>กำลังโหลด</value>
+  </data>
+  <data name="loading_report" xml:space="preserve">
+    <value>กำลังโหลดรายงาน</value>
+  </data>
+  <data name="location_monitor_description" xml:space="preserve">
+    <value>สถิติการตรวจสอบตำแหน่ง</value>
+  </data>
+  <data name="location_updates" xml:space="preserve">
+    <value>อัพเดทตำแหน่ง</value>
+  </data>
+  <data name="logging_started" xml:space="preserve">
+    <value>การบันทึกเริ่มต้น</value>
+  </data>
+  <data name="logging_stopped" xml:space="preserve">
+    <value>การบันทึกสิ้นสุด</value>
+  </data>
+  <data name="login_error_credentials_missing" xml:space="preserve">
+    <value>กรุณากรอก ชื่อผู้ใช้งาน กับ รหัสผ่าน</value>
+  </data>
+  <data name="login_progress_signing_in" xml:space="preserve">
+    <value>กำลังลงชื่อเข้าใช้งาน....</value>
+  </data>
+  <data name="logout_confirmation_question" xml:space="preserve">
+    <value>คุณต้องการออกจากระบบใช้หรือไม่</value>
+  </data>
+  <data name="l_100km" xml:space="preserve">
+    <value>ล/100 กม.</value>
+  </data>
+  <data name="male" xml:space="preserve">
+    <value>เพศชาย</value>
+  </data>
+  <data name="map_default_vehicle_group_title" xml:space="preserve">
+    <value>แผนที่กลุ่มรถเริ่มต้น</value>
+  </data>
+  <data name="marker_color_codes" xml:space="preserve">
+    <value>เครื่องหมายรหัสสี</value>
+  </data>
+  <data name="marker_legend_black" xml:space="preserve">
+    <value>ดับเครื่องยนต์</value>
+  </data>
+  <data name="marker_legend_green" xml:space="preserve">
+    <value>กำลังเดินทาง</value>
+  </data>
+  <data name="marker_legend_purple" xml:space="preserve">
+    <value>ตำแหน่งสุดท้ายก่อน GPS Lost</value>
+  </data>
+  <data name="marker_legend_red" xml:space="preserve">
+    <value>ข้อมูลไม่อัพเดท โปรดตรวจสอบ</value>
+  </data>
+  <data name="marker_legend_yellow" xml:space="preserve">
+    <value>จอดรถไม่ดับเครื่อง</value>
+  </data>
+  <data name="max_rpm" xml:space="preserve">
+    <value>รอบเครื่อง สูงสุด</value>
+  </data>
+  <data name="max_speed" xml:space="preserve">
+    <value>ความเร็ว สูงสุด</value>
+  </data>
+  <data name="max_speed_dashboard" xml:space="preserve">
+    <value>ความเร็ว สูงสุด(กม)</value>
+  </data>
+  <data name="max_speed_label" xml:space="preserve">
+    <value>ความเร็ว สูงสุด</value>
+  </data>
+  <data name="minutes" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="more_than_year" xml:space="preserve">
+    <value>มากกว่า 1 ปี</value>
+  </data>
+  <data name="most_exceptions" xml:space="preserve">
+    <value>พฤติกรรมเกินกำหนด มากที่สุด</value>
+  </data>
+  <data name="most_fuel_efficient" xml:space="preserve">
+    <value>การใช้น้ำมันอย่างมีประสิทธิภาพมากที่สุด</value>
+  </data>
+  <data name="mzone_cost" xml:space="preserve">
+    <value>MZone ราคา</value>
+  </data>
+  <data name="non_reporting" xml:space="preserve">
+    <value>ไม่มีรายงาน</value>
+  </data>
+  <data name="non_reporting_label" xml:space="preserve">
+    <value>ไม่มีรายงาน</value>
+  </data>
+  <data name="not_available_abbreviation" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="no_b_licences" xml:space="preserve">
+    <value>B1 - B4 ใบอนุญาต</value>
+  </data>
+  <data name="no_data_error" xml:space="preserve">
+    <value>ไม่มีข้อมูลถูกส่งคืน</value>
+  </data>
+  <data name="no_data_message" xml:space="preserve">
+    <value>ไม่มีข้อมูลสำหรับรายการนี้</value>
+  </data>
+  <data name="no_favourite_reports" xml:space="preserve">
+    <value>ไม่มีรายงานโปรด</value>
+  </data>
+  <data name="no_favourite_reports_description" xml:space="preserve">
+    <value>เพิ่มรายงานนี้เป็นรายงานโปรดกดปุ่ม</value>
+  </data>
+  <data name="no_personal_licences" xml:space="preserve">
+    <value>ส่วนบุคคล ใบอนุญาต</value>
+  </data>
+  <data name="no_trips_found" xml:space="preserve">
+    <value>ไม่มีการเดินทางสำหรับรถคันนี้</value>
+  </data>
+  <data name="no_t_licences" xml:space="preserve">
+    <value>T1 - T4 ใบอนุญาต</value>
+  </data>
+  <data name="number" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="number_of_vehicles" xml:space="preserve">
+    <value>จำนวนรถ</value>
+  </data>
+  <data name="obd_route_data" xml:space="preserve">
+    <value>ข้อมูลการเดินทาง(ODB)</value>
+  </data>
+  <data name="operational_alerts_title" xml:space="preserve">
+    <value>การดำเนินการแจ้งเตือน</value>
+  </data>
+  <data name="overtime" xml:space="preserve">
+    <value>ล่วงเวลา</value>
+  </data>
+  <data name="overtime_driving" xml:space="preserve">
+    <value>ขับรถล่วงเวลา</value>
+  </data>
+  <data name="over_speed_dashboard" xml:space="preserve">
+    <value>ความเร็วเกินกำหนด(กม)</value>
+  </data>
+  <data name="parked" xml:space="preserve">
+    <value>จอด</value>
+  </data>
+  <data name="parse_error" xml:space="preserve">
+    <value>เกิดข้อผิดพลาดขณะประมวลผล</value>
+  </data>
+  <data name="personal_logbook_location_message" xml:space="preserve">
+    <value>การเดินทางส่วนบุคคลช่วยให้โทรศัพท์สามารถส่งตำแหน่งและข้อมูลการเดินทางขั้นพื้นฐานสำหรับผู้ใช้. เมื่อเปิดใช้งานฟังก์ชันนี้คุณยินยอมให้ส่งตำแหน่งไปยังอุปกรณ์เพื่อการวิเคราะห์. 
+การเดินทางส่วนบุคคลต้องการให้ลงทะเบียน,หมายเลขโทรศัพท์ของคุณหากคุณยังไม่ได้ดำเนินการดังกล่าวโปรดติดต่อผู้ดูแลระบบของคุณ
+สำหรับความช่วยเหลือ.</value>
+  </data>
+  <data name="personal_logbook_phone_note" xml:space="preserve">
+    <value>หมายเหตุ: ผู้ดูแลระบบของคุณอาจให้รหัสโทรศัพท์ใหม่ซึ่งคุณสามารถป้อนรหัสโทรศัพท์นี้ลงในช่องรหัสโทรศัพท์ได้</value>
+  </data>
+  <data name="personal_logbook_phone_registration_steps" xml:space="preserve">
+    <value>1. ไปที่การตั้งค่าและค้นหาส่วนการเดินทางส่วนบุคคล&lt;/br&gt;
+2. ช่องหมายเลขโทรศัพท์จะปรากฏขึ้น
+&lt;/br&gt;3. ระบุหมายเลขโทรศัพท์ให้กับผู้ดูแลระบบของคุณ&lt;/br&gt;
+4. ผู้ดูแลระบบจะลงทะเบียนหมายเลขโทรศัพท์ของคุณเพื่อใช้</value>
+  </data>
+  <data name="personal_logbook_phone_registration_title" xml:space="preserve">
+    <value>การลงทะเบียนรหัสโทรศัพท์ของคุณ</value>
+  </data>
+  <data name="per_variable_display_description" xml:space="preserve">
+    <value>รายงานแบบกราฟแสดงระยะทางและเวลา</value>
+  </data>
+  <data name="per_vehicle" xml:space="preserve">
+    <value>ต่อคัน</value>
+  </data>
+  <data name="phone_id" xml:space="preserve">
+    <value>รหัสโทรศัพท์</value>
+  </data>
+  <data name="please_wait" xml:space="preserve">
+    <value>กรุณารอสักครู่</value>
+  </data>
+  <data name="poi_activity_description" xml:space="preserve">
+    <value>รายะเอียดสถานที่ที่เข้าจอด แบบละเอียดรายคัน</value>
+  </data>
+  <data name="poll_command_sent" xml:space="preserve">
+    <value>ดึงข้อมูล</value>
+  </data>
+  <data name="pref_currency" xml:space="preserve">
+    <value>ค่าเงิน</value>
+  </data>
+  <data name="pref_distance_measurement_unit" xml:space="preserve">
+    <value>ระยะทาง</value>
+  </data>
+  <data name="pref_fluid_measurement_unit" xml:space="preserve">
+    <value>ของแหลว</value>
+  </data>
+  <data name="previous_month" xml:space="preserve">
+    <value>เดือนก่อนหน้า</value>
+  </data>
+  <data name="previous_week" xml:space="preserve">
+    <value>สัปดาห์ก่อนหน้า</value>
+  </data>
+  <data name="ratio" xml:space="preserve">
+    <value>อัตราส่วน</value>
+  </data>
+  <data name="reckless_driving_label" xml:space="preserve">
+    <value>ขับรถประมาท</value>
+  </data>
+  <data name="registration" xml:space="preserve">
+    <value>ลงทะเบียน</value>
+  </data>
+  <data name="remove_report_confirmation" xml:space="preserve">
+    <value>ลบรายงานออกจากรายงานโปรด</value>
+  </data>
+  <data name="reporting_interval" xml:space="preserve">
+    <value>ช่วงการรายงาน (นาที)</value>
+  </data>
+  <data name="reports_title" xml:space="preserve">
+    <value>รายงาน</value>
+  </data>
+  <data name="report_title_actions" xml:space="preserve">
+    <value>การปฏิบัติ</value>
+  </data>
+  <data name="report_title_alert_notifications" xml:space="preserve">
+    <value>การแจ้งเตือน</value>
+  </data>
+  <data name="report_title_alert_summary" xml:space="preserve">
+    <value>สรุปการแจ้งเตือน</value>
+  </data>
+  <data name="report_title_dlt_driver_stats" xml:space="preserve">
+    <value>สถิติผู้ขับขี่ DLT</value>
+  </data>
+  <data name="report_title_driver_route_activity" xml:space="preserve">
+    <value>พฤติกรรมการเดินทางผู้ขับขี่</value>
+  </data>
+  <data name="report_title_driving_summary" xml:space="preserve">
+    <value>สรุปการขับขี่</value>
+  </data>
+  <data name="report_title_entities" xml:space="preserve">
+    <value>รายงานทั่วไป</value>
+  </data>
+  <data name="report_title_fleet" xml:space="preserve">
+    <value>ยานพาหนะ</value>
+  </data>
+  <data name="report_title_fleet_accident_summary" xml:space="preserve">
+    <value>สรุปอุบัติเหตุ</value>
+  </data>
+  <data name="report_title_fleet_custom_data_summary" xml:space="preserve">
+    <value>สรุปข้อมูลที่กำหนด</value>
+  </data>
+  <data name="report_title_fleet_dtc_code_maintenance" xml:space="preserve">
+    <value>DTC โค๊ดแจ้งเตือนเครื่องยนต์สำหรับซ่อมบำรุง</value>
+  </data>
+  <data name="report_title_fleet_exception_summary" xml:space="preserve">
+    <value>สรุปพฤติกรรมเกินกำหนด</value>
+  </data>
+  <data name="report_title_fleet_obd_route_data" xml:space="preserve">
+    <value>OBD ข้อมูลเส้นทาง </value>
+  </data>
+  <data name="report_title_fleet_route_activity" xml:space="preserve">
+    <value>พฤติกรรมการเดินทาง</value>
+  </data>
+  <data name="report_title_fleet_total_cost_of_ownership" xml:space="preserve">
+    <value>ต้นทุนทั้งหมดสำหรับผู้ประกอบการ</value>
+  </data>
+  <data name="report_title_fleet_utilization" xml:space="preserve">
+    <value>การใช้ประโยชน์กลุ่มรถ</value>
+  </data>
+  <data name="report_title_fuel_consumption" xml:space="preserve">
+    <value>การสิ้นเปลื่องน้ำมัน</value>
+  </data>
+  <data name="report_title_fuel_consumption_measures" xml:space="preserve">
+    <value>มาตรวัดสิ้นเปลื่องน้ำมัน</value>
+  </data>
+  <data name="report_title_fuel_cost" xml:space="preserve">
+    <value>ต้นทุนน้ำมัน </value>
+  </data>
+  <data name="report_title_fuel_entry_consumption" xml:space="preserve">
+    <value>การใช้น้ำมัน </value>
+  </data>
+  <data name="report_title_fuel_entry_costs" xml:space="preserve">
+    <value>ต้นทุนน้ำมันทั้งหมด</value>
+  </data>
+  <data name="report_title_fuel_level_monitor" xml:space="preserve">
+    <value>ปริมาตรน้ำมัน</value>
+  </data>
+  <data name="report_title_fuel_summary" xml:space="preserve">
+    <value>ผลรวมน้ำมัน</value>
+  </data>
+  <data name="report_title_fuel_volume" xml:space="preserve">
+    <value>ปริมาณน้ำมัน</value>
+  </data>
+  <data name="report_title_location_monitor" xml:space="preserve">
+    <value>การตรวจสอบตำแหน่ง</value>
+  </data>
+  <data name="report_title_overtime_utilization" xml:space="preserve">
+    <value>การใช้งานล่วงเวลา</value>
+  </data>
+  <data name="report_title_personal_logbook" xml:space="preserve">
+    <value>บันทึกส่วนตัว</value>
+  </data>
+  <data name="report_title_per_variable_display" xml:space="preserve">
+    <value>แสดงรายงานตามตัวแปรที่เลือก</value>
+  </data>
+  <data name="report_title_poi_activity" xml:space="preserve">
+    <value>กิจกรรมในพื้นที่หน้าสนใจ POI</value>
+  </data>
+  <data name="report_title_risk_management" xml:space="preserve">
+    <value>การจัดการความเสี่ยง</value>
+  </data>
+  <data name="report_title_time_profile_utilization" xml:space="preserve">
+    <value>การใช้งานยานพาหนะ</value>
+  </data>
+  <data name="report_title_vehicle_score" xml:space="preserve">
+    <value>จัดลำดับคะแนนรายคัน</value>
+  </data>
+  <data name="reset_dashboard_prompt" xml:space="preserve">
+    <value>รีเซ็ตค่าต่างๆ ช่วงเวลา และกลุ่มยานพาหนะใหม่</value>
+  </data>
+  <data name="result" xml:space="preserve">
+    <value>ผล</value>
+  </data>
+  <data name="risk_management_description" xml:space="preserve">
+    <value>รายละเอียดการจัดการความเสี่ยง</value>
+  </data>
+  <data name="route_activity_description" xml:space="preserve">
+    <value>รายละเอียดการเดินทาง</value>
+  </data>
+  <data name="rpm_label" xml:space="preserve">
+    <value>รอบเครื่องยนต์</value>
+  </data>
+  <data name="seconds" xml:space="preserve">
+    <value>วินาที</value>
+  </data>
+  <data name="select_y_axis" xml:space="preserve">
+    <value>เลือก Y เส้น</value>
+  </data>
+  <data name="server_connection_error" xml:space="preserve">
+    <value>การเชื่อมต่อผิดพลาด</value>
+  </data>
+  <data name="snap_trip_to_road_label" xml:space="preserve">
+    <value>แปลงเส้นทางไปสู่ถนน</value>
+  </data>
+  <data name="speeding_label" xml:space="preserve">
+    <value>ความเร็ว</value>
+  </data>
+  <data name="speed_km_h_abbr" xml:space="preserve">
+    <value>กม./ชม.</value>
+  </data>
+  <data name="speed_mph_abbr" xml:space="preserve">
+    <value>ไมล์/ชม.</value>
+  </data>
+  <data name="start" xml:space="preserve">
+    <value>เริ่มต้น</value>
+  </data>
+  <data name="start_date" xml:space="preserve">
+    <value>วันเริ่มต้น </value>
+  </data>
+  <data name="start_date_after_end_date_error" xml:space="preserve">
+    <value>ผิดพลาดจากวันเริ่มต้นมากกว่าวันสิ้นสุด</value>
+  </data>
+  <data name="stopped_time_dashboard" xml:space="preserve">
+    <value>ระยะเวลา จอด(ชม.)</value>
+  </data>
+  <data name="stopped_time_title" xml:space="preserve">
+    <value>เวลาจอด</value>
+  </data>
+  <data name="stop_duration" xml:space="preserve">
+    <value>ระยะเวลาการจอดรถ</value>
+  </data>
+  <data name="success_label" xml:space="preserve">
+    <value>สมบูรณ์</value>
+  </data>
+  <data name="swerving_label" xml:space="preserve">
+    <value>เลี้ยว</value>
+  </data>
+  <data name="this_month" xml:space="preserve">
+    <value>เดือนปัจจุบัน</value>
+  </data>
+  <data name="this_week" xml:space="preserve">
+    <value>สัปดาห์ปัจจุบัน</value>
+  </data>
+  <data name="time" xml:space="preserve">
+    <value>เวลา</value>
+  </data>
+  <data name="time_h" xml:space="preserve">
+    <value>ชม.</value>
+  </data>
+  <data name="time_min" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="title_activity_account_settings" xml:space="preserve">
+    <value>ตั้งค่าบัญชีผู้ใช้ user</value>
+  </data>
+  <data name="title_application" xml:space="preserve">
+    <value>แอปพลิเคชัน</value>
+  </data>
+  <data name="title_b_licence_chart" xml:space="preserve">
+    <value>ใบขับขี่:บ.1,บ.2,บ.3,บ.4</value>
+  </data>
+  <data name="title_custom_date_range" xml:space="preserve">
+    <value>เลือกช่วงวันที่(กำหนดเอง)</value>
+  </data>
+  <data name="title_exception_vs_distance_chart" xml:space="preserve">
+    <value>พฤติกรรมเกินกำหนดเทียบระยะทาง</value>
+  </data>
+  <data name="title_favourite_reports" xml:space="preserve">
+    <value>รายงานโปรด</value>
+  </data>
+  <data name="title_fuel_consumption" xml:space="preserve">
+    <value>น้ำมัน</value>
+  </data>
+  <data name="title_fuel_consumption_graph" xml:space="preserve">
+    <value>การใช้น้ำมันเชื้อเพลิงและต้นทุนค่าน้ำมันเชื้อเพลิงรายเดือน</value>
+  </data>
+  <data name="title_fuel_efficiency_graph" xml:space="preserve">
+    <value>ประสิทธิภาพการใช้น้ำมันและค่าน้ำมันต่อกิโลเมตรต่อเดือน</value>
+  </data>
+  <data name="title_least_utilised" xml:space="preserve">
+    <value>รถที่ใช้น้อยที่สุด</value>
+  </data>
+  <data name="title_map" xml:space="preserve">
+    <value>แผนที่ </value>
+  </data>
+  <data name="title_most_utilised" xml:space="preserve">
+    <value>รถที่ใช้มากที่สุด</value>
+  </data>
+  <data name="title_personal_licence_chart" xml:space="preserve">
+    <value>ประเภทใบขับขี่:รถยนต์ส่วนบุคคล</value>
+  </data>
+  <data name="title_share_report" xml:space="preserve">
+    <value>แชร์รายงาน</value>
+  </data>
+  <data name="title_total_exception_chart" xml:space="preserve">
+    <value>สรุปรวมพฤติกรรมเกินกำหนด</value>
+  </data>
+  <data name="title_trip_plotting" xml:space="preserve">
+    <value>วาดทริปการเดินทาง</value>
+  </data>
+  <data name="title_t_licence_chart" xml:space="preserve">
+    <value>ประเภทใบขับขี่:ท.1,ท.2,ท.3,ท.4</value>
+  </data>
+  <data name="title_units_of_measure" xml:space="preserve">
+    <value>หน่วยวัด</value>
+  </data>
+  <data name="title_vehicle_trip_activity_chart" xml:space="preserve">
+    <value>การเดินทางกลุ่มรถ</value>
+  </data>
+  <data name="title_vehicle_utilisation_distance_duration" xml:space="preserve">
+    <value>การใช้รถตามระยะทางและระยะเวลา</value>
+  </data>
+  <data name="title_vehicle_utilization" xml:space="preserve">
+    <value>รถ</value>
+  </data>
+  <data name="toast_cache_cleared" xml:space="preserve">
+    <value>เคลียร์ข้อมูลแคช</value>
+  </data>
+  <data name="toast_cannot_plot_trip_locations_missing" xml:space="preserve">
+    <value>ไม่สามารถวาดเส้นทางการเดินทางได้ ตำแหน่งผิดพลาด</value>
+  </data>
+  <data name="toast_favourite_report_removed" xml:space="preserve">
+    <value>ลบรายงานออกจากรายการโปรด</value>
+  </data>
+  <data name="toast_google_maps_not_available" xml:space="preserve">
+    <value>แผนที่ไม่สามารถใช้งานบนอุปกรณ์นี้</value>
+  </data>
+  <data name="toast_locating_vehicles" xml:space="preserve">
+    <value>กำลังค้นหารถ ...</value>
+  </data>
+  <data name="toast_report_added_to_favourites" xml:space="preserve">
+    <value>เพิ่มรายงานเป็นรายการโปรด</value>
+  </data>
+  <data name="toast_report_sharing_failed" xml:space="preserve">
+    <value>การส่งออกรายงาน ล้มเหลว</value>
+  </data>
+  <data name="toast_user_settings_updated" xml:space="preserve">
+    <value>อัพเดทตั้งค่าผู้ใช้งาน</value>
+  </data>
+  <data name="toast_vehicle_X_location_unknown" xml:space="preserve">
+    <value>ไม่สามารถค้นหาตำแหน่งรถ % 1 $ s</value>
+  </data>
+  <data name="toast_x_vehicles_located" xml:space="preserve">
+    <value>% 1 $ d ตำแหน่งรถ</value>
+  </data>
+  <data name="today" xml:space="preserve">
+    <value>วันนี้</value>
+  </data>
+  <data name="top_5_best_utilized" xml:space="preserve">
+    <value>การใช้งานรถดีที่สุด  5  อันดับสูงสุด</value>
+  </data>
+  <data name="top_5_best_utilized_subtitle" xml:space="preserve">
+    <value>การใช้งานรถดีที่สุด  5  อันดับสูงสุด(ขับรถล่วงเวลาน้อยที่สุด)</value>
+  </data>
+  <data name="top_5_current_fuel_level" xml:space="preserve">
+    <value>ระดับน้ำมันเชื้อเพลิง 5 อันดับสูงสุด (ที่ได้ระยะทางมากสุด)</value>
+  </data>
+  <data name="top_5_current_fuel_level_subtitle" xml:space="preserve">
+    <value>ระดับน้ำมันเชื้อเพลิง  5 อันดับสูงสุด (ที่ได้ระยะทางมากสุด)</value>
+  </data>
+  <data name="top_5_drivers" xml:space="preserve">
+    <value>ผู้ขับขี่ 5 อันดับสูงสุด (Active)</value>
+  </data>
+  <data name="top_5_driving_distance" xml:space="preserve">
+    <value>ผู้ขับขี่ที่ระยะทาง 5 อันดับสูงสุด </value>
+  </data>
+  <data name="top_5_driving_time" xml:space="preserve">
+    <value>ผู้ขับขี่ที่เวลาการขับขี่ 5 อันดับสูงสุด </value>
+  </data>
+  <data name="top_5_fuel_consumption" xml:space="preserve">
+    <value>อัตราการสิ้นเปลือง 5 อันดับสูงสุด</value>
+  </data>
+  <data name="top_5_fuel_volume" xml:space="preserve">
+    <value>ระดับน้ำมัน 5 อันดับสูงสุด </value>
+  </data>
+  <data name="top_5_least_utilized" xml:space="preserve">
+    <value>การใช้งานรถน้อยที่สุด 5 อันดับสูงสุด </value>
+  </data>
+  <data name="top_5_most_utilized" xml:space="preserve">
+    <value>การใช้งานมากรถที่สุด 5 อันดับสูงสุด </value>
+  </data>
+  <data name="top_5_worst_utilized" xml:space="preserve">
+    <value>การใช้งานรถที่แย่ที่สุด 5 อันดับสูงสุด  </value>
+  </data>
+  <data name="top_5_worst_utilized_subtitle" xml:space="preserve">
+    <value>การใช้งานที่รถแย่ที่สุด(ขับรถล่วงเวลามากที่สุด) 5 อันดับสูงสุด </value>
+  </data>
+  <data name="total" xml:space="preserve">
+    <value>ทั้งหมด</value>
+  </data>
+  <data name="total_cost" xml:space="preserve">
+    <value>ต้นทุนทั้งหมด</value>
+  </data>
+  <data name="total_cost_of_ownership_description" xml:space="preserve">
+    <value>รายละเอียดต้นทุน ต้นทุนน้ำมันต่อไมล์ (TCO)</value>
+  </data>
+  <data name="total_count" xml:space="preserve">
+    <value>จำนวนทั้งหมด(ครั้ง)</value>
+  </data>
+  <data name="total_distance" xml:space="preserve">
+    <value>ระยะทางทั้งหมด</value>
+  </data>
+  <data name="total_driving_time" xml:space="preserve">
+    <value>รวมเวลาการขับขี่ทั้งหมด</value>
+  </data>
+  <data name="total_time" xml:space="preserve">
+    <value>รวมเวลาทั้งหมด</value>
+  </data>
+  <data name="total_volume" xml:space="preserve">
+    <value>ปริมาณน้ำมันทั้งหมด</value>
+  </data>
+  <data name="to_label" xml:space="preserve">
+    <value>ถึง</value>
+  </data>
+  <data name="trip_end_label" xml:space="preserve">
+    <value>สิ้นสุดการเดินทาง:</value>
+  </data>
+  <data name="trip_logbook_title" xml:space="preserve">
+    <value>การเดินทางส่วนตัว</value>
+  </data>
+  <data name="trip_recording" xml:space="preserve">
+    <value>บันทึกการเดินทาง</value>
+  </data>
+  <data name="trip_start_label" xml:space="preserve">
+    <value>เริ่มการเดินทาง:</value>
+  </data>
+  <data name="ubi_exceptions" xml:space="preserve">
+    <value>แสดงพฤติกรรมเกินกำหนด</value>
+  </data>
+  <data name="unknown_location" xml:space="preserve">
+    <value>ไม่สามารถระบุตำแหน่ง</value>
+  </data>
+  <data name="unknown_service_error" xml:space="preserve">
+    <value>เกิดข้อผิดพลาดขณะเชื่อมต่อกับเซิร์ฟเวอร์</value>
+  </data>
+  <data name="updating_report" xml:space="preserve">
+    <value>กำลังอัปเดตรายงาน</value>
+  </data>
+  <data name="updating_reports" xml:space="preserve">
+    <value>กำลังอัปเดตรายงาน...</value>
+  </data>
+  <data name="utilisation_period_percent" xml:space="preserve">
+    <value>ระยะเวลาการใช้งาน%</value>
+  </data>
+  <data name="utilization" xml:space="preserve">
+    <value>การใช้งาน</value>
+  </data>
+  <data name="utilization_histogram" xml:space="preserve">
+    <value>การใช้งาน ฮิสโตแกรม</value>
+  </data>
+  <data name="vehicle" xml:space="preserve">
+    <value>รถ</value>
+  </data>
+  <data name="vehicle_description" xml:space="preserve">
+    <value>ข้อมูลรถ</value>
+  </data>
+  <data name="vehicle_dtc_dashboard" xml:space="preserve">
+    <value>พาหนะ DTC</value>
+  </data>
+  <data name="vehicle_group" xml:space="preserve">
+    <value>กลุ่มรถ</value>
+  </data>
+  <data name="vehicle_group_average" xml:space="preserve">
+    <value>ค่าเฉลี่ยแบบกลุ่ม</value>
+  </data>
+  <data name="vehicle_score_description" xml:space="preserve">
+    <value>รายละเอียดคะแนนรายคันรถตามที่กำหนดเกณฑ์การคำนวณไว้</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>รุ่น</value>
+  </data>
+  <data name="vin_changed_dashboard" xml:space="preserve">
+    <value>หมายเลขตัวกับรถ</value>
+  </data>
+  <data name="violation_label" xml:space="preserve">
+    <value>ข้อยกเว้น</value>
+  </data>
+  <data name="volume" xml:space="preserve">
+    <value>ปริมาตร</value>
+  </data>
+  <data name="volume_imperial_gallons" xml:space="preserve">
+    <value>Imperial gallons</value>
+  </data>
+  <data name="volume_imperial_gallons_abbr" xml:space="preserve">
+    <value>gal</value>
+  </data>
+  <data name="volume_litres" xml:space="preserve">
+    <value>ลิตร</value>
+  </data>
+  <data name="volume_litres_abbr" xml:space="preserve">
+    <value>ล.</value>
+  </data>
+  <data name="volume_us_gallons" xml:space="preserve">
+    <value>U.S แกลลอน</value>
+  </data>
+  <data name="volume_us_gallons_abbr" xml:space="preserve">
+    <value>แกลลอน</value>
+  </data>
+  <data name="welcome_label" xml:space="preserve">
+    <value>ยินดีต้อนรับ</value>
+  </data>
+  <data name="work_hours" xml:space="preserve">
+    <value>ชั่วโมงการทำงาน</value>
+  </data>
+  <data name="work_time_driving" xml:space="preserve">
+    <value>ชั่วโมงการขับขี่</value>
+  </data>
+  <data name="x_vehicles" xml:space="preserve">
+    <value>{0}รถ</value>
+  </data>
+  <data name="yesterday" xml:space="preserve">
+    <value>เมื่อวาน</value>
+  </data>
+</root>

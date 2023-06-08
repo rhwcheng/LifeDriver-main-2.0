@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+           xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+           xmlns:customControls="clr-namespace:StyexFleetManagement.CustomControls;assembly=StyexFleetManagement"
+           xmlns:styexFleetManagement="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+           mc:Ignorable="d"
+           x:Class="StyexFleetManagement.Pages.AddAccountPage">
+    <pages:PopupPage.Content>
+        <StackLayout BackgroundColor="White" Padding="10,15,10,50">
+            <StackLayout>
+                <Image x:Name="backButton" Source="ic_close_button.png" HeightRequest = "24" HorizontalOptions = "StartAndExpand"></Image>
+            </StackLayout>
+
+            <StackLayout x:Name="errorContainer" BackgroundColor="#ebebeb" Opacity="0.9" IsVisible="false">
+                <Label x:Name="messageLabel" HorizontalTextAlignment="Center" TextColor="#D84315"/>
+            </StackLayout>
+
+            <customControls:MaterialEntry x:Name="serverEntry" AccentColor="Black" TextColor="Black" Placeholder="live.mzoneweb.net"></customControls:MaterialEntry>
+            <customControls:MaterialEntry x:Name="usernameEntry" BackgroundColor="Transparent" AccentColor="Black" TextColor="Black" Placeholder="{styexFleetManagement:Translate label_username}"></customControls:MaterialEntry>
+
+            <customControls:MaterialEntry x:Name="passwordEntry" BackgroundColor="Transparent" AccentColor="Black" TextColor="Black" IsPassword="true" Placeholder="{styexFleetManagement:Translate label_password}"></customControls:MaterialEntry>
+            <Button Text="{styexFleetManagement:Translate proceed}" TextColor="White" BackgroundColor="#7f0000" Clicked="OnProceedClicked"/>
+        </StackLayout>
+    </pages:PopupPage.Content>
+</pages:PopupPage>

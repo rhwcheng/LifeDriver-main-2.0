@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StyexFleetManagement.Pages.VehicleSummary.Tiles.TripSummaryTile" xmlns:customControls="clr-namespace:StyexFleetManagement.CustomControls" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    <Frame BackgroundColor="White" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="False" OutlineColor="Black" HeightRequest="240">
+        <StackLayout BackgroundColor="Transparent" Margin="0" Spacing="0" Padding="0" x:Name="mainStack">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <StackLayout BackgroundColor="#37474F" Padding="3,0,0,1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" x:Name="header">
+                        <ffimageloading:CachedImage WidthRequest="24" HorizontalOptions="Start" x:Name="headerImage" Source="ic_trip_summary_cell">
+                        </ffimageloading:CachedImage>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="titleLabel" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center">
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout x:Name="contentStack" Margin="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <!-- Grid Content -->
+                    <StackLayout VerticalOptions="StartAndExpand" Grid.Row="0" Grid.Column="0">
+                        <Label Text="Exception Count" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center">
+                        </Label>
+                        <customControls:CircleLabel HorizontalOptions="Center" VerticalOptions="Center">
+                            <customControls:InnerCircleLabel HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label Text="{Binding ExceptionCount}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                                </Label>
+                            </customControls:InnerCircleLabel>
+                        </customControls:CircleLabel>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="StartAndExpand" Grid.Row="0" Grid.Column="1">
+                        <Label Text="Total Distance (km)" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center">
+                        </Label>
+                        <customControls:CircleLabel HorizontalOptions="Center" VerticalOptions="Center" OutlineColor="Blue" BackgroundColor="Blue">
+                        <customControls:InnerCircleLabel HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="{Binding TotalDistance}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            </Label>
+                                </customControls:InnerCircleLabel>
+                        </customControls:CircleLabel>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="EndAndExpand" Grid.Row="1" Grid.Column="0">
+                        <Label Text="Trip Count" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center">
+                        </Label>
+                        <customControls:CircleLabel HorizontalOptions="Center" VerticalOptions="Center" OutlineColor="Green" BackgroundColor="Green">
+                        <customControls:InnerCircleLabel HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="{Binding TripCount}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            </Label>
+                                </customControls:InnerCircleLabel>
+                        </customControls:CircleLabel>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="EndAndExpand" Grid.Row="1" Grid.Column="1">
+                        <Label Text="Total Duration (hours)" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center">
+                        </Label>
+                        <customControls:CircleLabel HorizontalOptions="Center" VerticalOptions="Center" OutlineColor="#FFC107" BackgroundColor="#FFC107">
+                        <customControls:InnerCircleLabel HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="{Binding TotalDuration}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            </Label>
+                                </customControls:InnerCircleLabel>
+                        </customControls:CircleLabel>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ContentView>

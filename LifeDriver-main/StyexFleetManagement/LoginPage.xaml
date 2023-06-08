@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="StyexFleetManagement.LoginPage"
+			 Title="Login Page"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+			 xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+             xmlns:local="clr-namespace:StyexFleetManagement.CustomControls;assembly=StyexFleetManagement">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Image x:Name="backgroundImage" Source="login_background_salus.jpg" Aspect="AspectFill" RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"></Image>
+
+            <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand" Padding="15, 85, 15, 15">
+
+                <StackLayout x:Name="errorContainer" BackgroundColor="#ebebeb" Opacity="0.9" IsVisible="false">
+                    <Label x:Name="messageLabel" HorizontalTextAlignment="Center" TextColor="#D84315"/>
+                </StackLayout>
+
+                <StackLayout Margin="0, 15">
+                    <local:MaterialEntry x:Name="usernameEntry" TextColor="Black" AccentColor="Black" Placeholder="{i18n:Translate label_username}"></local:MaterialEntry>
+
+                    <local:MaterialEntry x:Name="passwordEntry" TextColor="Black" AccentColor="Black" IsPassword="true" Placeholder="{i18n:Translate label_password}"></local:MaterialEntry>
+                </StackLayout>
+
+                <Button Text="{i18n:Translate label_login}" TextColor="White" BackgroundColor="#7f0000" Clicked="OnLoginButtonClicked"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0, 40">
+                    <ImageButton Source="salus_icon.png"  HeightRequest="100" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="OnSalusLoginClicked" />
+                    <ImageButton Source="mzone_icon.png"  HeightRequest="100" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="OnMzoneLoginClicked" />
+                </StackLayout>
+            </StackLayout>
+
+        </RelativeLayout>
+
+    </ContentPage.Content>
+</ContentPage>

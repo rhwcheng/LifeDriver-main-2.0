@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="StyexFleetManagement.Pages.AppSettings.SettingsPage"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:appSettings="clr-namespace:StyexFleetManagement.Pages.AppSettings;assembly=StyexFleetManagement">
+  <pages:PopupPage.Content>
+                <StackLayout BackgroundColor="White" Padding="5,5,5,5">
+      <StackLayout>
+        <Image x:Name="backButton" Source="ic_close_button.png" HeightRequest = "24" HorizontalOptions = "StartAndExpand"></Image>
+      </StackLayout>
+
+    <appSettings:SettingsContent></appSettings:SettingsContent>
+            </StackLayout>
+  </pages:PopupPage.Content>
+</pages:PopupPage>

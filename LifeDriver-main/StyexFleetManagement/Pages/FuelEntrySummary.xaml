@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StyexFleetManagement.Pages.FuelEntrySummary" xmlns:Gestures="clr-namespace:StyexFleetManagement.CustomControls;assembly=StyexFleetManagement" xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement">
+	<ContentPage.Content>
+    <Gestures:GestureFrame x:Name="gestureFrame" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+		<StackLayout>
+			<StackLayout Padding="5" Orientation="Horizontal" VerticalOptions="Fill">
+			<Image WidthRequest="35" Source="calendar.png"></Image>
+			<Picker x:Name="datePicker" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+			<Picker.Items>
+            	<x:String>Today</x:String> 
+            	<x:String>Yesterday</x:String>
+            	<x:String>This Week</x:String>
+            	<x:String>Previous Week</x:String>
+            	<x:String>This Month</x:String>
+            	<x:String>Previous Month</x:String>
+            	<x:String>Custom</x:String>
+        	</Picker.Items>
+			</Picker>
+			<Image WidthRequest="35" Source="truck.png"></Image>
+			<Picker x:Name="VehicleGroupPicker" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+			</Picker>
+			</StackLayout>
+
+				<Grid VerticalOptions="FillAndExpand" x:Name="MainGrid">
+				<Grid.ColumnSpacing>
+				    <OnIdiom x:TypeArguments="x:Double"
+				             Phone="20"
+				             Tablet="20"/>
+				 </Grid.ColumnSpacing>
+				  <Grid.RowSpacing>
+				    <OnIdiom x:TypeArguments="x:Double"
+				             Phone="10"
+				             Tablet="10"/>
+				  </Grid.RowSpacing>
+				  <Grid.Padding>
+				    <OnIdiom x:TypeArguments="Thickness"
+				             Phone="10, 10, 10, 0"
+				             Tablet="10, 10, 10, 0"/>
+				  </Grid.Padding>
+			<Grid Margin="8" x:Name="UtilizationGrid" RowSpacing="0" ColumnSpacing="0"
+
+			RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}">
+            <Grid.RowDefinitions>
+    			<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+    			<RowDefinition Height="*" />
+				<RowDefinition Height="2*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="2*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="2*" />
+  			</Grid.RowDefinitions>
+  			<Grid.ColumnDefinitions>
+    			<ColumnDefinition Width="*" />
+    			<ColumnDefinition Width="*" />
+    			<ColumnDefinition Width="*" />
+  			</Grid.ColumnDefinitions>
+				<Label Text="Total" Grid.Row="0" Grid.Column="1"></Label>
+				<Label Text="Average" Grid.Row="0" Grid.Column="2"></Label>
+
+				<Label x:Name="TotalVehicleCountLabel" Text="{i18n:Translate x_vehicles}" TextColor="Gray" FontSize="10" Grid.Row="1" Grid.Column="1"></Label>
+				<Label Text="per vehicle" TextColor="Gray" FontSize="10" Grid.Row="1" Grid.Column="2"></Label>
+				
+				<Image Source="fuel.png" WidthRequest="25" Grid.Row="2" Grid.Column="0"></Image>
+				<Label x:Name="TotalVolume"  Grid.Row="2" Grid.Column="1"></Label>
+				<Label x:Name="AverageVolume" Grid.Row="2" Grid.Column="2"></Label>
+				
+				<Label FontSize="12" HorizontalOptions="Center" Text="Volume" Grid.Row="3" Grid.Column="0"></Label>
+				
+				<Label x:Name="TotalCost" Grid.Row="4" Grid.Column="1"></Label>
+				<Label x:Name="AverageCost" Grid.Row="4" Grid.Column="2"></Label>
+				<Image Source="dollar.png" WidthRequest="25" Grid.Row="4" Grid.Column="0"></Image>
+				
+				<Label FontSize="12" HorizontalOptions="Center" Text="Cost" Grid.Row="5" Grid.Column="0"></Label>
+				
+				<Image Source="gauge.png" WidthRequest="25" Grid.Row="6" Grid.Column="0"></Image>
+				<Label x:Name="AverageConsumption" Grid.Row="6" Grid.Column="1"></Label>
+				
+				<Label FontSize="12" HorizontalOptions="Center" Text="Average consumption" Grid.Row="7" Grid.Column="0"></Label>
+				
+					
+
+			</Grid>
+
+		<StackLayout x:Name="TopFiveFuelVolume">
+		<Label Text="{i18n:Translate top_5_fuel_volume}" TextColor="#3F51B5" Margin="3"></Label> 
+			<ScrollView Orientation="Horizontal">
+
+			<Grid Margin="8" x:Name="FuelVolumeGrid">
+
+            <Grid.RowDefinitions>
+    			<RowDefinition Height="*" />
+    			<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+  			</Grid.RowDefinitions>
+  			<Grid.ColumnDefinitions>
+    			<ColumnDefinition Width="auto" />
+    			<ColumnDefinition Width="auto" />
+    			<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+  			</Grid.ColumnDefinitions>
+				<Label Text="#" Grid.Row="0" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="Vehicle" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"></Label>
+				<Label Text="Volume" Grid.Row="0" Grid.Column="2" FontAttributes="Bold"></Label>
+				<Label Text="Distance"  Grid.Row="0" Grid.Column="3" FontAttributes="Bold"></Label>
+				<Label Text="Consumption"  Grid.Row="0" Grid.Column="4" FontAttributes="Bold"></Label>
+						
+				<Label Text="1" Grid.Row="1" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="2" Grid.Row="2" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="3" Grid.Row="3" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="4" Grid.Row="4" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="5" Grid.Row="5" Grid.Column="0" TextColor="Gray"></Label>
+						
+				<Label x:Name="VehicleFirst" Grid.Row="1" Grid.Column="1"></Label>
+				<Label x:Name="VehicleSecond" Grid.Row="2" Grid.Column="1"></Label>
+				<Label x:Name="VehicleThird" Grid.Row="3" Grid.Column="1"></Label>
+				<Label x:Name="VehicleFourth" Grid.Row="4" Grid.Column="1"></Label>
+				<Label x:Name="VehicleFifth" Grid.Row="5" Grid.Column="1"></Label>
+
+				<Label x:Name="VolumeFirst" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="2"></Label>
+				<Label x:Name="VolumeSecond" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="2"></Label>
+				<Label x:Name="VolumeThird" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="2"></Label>
+				<Label x:Name="VolumeFourth" HorizontalTextAlignment="Center" Grid.Row="4" Grid.Column="2"></Label>
+				<Label x:Name="VolumeFifth" HorizontalTextAlignment="Center" Grid.Row="5" Grid.Column="2"></Label>
+
+				<Label x:Name="DistanceFirst" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="1" Grid.Column="3"></Label>
+				<Label x:Name="DistanceSecond" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="2" Grid.Column="3"></Label>
+				<Label x:Name="DistanceThird" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="3" Grid.Column="3"></Label>
+				<Label x:Name="DistanceFourth" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="4" Grid.Column="3"></Label>
+				<Label x:Name="DistanceFifth" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="5" Grid.Column="3"></Label>
+
+				<Label x:Name="ConsumptionFirst" Grid.Row="1" Grid.Column="4"></Label>
+				<Label x:Name="ConsumptionSecond" Grid.Row="2" Grid.Column="4"></Label>
+				<Label x:Name="ConsumptionThird" Grid.Row="3" Grid.Column="4"></Label>
+				<Label x:Name="ConsumptionFourth" Grid.Row="4" Grid.Column="4"></Label>
+				<Label x:Name="ConsumptionFifth" Grid.Row="5" Grid.Column="4"></Label>
+
+
+			</Grid>
+
+			</ScrollView>
+			</StackLayout>
+
+			<StackLayout x:Name="TopFiveFuelConsumption">
+			<Label Text="{i18n:Translate top_5_fuel_consumption}" TextColor="#3F51B5" Margin="3"></Label> 
+			<ScrollView Orientation="Horizontal">
+			<Grid Margin="8" x:Name="FuelConsumptionGrid">
+
+            <Grid.RowDefinitions>
+    			<RowDefinition Height="*" />
+    			<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+  			</Grid.RowDefinitions>
+  			<Grid.ColumnDefinitions>
+    			<ColumnDefinition Width="auto" />
+    			<ColumnDefinition Width="auto" />
+    			<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+  			</Grid.ColumnDefinitions>
+				<Label Text="#" Grid.Row="0" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="Vehicle" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"></Label>
+				<Label Text="Volume" Grid.Row="0" Grid.Column="2" FontAttributes="Bold"></Label>
+				<Label Text="Distance"  Grid.Row="0" Grid.Column="3" FontAttributes="Bold"></Label>
+				<Label Text="Consumption"  Grid.Row="0" Grid.Column="4" FontAttributes="Bold"></Label>
+						
+				<Label Text="1" Grid.Row="1" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="2" Grid.Row="2" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="3" Grid.Row="3" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="4" Grid.Row="4" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="5" Grid.Row="5" Grid.Column="0" TextColor="Gray"></Label>
+						
+				<Label x:Name="ConsumptionVehicleFirst" Grid.Row="1" Grid.Column="1"></Label>
+				<Label x:Name="ConsumptionVehicleSecond" Grid.Row="2" Grid.Column="1"></Label>
+				<Label x:Name="ConsumptionVehicleThird" Grid.Row="3" Grid.Column="1"></Label>
+				<Label x:Name="ConsumptionVehicleFourth" Grid.Row="4" Grid.Column="1"></Label>
+				<Label x:Name="ConsumptionVehicleFifth" Grid.Row="5" Grid.Column="1"></Label>
+
+				<Label x:Name="ConsumptionVolumeFirst" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="2"></Label>
+				<Label x:Name="ConsumptionVolumeSecond" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="2"></Label>
+				<Label x:Name="ConsumptionVolumeThird" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="2"></Label>
+				<Label x:Name="ConsumptionVolumeFourth" HorizontalTextAlignment="Center" Grid.Row="4" Grid.Column="2"></Label>
+				<Label x:Name="ConsumptionVolumeFifth" HorizontalTextAlignment="Center" Grid.Row="5" Grid.Column="2"></Label>
+
+				<Label x:Name="ConsumptionDistanceFirst" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="1" Grid.Column="3"></Label>
+				<Label x:Name="ConsumptionDistanceSecond" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="2" Grid.Column="3"></Label>
+				<Label x:Name="ConsumptionDistanceThird" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="3" Grid.Column="3"></Label>
+				<Label x:Name="ConsumptionDistanceFourth" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="4" Grid.Column="3"></Label>
+				<Label x:Name="ConsumptionDistanceFifth" HorizontalTextAlignment="End" TextColor="#3F51B5" Grid.Row="5" Grid.Column="3"></Label>
+
+				<Label x:Name="ConsumptionEntryConsumptionFirst" Grid.Row="1" Grid.Column="4"></Label>
+				<Label x:Name="ConsumptionEntryConsumptionSecond" Grid.Row="2" Grid.Column="4"></Label>
+				<Label x:Name="ConsumptionEntryConsumptionThird" Grid.Row="3" Grid.Column="4"></Label>
+				<Label x:Name="ConsumptionEntryConsumptionFourth" Grid.Row="4" Grid.Column="4"></Label>
+				<Label x:Name="ConsumptionEntryConsumptionFifth" Grid.Row="5" Grid.Column="4"></Label>
+
+
+			</Grid>
+
+			</ScrollView>
+			</StackLayout>
+			</Grid>
+		</StackLayout>
+    </Gestures:GestureFrame>
+  </ContentPage.Content>
+</ContentPage>

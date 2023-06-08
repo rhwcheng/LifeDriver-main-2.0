@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomControls:ReportPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="StyexFleetManagement.Pages.AlertNotifications.EventsPage"
+    xmlns:Gestures="clr-namespace:StyexFleetManagement.CustomControls;assembly=StyexFleetManagement"
+    xmlns:CustomControls="clr-namespace:StyexFleetManagement.CustomControls">
+    <ScrollView>
+        <StackLayout Padding="5" Orientation="Vertical" VerticalOptions="Fill">
+            <CustomControls:ReportHeaderLayout x:Name="ReportHeader"></CustomControls:ReportHeaderLayout>
+            <Label x:Name="noEventsLabel" IsVisible="false" TextColor="Gray" HorizontalOptions="CenterAndExpand" Text="No events for the current selection"></Label>
+            <StackLayout x:Name="TableStack" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</CustomControls:ReportPage>

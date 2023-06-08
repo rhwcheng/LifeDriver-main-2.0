@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                         x:Class="StyexFleetManagement.Pages.VehicleSummary.Tiles.RecentViolationsTile"
+                         xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                         xmlns:customControls="clr-namespace:StyexFleetManagement.CustomControls">
+    <Frame BackgroundColor="White" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="False" OutlineColor="Black" HeightRequest="240">
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="0" Spacing="0" Padding="0" x:Name="mainStack">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <StackLayout BackgroundColor="#37474F" Padding="3,0,0,1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" x:Name="header">
+                        <ffimageloading:CachedImage WidthRequest="24" HorizontalOptions="Start" x:Name="headerImage" Source="ic_recent_exceptions_cell">
+                        </ffimageloading:CachedImage>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="titleLabel" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center">
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout x:Name="contentStack" Margin="5,15,5,15" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <!-- Grid Content -->
+                        <Label Margin="0,5,0,5" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding RecentViolationOne.DateString}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <Label Margin="0,5,0,5" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding RecentViolationOne.EventTypeDescription}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+
+                    <BoxView BackgroundColor="Black" HeightRequest="1" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"></BoxView>
+                    <!--<customControls:CircleLabel Grid.Row="0" Grid.Column="1">
+                    <customControls:InnerCircleLabel>
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="10"></Label>
+                            </customControls:InnerCircleLabel>
+                    </customControls:CircleLabel>-->
+
+                        <Label Margin="0,5,0,5" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding RecentViolationTwo.DateString}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <Label Margin="0,5,0,5" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding RecentViolationTwo.EventTypeDescription}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+
+
+                    <BoxView BackgroundColor="Black" HeightRequest="1" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"></BoxView>
+                    <!--<customControls:CircleLabel Grid.Row="1" Grid.Column="1">
+                    <customControls:InnerCircleLabel>
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="10"></Label>
+                            </customControls:InnerCircleLabel>
+                    </customControls:CircleLabel>-->
+
+
+                        <Label Margin="0,5,0,5" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding RecentViolationThree.DateString}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+
+                         <Label Margin="0,5,0,5" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding RecentViolationThree.EventTypeDescription}" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+
+
+                    <BoxView BackgroundColor="Black" HeightRequest="1" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"></BoxView><!--<customControls:CircleLabel Grid.Row="2" Grid.Column="1">
+                    <customControls:InnerCircleLabel>
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="10"></Label>
+                            </customControls:InnerCircleLabel>
+                    </customControls:CircleLabel>-->
+
+
+                        <Label Margin="0,5,0,5" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding RecentViolationFour.DateString}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                        <Label Margin="0,5,0,5" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding RecentViolationFour.EventTypeDescription}" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2"></Label>
+
+                    <!--<customControls:CircleLabel Grid.Row="3" Grid.Column="1">
+                    <customControls:InnerCircleLabel>
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="10"></Label>
+                            </customControls:InnerCircleLabel>
+                    </customControls:CircleLabel>-->
+
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ContentView>

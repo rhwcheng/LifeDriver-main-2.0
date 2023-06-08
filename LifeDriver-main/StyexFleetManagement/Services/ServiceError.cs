@@ -1,0 +1,17 @@
+namespace StyexFleetManagement.Services
+{
+	public enum ServiceError
+	{
+		NO_ERROR,
+		MISSING_CREDENTIALS_ERROR,
+		SERVER_CONNECTION_ERROR,
+		AUTHENTICATION_ERROR = 401,
+		PARSE_ERROR,
+		NO_DATA = 204,
+		NO_CACHED_DATA,
+		UNKNOWN_SERVICE_ERROR = 500
+	}
+
+
+}
+

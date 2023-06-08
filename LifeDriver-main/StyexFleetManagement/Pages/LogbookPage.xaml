@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyexFleetManagement.Pages.LogbookPage"
+             xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+             xmlns:customControls="clr-namespace:StyexFleetManagement.CustomControls">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" Padding = "10" BackgroundColor="White">
+                <Frame x:Name="frame" HasShadow = "true" CornerRadius = "0" Padding = "10">
+                    <StackLayout HorizontalOptions = "FillAndExpand" BackgroundColor = "Transparent" Padding = "0">
+                        <Label Text = "{i18n:Translate last_location}" FontAttributes = "Bold" TextColor = "White" FontSize = "18"></Label>
+                        <Label  x:Name="lastPositionLabel" Text = "{i18n:Translate loading}" TextColor = "White" FontSize = "13" Margin = "8,0,0,0"></Label>
+                        <Label  x:Name="lastAddressLabel" TextColor = "White" FontSize = "13" Margin = "8,0,0,0"></Label>
+                    </StackLayout>
+                </Frame>
+                <StackLayout>
+                    <ActivityIndicator x:Name="syncIndicator" HorizontalOptions = "Center" VerticalOptions = "Center" IsVisible = "false" IsEnabled = "false"></ActivityIndicator>
+                    <Label Text = "{i18n:Translate last_trips}" FontSize = "16"></Label>
+                </StackLayout>
+                <Label x:Name="noRecordsLabel" Text ="{i18n:Translate label_no_trips}" TextColor = "Gray" HorizontalOptions = "CenterAndExpand" IsVisible = "false"></Label>
+                <ListView x:Name ="tripLog" IsGroupingEnabled="true" SeparatorVisibility="None" HasUnevenRows="True" BackgroundColor="Transparent">
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout HeightRequest="35" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Padding="5" Orientation="Horizontal">
+                                    <Label Text="{Binding Date}" TextColor="#737273" FontSize="Small"></Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <customControls:TripViewCell></customControls:TripViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5"></BoxView>
+
+                <StackLayout x:Name="webViewLayout"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                       >
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

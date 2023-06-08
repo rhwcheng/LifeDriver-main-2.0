@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyexFleetManagement.CustomControls.TripViewCell"
+             xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    <Frame Padding = "5, 10, 5, 10" HasShadow = "false" BackgroundColor = "Transparent">
+        <Frame x:Name="innerFrame" Padding = "0" HasShadow = "true" BackgroundColor = "Transparent">
+            <StackLayout x:Name="mainStack" Spacing="0" Padding="0" VerticalOptions="FillAndExpand">
+                <ffimageloading:CachedImage x:Name="routePreviewImage" HeightRequest="200" HorizontalOptions = "CenterAndExpand" Margin = "0" Aspect = "AspectFill" DownsampleToViewSize = "true" RetryCount = "3" RetryDelay = "250" TransparencyEnabled = "false">
+
+                </ffimageloading:CachedImage>
+                <StackLayout>
+                    <BoxView HeightRequest="0.8" BackgroundColor="Gray" HorizontalOptions="FillAndExpand"></BoxView>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Padding="4">
+                        <Label TextColor="#585858" Text="{Binding LocalStartTime}"></Label>
+                        <Label Text="{i18n:Translate to_label}" TextColor="Gray" FontSize="Small"></Label>
+                        <Label TextColor="#585858" Text="{Binding LocalEndTime}"></Label>
+                    </StackLayout>
+                    <Grid HorizontalOptions="FillAndExpand" BackgroundColor="#E0E4E7" Padding="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <Label Text="{i18n:Translate duration_short_title}" TextColor="#787E7E" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"></Label>
+                            <Label Text="{Binding DurationAsString}" FontAttributes="Bold" TextColor="#787E7E" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="{i18n:Translate distance_short_title}" TextColor="#787E7E" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"></Label>
+                            <Label Text="{Binding DistanceAsString}" FontAttributes="Bold" TextColor="#787E7E" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                        </StackLayout>
+
+                    </Grid>
+                </StackLayout>
+                
+            </StackLayout>
+        </Frame>
+    </Frame>
+</ViewCell>

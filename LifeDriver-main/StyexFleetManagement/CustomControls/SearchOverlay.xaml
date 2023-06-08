@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Frame 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="StyexFleetManagement.CustomControls.SearchOverlay"
+    xmlns:behaviours="clr-namespace:StyexFleetManagement.Behaviours;assembly=StyexFleetManagement"
+    BackgroundColor="White"
+    HasShadow="true"
+    Padding="0"
+    Margin="0"
+    CornerRadius="2">
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0" Spacing="0" Padding="0">
+        <SearchBar x:Name="SearchBar" HeightRequest="45" BackgroundColor="White" SearchCommand="{Binding SearchCommand}" SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}">
+                <SearchBar.Behaviors>
+                    <behaviours:TextChangedBehavior />
+                </SearchBar.Behaviors>
+            </SearchBar>
+        <AbsoluteLayout>
+            <ListView x:Name="listView" BackgroundColor="#f9f9f9" SeparatorVisibility="None" IsVisible="false" RowHeight="40"
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="SizeProportional" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Description}" TextColor="Black"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </AbsoluteLayout>
+        </StackLayout>
+    </Frame>

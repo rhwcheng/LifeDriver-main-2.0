@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+			 xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="StyexFleetManagement.VehiclesPage"
+			 xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+			 xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+			 xmlns:local="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement">
+	<ContentPage.Content>
+		<!--<StackLayout>
+
+			<StackLayout Padding="5" Orientation="Horizontal" VerticalOptions="Fill">
+			<Image WidthRequest="35" Source="calendar.png"></Image>
+			<Picker x:Name="datePicker" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+			<Picker.Items>
+            	<x:String>Today</x:String> 
+            	<x:String>Yesterday</x:String>
+            	<x:String>This Week</x:String>
+            	<x:String>Previous Week</x:String>
+            	<x:String>This Month</x:String>
+            	<x:String>Previous Month</x:String>
+            	<x:String>Custom</x:String>
+        	</Picker.Items>
+			</Picker>
+			<Image WidthRequest="35" Source="truck.png"></Image>
+			<Picker x:Name="VehicleGroupPicker" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+			</Picker>
+			</StackLayout>
+		<ScrollView>
+		<Grid VerticalOptions="FillAndExpand" x:Name="MainGrid">
+		  
+		  <Grid.RowSpacing>
+		    <OnIdiom x:TypeArguments="x:Double"
+		             Phone="10"
+		             Tablet="20"/>
+		  </Grid.RowSpacing>
+
+
+			<Frame Margin="5" OutlineColor="#3F51B5" VerticalOptions="FillAndExpand" HeightRequest="200" x:Name="SummaryFrame">
+				<StackLayout x:Name="Summary">
+					<StackLayout.GestureRecognizers>
+        				<TapGestureRecognizer Tapped="OnSummaryTapped"/>
+    				</StackLayout.GestureRecognizers>
+					<Label Text="{i18n:Translate report_title_driving_summary}"></Label>
+					<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+						<StackLayout Orientation="Horizontal" Margin="5">
+							<Image Source="menu_map.png"></Image>
+							<StackLayout>
+								<Label x:Name="TotalDistanceLabel" Text="{i18n:Translate loading}"></Label>
+								<Label Text="{i18n:Translate total_distance}" FontSize="10"></Label>
+							</StackLayout>
+						</StackLayout>
+
+						<StackLayout Orientation="Horizontal" Margin="5">
+							<Image Source="timer.png"></Image>
+							<StackLayout>
+								<Label x:Name="TotalTimeLabel" Text="{i18n:Translate loading}"></Label>
+								<Label Text="{i18n:Translate total_time}" FontSize="10"></Label>
+							</StackLayout>
+						</StackLayout>
+
+						<StackLayout Orientation="Horizontal" Margin="5">
+							<Image Source="speed.png"></Image>
+							<StackLayout>
+								<Label x:Name="AverageSpeedLabel" Text="{i18n:Translate loading}"></Label>
+								<Label Text="{i18n:Translate average_speed}" FontSize="10"></Label>
+							</StackLayout>
+						</StackLayout>
+							
+					</StackLayout>
+				</StackLayout>
+			</Frame>
+			
+			<Frame Margin="5" OutlineColor="#3F51B5" VerticalOptions="FillAndExpand" HeightRequest="200" x:Name="PieChartFrame">
+				<StackLayout x:Name="PieChart" VerticalOptions="FillAndExpand">
+					<StackLayout.GestureRecognizers>
+        				<TapGestureRecognizer Tapped="OnUtilizationPieChartTapped"/>
+    				</StackLayout.GestureRecognizers>
+				</StackLayout>
+			</Frame>
+
+			<Frame Margin="5" OutlineColor="#3F51B5" VerticalOptions="FillAndExpand" HeightRequest="200" x:Name="OvertimeFrame">
+				<StackLayout x:Name="OvertimeChart" VerticalOptions="FillAndExpand">
+					<StackLayout.GestureRecognizers>
+        				<TapGestureRecognizer Tapped="OnOvertimePieChartTapped"/>
+    				</StackLayout.GestureRecognizers>
+				</StackLayout>
+			</Frame>
+
+		
+
+		</Grid>
+		</ScrollView>
+
+		</StackLayout>-->
+    <ScrollView>
+      <Grid VerticalOptions="FillAndExpand" x:Name="MainGrid">
+        <Grid.ColumnSpacing>
+          <OnIdiom x:TypeArguments="x:Double"
+                   Phone="10"
+                   Tablet="10"/>
+        </Grid.ColumnSpacing>
+        <Grid.RowSpacing>
+          <OnIdiom x:TypeArguments="x:Double"
+                   Phone="5"
+                   Tablet="5"/>
+        </Grid.RowSpacing>
+        <Grid.Padding>
+          <OnIdiom x:TypeArguments="Thickness"
+                   Phone="10, 10, 10, 0"
+                   Tablet="10, 10, 10, 0"/>
+        </Grid.Padding>
+      </Grid>
+    </ScrollView>
+	</ContentPage.Content>
+</ContentPage>

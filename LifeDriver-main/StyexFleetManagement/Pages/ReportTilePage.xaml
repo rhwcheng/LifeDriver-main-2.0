@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyexFleetManagement.Pages.ReportTilePage"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+  <StackLayout x:Name="MainStack" BackgroundColor="White" Padding="5,5,5,5">
+    <StackLayout>
+      <Image x:Name="backButton" Source="ic_close_button.png" HeightRequest = "24" HorizontalOptions = "StartAndExpand"></Image>
+    </StackLayout>
+  </StackLayout>
+</pages:PopupPage>

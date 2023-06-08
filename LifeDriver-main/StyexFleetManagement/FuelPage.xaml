@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="StyexFleetManagement.FuelPage"
+			 Title="Fuel">
+	<ContentPage.Content>
+		<!--<ScrollView>
+		<StackLayout>
+			<StackLayout Padding="5" Orientation="Horizontal" VerticalOptions="Fill">
+			<Image WidthRequest="35" Source="calendar.png"></Image>
+			<Picker x:Name="datePicker" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+			<Picker.Items>
+            	<x:String>Today</x:String> 
+            	<x:String>Yesterday</x:String>
+            	<x:String>This Week</x:String>
+            	<x:String>Previous Week</x:String>
+            	<x:String>This Month</x:String>
+            	<x:String>Previous Month</x:String>
+            	<x:String>Custom</x:String>
+        	</Picker.Items>
+			</Picker>
+			<Image WidthRequest="35" Source="truck.png"></Image>
+			<Picker x:Name="VehicleGroupPicker" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+			</Picker>
+			</StackLayout>
+
+				<Frame Margin="20" OutlineColor="#3F51B5" >
+				<StackLayout>
+					<Label Text="Fuel Entry Summary" HorizontalTextAlignment="Start"></Label>
+					<ActivityIndicator
+                           IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           Color="Black" 
+							x:Name="SummaryIndicator"
+							HorizontalOptions="CenterAndExpand"
+							VerticalOptions="CenterAndExpand"/>
+					<StackLayout Padding="20" x:Name="fuelSummarySection" HorizontalOptions="Center" IsVisible="{Binding SectionEnabled}">
+						
+
+						<StackLayout Orientation="Horizontal" Margin="5">
+							<Image Source="fuel.png"></Image>
+							<StackLayout>
+								<Label x:Name="TotalVolumeLabel" Text="l"></Label>
+								<Label Text="Total volume" FontSize="10"></Label>
+							</StackLayout>
+						</StackLayout>
+
+						<StackLayout Orientation="Horizontal" Margin="5">
+							<Image Source="dollar.png"></Image>
+							<StackLayout>
+								<Label x:Name="TotalCostLabel" Text="$"></Label>
+								<Label Text="Total cost" FontSize="10"></Label>
+							</StackLayout>
+						</StackLayout>
+
+						<StackLayout Orientation="Horizontal" Margin="5">
+							<Image Source="gauge.png"></Image>
+							<StackLayout>
+								<Label x:Name="AverageConsumptionLabel" Text="l/100ml"></Label>
+								<Label Text="Average consumption" FontSize="10"></Label>
+							</StackLayout>
+					</StackLayout>
+					<StackLayout.GestureRecognizers>
+        				<TapGestureRecognizer Tapped="OnFuelSummaryTapped"/>
+    				</StackLayout.GestureRecognizers>
+				</StackLayout>
+				</StackLayout>
+
+
+				</Frame>
+
+				<Frame Margin="20" OutlineColor="#3F51B5">
+						
+						
+						<StackLayout x:Name="fuelConsumptionSection" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="FillAndExpand" IsVisible="{Binding SectionEnabled}">
+							<Label Text="Fuel Entry Consumption" HorizontalTextAlignment="Start"></Label>
+						<ActivityIndicator
+                           IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           Color="Black" 
+							x:Name="ConsumptionIndicator"
+							HorizontalOptions="CenterAndExpand"
+							VerticalOptions="CenterAndExpand"/>
+							<StackLayout x:Name="ConsumptionChartContainer" HeightRequest="300">
+					
+						</StackLayout>
+						<StackLayout.GestureRecognizers>
+		       				<TapGestureRecognizer Tapped="OnFuelConsumptionTapped"/>
+		   				</StackLayout.GestureRecognizers>
+					</StackLayout>
+				
+				</Frame>
+
+
+
+		</StackLayout>
+		</ScrollView>-->
+    <ScrollView>
+      <Grid VerticalOptions="FillAndExpand" x:Name="MainGrid">
+        <Grid.ColumnSpacing>
+          <OnIdiom x:TypeArguments="x:Double"
+                   Phone="10"
+                   Tablet="10"/>
+        </Grid.ColumnSpacing>
+        <Grid.RowSpacing>
+          <OnIdiom x:TypeArguments="x:Double"
+                   Phone="5"
+                   Tablet="5"/>
+        </Grid.RowSpacing>
+        <Grid.Padding>
+          <OnIdiom x:TypeArguments="Thickness"
+                   Phone="10, 10, 10, 0"
+                   Tablet="10, 10, 10, 0"/>
+        </Grid.Padding>
+      </Grid>
+    </ScrollView>
+	</ContentPage.Content>
+</ContentPage>

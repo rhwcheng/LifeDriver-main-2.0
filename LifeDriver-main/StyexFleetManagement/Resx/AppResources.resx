@@ -1,0 +1,1439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="above" xml:space="preserve">
+    <value>above</value>
+  </data>
+  <data name="acceleration_label" xml:space="preserve">
+    <value>Acceleration</value>
+  </data>
+  <data name="acceleration_short_title" xml:space="preserve">
+    <value>Accel</value>
+  </data>
+  <data name="accident_count" xml:space="preserve">
+    <value>Accident Count</value>
+  </data>
+  <data name="accident_count_dashboard" xml:space="preserve">
+    <value>Accident (count)</value>
+  </data>
+  <data name="accident_label" xml:space="preserve">
+    <value>Accident</value>
+  </data>
+  <data name="accident_summary_description" xml:space="preserve">
+    <value>The report details the per second accident data received, providing Impact zones, accident location as well as accelerometer values.</value>
+  </data>
+  <data name="action_account_settings" xml:space="preserve">
+    <value>Account settings</value>
+  </data>
+  <data name="action_add_to_favourites" xml:space="preserve">
+    <value>Add to favourites</value>
+  </data>
+  <data name="action_change_map_type" xml:space="preserve">
+    <value>Change map type</value>
+  </data>
+  <data name="action_clear_cache" xml:space="preserve">
+    <value>Clear cached data</value>
+  </data>
+  <data name="action_logout" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="action_refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="action_refresh_user_settings" xml:space="preserve">
+    <value>Refresh settings</value>
+  </data>
+  <data name="action_remove_from_favourites" xml:space="preserve">
+    <value>Remove from favourites</value>
+  </data>
+  <data name="action_reset_dashboard_settings" xml:space="preserve">
+    <value>Reset Dashboard Settings</value>
+  </data>
+  <data name="action_share_report" xml:space="preserve">
+    <value>Share report</value>
+  </data>
+  <data name="alerts" xml:space="preserve">
+    <value>alerts</value>
+  </data>
+  <data name="alert_summary_description" xml:space="preserve">
+    <value>The report displays the total alert counts for any given vehicle along with statistics which also provides % of alerts processed &amp; un-processed.</value>
+  </data>
+  <data name="allow_multiple_trip_plotting_lable" xml:space="preserve">
+    <value>Allow Multiple Trip Plotting</value>
+  </data>
+  <data name="all_label" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="app_is_recording" xml:space="preserve">
+    <value>Fleet BI is recording</value>
+  </data>
+  <data name="app_is_running" xml:space="preserve">
+    <value>Fleet BI is running</value>
+  </data>
+  <data name="app_name" xml:space="preserve">
+    <value>Fleet BI</value>
+  </data>
+  <data name="authentication_error" xml:space="preserve">
+    <value>The username or password is incorrect</value>
+  </data>
+  <data name="average" xml:space="preserve">
+    <value>Average</value>
+  </data>
+  <data name="average_consumption" xml:space="preserve">
+    <value>Average consumption</value>
+  </data>
+  <data name="average_fuel_consumption" xml:space="preserve">
+    <value>Average Fuel Consumption</value>
+  </data>
+  <data name="average_short" xml:space="preserve">
+    <value>Avg</value>
+  </data>
+  <data name="average_speed" xml:space="preserve">
+    <value>Average speed</value>
+  </data>
+  <data name="back_button" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="below" xml:space="preserve">
+    <value>below</value>
+  </data>
+  <data name="brakes_title" xml:space="preserve">
+    <value>Brakes</value>
+  </data>
+  <data name="braking_label" xml:space="preserve">
+    <value>Braking</value>
+  </data>
+  <data name="button_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="button_login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="button_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="button_plot" xml:space="preserve">
+    <value>Plot</value>
+  </data>
+  <data name="button_poll" xml:space="preserve">
+    <value>Poll</value>
+  </data>
+  <data name="coming_soon" xml:space="preserve">
+    <value>Coming Soon</value>
+  </data>
+  <data name="compliance_label" xml:space="preserve">
+    <value>Compliance</value>
+  </data>
+  <data name="consumption" xml:space="preserve">
+    <value>Consumption</value>
+  </data>
+  <data name="consumption_measures_description" xml:space="preserve">
+    <value>The report displays all driver related factors that effect fuel consumption. The sources of fuel data are also listed in this report.</value>
+  </data>
+  <data name="consumption_short" xml:space="preserve">
+    <value>consump</value>
+  </data>
+  <data name="copyright" xml:space="preserve">
+    <value>Copyright 2020, Salus. All rights reserved.</value>
+  </data>
+  <data name="cornering_label" xml:space="preserve">
+    <value>Cornering</value>
+  </data>
+  <data name="cost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="custom_data_summary_description" xml:space="preserve">
+    <value>The report allows the plotting of any events received onto a graph to be analysed against Distance and Duration.</value>
+  </data>
+  <data name="custom_end_date" xml:space="preserve">
+    <value>Custom end date</value>
+  </data>
+  <data name="custom_start_date" xml:space="preserve">
+    <value>Custom start date</value>
+  </data>
+  <data name="custom_value" xml:space="preserve">
+    <value>Custom Selected Value</value>
+  </data>
+  <data name="daily_avg" xml:space="preserve">
+    <value>Daily avg.</value>
+  </data>
+  <data name="dashboard_title" xml:space="preserve">
+    <value>Fleet BI Dashboard</value>
+  </data>
+  <data name="dashboard_title_short" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="date_range" xml:space="preserve">
+    <value>Date range</value>
+  </data>
+  <data name="days" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="device_activity_dashboard" xml:space="preserve">
+    <value>Device Activity (count)</value>
+  </data>
+  <data name="device_id" xml:space="preserve">
+    <value>Device ID</value>
+  </data>
+  <data name="distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="distance_average_total" xml:space="preserve">
+    <value>Distance Total/Average</value>
+  </data>
+  <data name="distance_km" xml:space="preserve">
+    <value>Kilometres</value>
+  </data>
+  <data name="distance_km_abbr" xml:space="preserve">
+    <value>km</value>
+  </data>
+  <data name="distance_marker" xml:space="preserve">
+    <value>Distance Marker</value>
+  </data>
+  <data name="distance_miles" xml:space="preserve">
+    <value>International miles</value>
+  </data>
+  <data name="distance_miles_abbr" xml:space="preserve">
+    <value>mi.</value>
+  </data>
+  <data name="distance_nautical_miles" xml:space="preserve">
+    <value>Nautical miles</value>
+  </data>
+  <data name="distance_nautical_miles_abbr" xml:space="preserve">
+    <value>mi.</value>
+  </data>
+  <data name="distance_short_title" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="distance_with_value" xml:space="preserve">
+    <value>Distance: %1$s</value>
+  </data>
+  <data name="dist_driven_dashboard" xml:space="preserve">
+    <value>Distance Driven (km)</value>
+  </data>
+  <data name="driver_code" xml:space="preserve">
+    <value>Driver Code</value>
+  </data>
+  <data name="driver_count" xml:space="preserve">
+    <value>Driver count</value>
+  </data>
+  <data name="driver_label" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="driver_route_description" xml:space="preserve">
+    <value>The report provides information on trips on a per driver basis.  Such data will include Max Speed, Max RPM and Fuel Used.</value>
+  </data>
+  <data name="driver_stats_description" xml:space="preserve">
+    <value>The report groups the various Drivers License types by categories as well as detailing Driver's Information along with the no. of vehicles used.</value>
+  </data>
+  <data name="drive_duration" xml:space="preserve">
+    <value>Drive Duration</value>
+  </data>
+  <data name="drive_duration_dashboard" xml:space="preserve">
+    <value>Drive Duration (h)</value>
+  </data>
+  <data name="driving" xml:space="preserve">
+    <value>Driving</value>
+  </data>
+  <data name="driving_time" xml:space="preserve">
+    <value>Driving time</value>
+  </data>
+  <data name="dtc_code_maintenance_description" xml:space="preserve">
+    <value>The report lists the last received DTC code and its last cleared state. Codes provided can be searched for further action to be taken.</value>
+  </data>
+  <data name="duration_marker" xml:space="preserve">
+    <value>Duration Marker</value>
+  </data>
+  <data name="duration_short_title" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="duration_with_value" xml:space="preserve">
+    <value>Duration: %1$s</value>
+  </data>
+  <data name="end" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="end_date" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="end_location" xml:space="preserve">
+    <value>End Location</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>Entries</value>
+  </data>
+  <data name="error_dashboard_tile" xml:space="preserve">
+    <value>An error occured while setting up the tile. Please try again.</value>
+  </data>
+  <data name="error_label" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="error_loading_report" xml:space="preserve">
+    <value>Could not get report data</value>
+  </data>
+  <data name="error_position" xml:space="preserve">
+    <value>An error occured retrieving positions. Please try again</value>
+  </data>
+  <data name="error_trip_information" xml:space="preserve">
+    <value>Unable to collect trip information</value>
+  </data>
+  <data name="exceptions" xml:space="preserve">
+    <value>Exceptions: %1$d</value>
+  </data>
+  <data name="exception_acceleration" xml:space="preserve">
+    <value>Excessive Acceleration</value>
+  </data>
+  <data name="exception_accident" xml:space="preserve">
+    <value>Accident</value>
+  </data>
+  <data name="exception_alerts_label" xml:space="preserve">
+    <value>Exception Alerts (count)</value>
+  </data>
+  <data name="exception_cornering" xml:space="preserve">
+    <value>Cornering</value>
+  </data>
+  <data name="exception_count" xml:space="preserve">
+    <value>Exception Count</value>
+  </data>
+  <data name="exception_freewheeling" xml:space="preserve">
+    <value>Freewheeling</value>
+  </data>
+  <data name="exception_harshbreaking" xml:space="preserve">
+    <value>Harshbreaking</value>
+  </data>
+  <data name="exception_idle" xml:space="preserve">
+    <value>Excessive Idle</value>
+  </data>
+  <data name="exception_lanechange" xml:space="preserve">
+    <value>Lane Change</value>
+  </data>
+  <data name="exception_recklessdriving" xml:space="preserve">
+    <value>Reckless Driving</value>
+  </data>
+  <data name="exception_rpm" xml:space="preserve">
+    <value>Excessive RPM</value>
+  </data>
+  <data name="exception_speeding" xml:space="preserve">
+    <value>Speeding</value>
+  </data>
+  <data name="exception_summary_description" xml:space="preserve">
+    <value>The report lists the Total Exception Counts where this will be plotted against Distance to better determine the frequency of these Exceptions.</value>
+  </data>
+  <data name="exception_swerving" xml:space="preserve">
+    <value>Swerving</value>
+  </data>
+  <data name="exception_title" xml:space="preserve">
+    <value>Exceptions</value>
+  </data>
+  <data name="female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="fleet_exceptions" xml:space="preserve">
+    <value>Plot Fleet Exceptions</value>
+  </data>
+  <data name="fleet_utilization_description" xml:space="preserve">
+    <value>The report determines its most and least utilized vehicles in their fleets. Utilization trends are also indicated for continued efficiency.</value>
+  </data>
+  <data name="fleet_utilization_report" xml:space="preserve">
+    <value>The report determines its most and least utilized vehicles in their fleets. Utilization trends are also indicated for continued efficiency.</value>
+  </data>
+  <data name="freewheeling_label" xml:space="preserve">
+    <value>Freewheeling</value>
+  </data>
+  <data name="fuel" xml:space="preserve">
+    <value>Fuel</value>
+  </data>
+  <data name="fuel_consumption" xml:space="preserve">
+    <value>Fuel Consumption</value>
+  </data>
+  <data name="fuel_cons_dashboard_label" xml:space="preserve">
+    <value>Fuel Consumption (l/100km)</value>
+  </data>
+  <data name="fuel_cost" xml:space="preserve">
+    <value>Fuel Cost</value>
+  </data>
+  <data name="fuel_cost_per_km" xml:space="preserve">
+    <value>Fuel Cost Per km</value>
+  </data>
+  <data name="fuel_entry_consumption_description" xml:space="preserve">
+    <value>The report graphically displays Cost, Consumption and Volume recorded against each day of the week for trend analysis.</value>
+  </data>
+  <data name="fuel_entry_costs_description" xml:space="preserve">
+    <value>The report consolidates fuel entry data that provides a Cost per KM/Mile value. Both Cost and Consumption thresholds can be set in this report.</value>
+  </data>
+  <data name="fuel_entry_summary_description" xml:space="preserve">
+    <value>The report provides the total &amp; average fuel values logged along with its associated cost. This will then be calculated to provide an estimated consumption.</value>
+  </data>
+  <data name="fuel_level" xml:space="preserve">
+    <value>Fuel level</value>
+  </data>
+  <data name="fuel_level_monitor_description" xml:space="preserve">
+    <value>The report displays fuel levels from both OBD and Analog. It also reports on estimated Refuel and Fuel loss instances.</value>
+  </data>
+  <data name="fuel_marker" xml:space="preserve">
+    <value>Fuel Level Marker</value>
+  </data>
+  <data name="fuel_source" xml:space="preserve">
+    <value>Fuel Source</value>
+  </data>
+  <data name="fuel_theft" xml:space="preserve">
+    <value>Fuel Theft</value>
+  </data>
+  <data name="fuel_theft_dashboard_label" xml:space="preserve">
+    <value>Fuel Theft</value>
+  </data>
+  <data name="fuel_used" xml:space="preserve">
+    <value>Fuel Used</value>
+  </data>
+  <data name="fuel_used_short" xml:space="preserve">
+    <value>Fuel Used</value>
+  </data>
+  <data name="goal" xml:space="preserve">
+    <value>Goal</value>
+  </data>
+  <data name="gray_marker_definition" xml:space="preserve">
+    <value>Gray: All other vehicles</value>
+  </data>
+  <data name="hours" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="icon" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="idle_dashboard_label" xml:space="preserve">
+    <value>Trip Idle Time</value>
+  </data>
+  <data name="idle_dur" xml:space="preserve">
+    <value>Idle Dur.</value>
+  </data>
+  <data name="idle_label" xml:space="preserve">
+    <value>Idle</value>
+  </data>
+  <data name="idle_time" xml:space="preserve">
+    <value>Idle time</value>
+  </data>
+  <data name="idle_time_dashboard" xml:space="preserve">
+    <value>Trip Idle Time (min)</value>
+  </data>
+  <data name="idling" xml:space="preserve">
+    <value>Idling</value>
+  </data>
+  <data name="invalid_value" xml:space="preserve">
+    <value>Please enter a valid value</value>
+  </data>
+  <data name="kpi_alerts_title" xml:space="preserve">
+    <value>KPI Alerts</value>
+  </data>
+  <data name="label_birthDate" xml:space="preserve">
+    <value>Birth Date</value>
+  </data>
+  <data name="label_canbus" xml:space="preserve">
+    <value>CANBus</value>
+  </data>
+  <data name="label_co2" xml:space="preserve">
+    <value>CO2</value>
+  </data>
+  <data name="label_driverId" xml:space="preserve">
+    <value>Driver ID</value>
+  </data>
+  <data name="label_driver_filtered" xml:space="preserve">
+    <value>Driver ID Filtered</value>
+  </data>
+  <data name="label_expiraryDate" xml:space="preserve">
+    <value>Expirary Date</value>
+  </data>
+  <data name="label_fuel_meter" xml:space="preserve">
+    <value>Fuel Meter</value>
+  </data>
+  <data name="label_gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="label_in_trip" xml:space="preserve">
+    <value>is currently in a trip</value>
+  </data>
+  <data name="label_is_idling" xml:space="preserve">
+    <value>is idling</value>
+  </data>
+  <data name="label_licenceNumber" xml:space="preserve">
+    <value>Licence No.</value>
+  </data>
+  <data name="label_licenceType" xml:space="preserve">
+    <value>Lic Type</value>
+  </data>
+  <data name="label_login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="label_mass_airflow" xml:space="preserve">
+    <value>Mass Airflow</value>
+  </data>
+  <data name="label_none" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="label_not_in_trip" xml:space="preserve">
+    <value>is currently not in a trip</value>
+  </data>
+  <data name="label_no_trips" xml:space="preserve">
+    <value>No trips for the period</value>
+  </data>
+  <data name="label_obdii" xml:space="preserve">
+    <value>OBDII</value>
+  </data>
+  <data name="label_password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="label_requires_attention" xml:space="preserve">
+    <value>Requires attention</value>
+  </data>
+  <data name="label_rfe" xml:space="preserve">
+    <value>RFE</value>
+  </data>
+  <data name="label_server" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="label_unknown_vehicle_group" xml:space="preserve">
+    <value>Unknown vehicle group</value>
+  </data>
+  <data name="label_updated" xml:space="preserve">
+    <value>Updated</value>
+  </data>
+  <data name="label_username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="label_vehicles" xml:space="preserve">
+    <value>Last Vehicle</value>
+  </data>
+  <data name="landing_page_title" xml:space="preserve">
+    <value>Landing Page</value>
+  </data>
+  <data name="lane_change_label" xml:space="preserve">
+    <value>Lane Change</value>
+  </data>
+  <data name="last_event_received" xml:space="preserve">
+    <value>Last event received %1$s ago.</value>
+  </data>
+  <data name="last_known_position" xml:space="preserve">
+    <value>last known position</value>
+  </data>
+  <data name="last_location" xml:space="preserve">
+    <value>Last location</value>
+  </data>
+  <data name="last_reported" xml:space="preserve">
+    <value>Last Reported Time</value>
+  </data>
+  <data name="last_trips" xml:space="preserve">
+    <value>Last trips</value>
+  </data>
+  <data name="last_x_days" xml:space="preserve">
+    <value>Last {0} days</value>
+  </data>
+  <data name="last_x_months" xml:space="preserve">
+    <value>Last  {0} months</value>
+  </data>
+  <data name="last_x_weeks" xml:space="preserve">
+    <value>Last {0} weeks</value>
+  </data>
+  <data name="least_exceptions" xml:space="preserve">
+    <value>Least Exceptions</value>
+  </data>
+  <data name="least_fuel_efficient" xml:space="preserve">
+    <value>Least Fuel Efficient</value>
+  </data>
+  <data name="limit_label" xml:space="preserve">
+    <value>Limit</value>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="loading_report" xml:space="preserve">
+    <value>Loading report</value>
+  </data>
+  <data name="location_monitor_description" xml:space="preserve">
+    <value>Location monitor statistics</value>
+  </data>
+  <data name="location_updates" xml:space="preserve">
+    <value>Location Updates</value>
+  </data>
+  <data name="logging_started" xml:space="preserve">
+    <value>Logging started</value>
+  </data>
+  <data name="logging_stopped" xml:space="preserve">
+    <value>Logging stopped</value>
+  </data>
+  <data name="login_error_credentials_missing" xml:space="preserve">
+    <value>Please enter username and password.</value>
+  </data>
+  <data name="login_progress_signing_in" xml:space="preserve">
+    <value>Logging in…</value>
+  </data>
+  <data name="logout_confirmation_question" xml:space="preserve">
+    <value>Are you sure you want to log out the current user from this application?</value>
+  </data>
+  <data name="l_100km" xml:space="preserve">
+    <value>l/100km</value>
+  </data>
+  <data name="male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="default_vehicle_group_title" xml:space="preserve">
+    <value>Default Vehicle Group</value>
+  </data>
+  <data name="marker_color_codes" xml:space="preserve">
+    <value>Marker color codes</value>
+  </data>
+  <data name="marker_legend_black" xml:space="preserve">
+    <value>Not in a trip</value>
+  </data>
+  <data name="marker_legend_green" xml:space="preserve">
+    <value>In a trip</value>
+  </data>
+  <data name="marker_legend_purple" xml:space="preserve">
+    <value>Last Known Position</value>
+  </data>
+  <data name="marker_legend_red" xml:space="preserve">
+    <value>Requires Attention</value>
+  </data>
+  <data name="marker_legend_yellow" xml:space="preserve">
+    <value>Idling</value>
+  </data>
+  <data name="max_rpm" xml:space="preserve">
+    <value>Max RPM</value>
+  </data>
+  <data name="max_speed" xml:space="preserve">
+    <value>Max Speed</value>
+  </data>
+  <data name="max_speed_dashboard" xml:space="preserve">
+    <value>Max Speed (km)</value>
+  </data>
+  <data name="max_speed_label" xml:space="preserve">
+    <value>Max Speed</value>
+  </data>
+  <data name="minutes" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="more_than_year" xml:space="preserve">
+    <value>more than 1 year</value>
+  </data>
+  <data name="most_exceptions" xml:space="preserve">
+    <value>Most Exceptions</value>
+  </data>
+  <data name="most_fuel_efficient" xml:space="preserve">
+    <value>Most Fuel Efficient</value>
+  </data>
+  <data name="mzone_cost" xml:space="preserve">
+    <value>MZone Cost</value>
+  </data>
+  <data name="non_reporting" xml:space="preserve">
+    <value>Non-Reporting</value>
+  </data>
+  <data name="non_reporting_label" xml:space="preserve">
+    <value>Non-reporting (h)</value>
+  </data>
+  <data name="not_available_abbreviation" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="no_b_licences" xml:space="preserve">
+    <value>No B1-B4 Licences</value>
+  </data>
+  <data name="no_data_error" xml:space="preserve">
+    <value>No data were returned</value>
+  </data>
+  <data name="no_data_message" xml:space="preserve">
+    <value>No data is available for this tile.</value>
+  </data>
+  <data name="no_favourite_reports" xml:space="preserve">
+    <value>No favourite reports yet</value>
+  </data>
+  <data name="no_favourite_reports_description" xml:space="preserve">
+    <value>To add a report to this page, open any report and press action button</value>
+  </data>
+  <data name="no_personal_licences" xml:space="preserve">
+    <value>No Personal Licences</value>
+  </data>
+  <data name="no_trips_found" xml:space="preserve">
+    <value>No trips found for this vehicle</value>
+  </data>
+  <data name="no_t_licences" xml:space="preserve">
+    <value>No T1-T4 Licences</value>
+  </data>
+  <data name="number" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="number_of_vehicles" xml:space="preserve">
+    <value>Number of vehicles</value>
+  </data>
+  <data name="obd_route_data" xml:space="preserve">
+    <value>A specialised report that details the OBD information received by the vehicle. This OBD per second data is represented graphically.</value>
+  </data>
+  <data name="operational_alerts_title" xml:space="preserve">
+    <value>Operational Alerts</value>
+  </data>
+  <data name="overtime" xml:space="preserve">
+    <value>Overtime</value>
+  </data>
+  <data name="overtime_driving" xml:space="preserve">
+    <value>Overtime driving</value>
+  </data>
+  <data name="over_speed_dashboard" xml:space="preserve">
+    <value>Over Speed (km)</value>
+  </data>
+  <data name="parked" xml:space="preserve">
+    <value>Parked</value>
+  </data>
+  <data name="parse_error" xml:space="preserve">
+    <value>An error occurred while processing the server response</value>
+  </data>
+  <data name="personal_logbook_location_message" xml:space="preserve">
+    <value>The Personal Trip Logbook feature allows the phone to send its location and provide basic trip data for the user. By enabling this function you consent to have your device's location to be sent for analysis. 
+The logbook feature requires your Phone ID to be registered, if you have not done so please contact your administrator 
+for assistance.</value>
+  </data>
+  <data name="personal_logbook_phone_note" xml:space="preserve">
+    <value>Note: Your administrator may provide you a new Phone ID in which case you can enter this into the Phone ID field.</value>
+  </data>
+  <data name="personal_logbook_phone_registration_steps" xml:space="preserve">
+    <value>1. Go to settings and locate the Personal Trip Logbook section&lt;/br&gt;
+2. The Phone ID field is shown&lt;/br&gt;
+3. Provide the Phone ID to your administrator&lt;/br&gt;
+4. The administrator will then register your Phone ID for use. </value>
+  </data>
+  <data name="personal_logbook_phone_registration_title" xml:space="preserve">
+    <value>Registering your Phone ID</value>
+  </data>
+  <data name="per_variable_display_description" xml:space="preserve">
+    <value>The report graphically displays the Total Counts as received and lists the Distance and Time variables as set.</value>
+  </data>
+  <data name="per_vehicle" xml:space="preserve">
+    <value>per vehicle</value>
+  </data>
+  <data name="phone_id" xml:space="preserve">
+    <value>Phone ID</value>
+  </data>
+  <data name="please_wait" xml:space="preserve">
+    <value>Please wait…</value>
+  </data>
+  <data name="poi_activity_description" xml:space="preserve">
+    <value>The report lists the places visited by the selected vehicle, details include Total Visits, Total Duration and Ave. Duration.</value>
+  </data>
+  <data name="poll_command_sent" xml:space="preserve">
+    <value>Poll command sent</value>
+  </data>
+  <data name="pref_currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="pref_distance_measurement_unit" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="pref_fluid_measurement_unit" xml:space="preserve">
+    <value>Fluid</value>
+  </data>
+  <data name="previous_month" xml:space="preserve">
+    <value>Previous month</value>
+  </data>
+  <data name="previous_week" xml:space="preserve">
+    <value>Previous week</value>
+  </data>
+  <data name="ratio" xml:space="preserve">
+    <value>Ratio</value>
+  </data>
+  <data name="reckless_driving_label" xml:space="preserve">
+    <value>Reckless Driving</value>
+  </data>
+  <data name="registration" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="remove_report_confirmation" xml:space="preserve">
+    <value>Remove the report from favourites?</value>
+  </data>
+  <data name="reporting_interval" xml:space="preserve">
+    <value>Reporting Interval (min)</value>
+  </data>
+  <data name="reports_title" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="report_title_actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="report_title_alert_notifications" xml:space="preserve">
+    <value>Alert Notifications</value>
+  </data>
+  <data name="report_title_alert_summary" xml:space="preserve">
+    <value>Alert Summary</value>
+  </data>
+  <data name="report_title_dlt_driver_stats" xml:space="preserve">
+    <value>DLT Driver Statistics</value>
+  </data>
+  <data name="report_title_driver_route_activity" xml:space="preserve">
+    <value>Route Activity</value>
+  </data>
+  <data name="report_title_driving_summary" xml:space="preserve">
+    <value>Driving summary</value>
+  </data>
+  <data name="report_title_entities" xml:space="preserve">
+    <value>Entites</value>
+  </data>
+  <data name="report_title_fleet" xml:space="preserve">
+    <value>Fleet</value>
+  </data>
+  <data name="report_title_fleet_accident_summary" xml:space="preserve">
+    <value>Accident Summary</value>
+  </data>
+  <data name="report_title_fleet_custom_data_summary" xml:space="preserve">
+    <value>Custom Data Summary</value>
+  </data>
+  <data name="report_title_fleet_dtc_code_maintenance" xml:space="preserve">
+    <value>DTC Code Maintenance</value>
+  </data>
+  <data name="report_title_fleet_exception_summary" xml:space="preserve">
+    <value>Exception Summary</value>
+  </data>
+  <data name="report_title_fleet_obd_route_data" xml:space="preserve">
+    <value>OBD Route Data</value>
+  </data>
+  <data name="report_title_fleet_route_activity" xml:space="preserve">
+    <value>Route Activity</value>
+  </data>
+  <data name="report_title_fleet_total_cost_of_ownership" xml:space="preserve">
+    <value>Total Cost of Ownership</value>
+  </data>
+  <data name="report_title_fleet_utilization" xml:space="preserve">
+    <value>Fleet Utilization</value>
+  </data>
+  <data name="report_title_fuel_consumption" xml:space="preserve">
+    <value>Fuel consumption</value>
+  </data>
+  <data name="report_title_fuel_consumption_measures" xml:space="preserve">
+    <value>Consumption Measures</value>
+  </data>
+  <data name="report_title_fuel_cost" xml:space="preserve">
+    <value>Fuel cost</value>
+  </data>
+  <data name="report_title_fuel_entry_consumption" xml:space="preserve">
+    <value>Fuel Entry Consumption</value>
+  </data>
+  <data name="report_title_fuel_entry_costs" xml:space="preserve">
+    <value>Fuel Entry Costs</value>
+  </data>
+  <data name="report_title_fuel_level_monitor" xml:space="preserve">
+    <value>Fuel Level Monitor</value>
+  </data>
+  <data name="report_title_fuel_summary" xml:space="preserve">
+    <value>Fuel Entry Summary</value>
+  </data>
+  <data name="report_title_fuel_volume" xml:space="preserve">
+    <value>Fuel volume</value>
+  </data>
+  <data name="report_title_location_monitor" xml:space="preserve">
+    <value>Location Monitor</value>
+  </data>
+  <data name="report_title_overtime_utilization" xml:space="preserve">
+    <value>Overtime utilization</value>
+  </data>
+  <data name="report_title_personal_logbook" xml:space="preserve">
+    <value>Personal Log Book (Beta)</value>
+  </data>
+  <data name="report_title_per_variable_display" xml:space="preserve">
+    <value>Per Variable Display</value>
+  </data>
+  <data name="report_title_poi_activity" xml:space="preserve">
+    <value>POI Activity</value>
+  </data>
+  <data name="report_title_risk_management" xml:space="preserve">
+    <value>Risk Management</value>
+  </data>
+  <data name="report_title_time_profile_utilization" xml:space="preserve">
+    <value>Vehicle utilization</value>
+  </data>
+  <data name="report_title_vehicle_score" xml:space="preserve">
+    <value>Vehicle Score Rating</value>
+  </data>
+  <data name="reset_dashboard_prompt" xml:space="preserve">
+    <value>This will reset all values, including date range and vehicle groups already selected.</value>
+  </data>
+  <data name="result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="risk_management_description" xml:space="preserve">
+    <value>The report provides the last reported time of the vehicles along with its last known event. An alert summary is also provided.</value>
+  </data>
+  <data name="route_activity_description" xml:space="preserve">
+    <value>The report summarises the trip's details along with its Max Speed, Max RPM, Fuel Used and Total Exception Counts.</value>
+  </data>
+  <data name="rpm_label" xml:space="preserve">
+    <value>RPM</value>
+  </data>
+  <data name="seconds" xml:space="preserve">
+    <value>seconds</value>
+  </data>
+  <data name="select_y_axis" xml:space="preserve">
+    <value>Select Y Axis:</value>
+  </data>
+  <data name="server_connection_error" xml:space="preserve">
+    <value>Could not establish connection to the server</value>
+  </data>
+  <data name="snap_trip_to_road_label" xml:space="preserve">
+    <value>Snap To Road</value>
+  </data>
+  <data name="speeding_label" xml:space="preserve">
+    <value>Speeding</value>
+  </data>
+  <data name="speed_km_h_abbr" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="speed_mph_abbr" xml:space="preserve">
+    <value>mph</value>
+  </data>
+  <data name="start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="start_date" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="start_date_after_end_date_error" xml:space="preserve">
+    <value>Start date must not be greater than end date</value>
+  </data>
+  <data name="stopped_time_dashboard" xml:space="preserve">
+    <value>Stopped Time (h)</value>
+  </data>
+  <data name="stopped_time_title" xml:space="preserve">
+    <value>Stopped Time</value>
+  </data>
+  <data name="stop_duration" xml:space="preserve">
+    <value>Stop Dur.</value>
+  </data>
+  <data name="success_label" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="swerving_label" xml:space="preserve">
+    <value>Swerving</value>
+  </data>
+  <data name="this_month" xml:space="preserve">
+    <value>Current Month</value>
+  </data>
+  <data name="this_week" xml:space="preserve">
+    <value>This week</value>
+  </data>
+  <data name="time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="time_h" xml:space="preserve">
+    <value>h</value>
+  </data>
+  <data name="time_min" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="title_activity_account_settings" xml:space="preserve">
+    <value>Account settings</value>
+  </data>
+  <data name="title_application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="title_b_licence_chart" xml:space="preserve">
+    <value>Licence Type: B1 - B4</value>
+  </data>
+  <data name="title_custom_date_range" xml:space="preserve">
+    <value>Select custom date range</value>
+  </data>
+  <data name="title_exception_vs_distance_chart" xml:space="preserve">
+    <value>Exceptions vs Distance</value>
+  </data>
+  <data name="title_favourite_reports" xml:space="preserve">
+    <value>Favourite reports</value>
+  </data>
+  <data name="title_fuel_consumption" xml:space="preserve">
+    <value>Fuel</value>
+  </data>
+  <data name="title_fuel_consumption_graph" xml:space="preserve">
+    <value>Monthly Fuel Consumption and Cost</value>
+  </data>
+  <data name="title_fuel_efficiency_graph" xml:space="preserve">
+    <value>Monthly Fuel Efficiency and Cost per km</value>
+  </data>
+  <data name="title_least_utilised" xml:space="preserve">
+    <value>Least Utilised Vehicles</value>
+  </data>
+  <data name="title_map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="title_most_utilised" xml:space="preserve">
+    <value>Most Utilised Vehicles</value>
+  </data>
+  <data name="title_personal_licence_chart" xml:space="preserve">
+    <value>Licence Type: Personal</value>
+  </data>
+  <data name="title_settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="title_share_report" xml:space="preserve">
+    <value>Share report</value>
+  </data>
+  <data name="title_total_exception_chart" xml:space="preserve">
+    <value>Total Exception Counts</value>
+  </data>
+  <data name="title_trip_plotting" xml:space="preserve">
+    <value>Trip Plotting</value>
+  </data>
+  <data name="title_t_licence_chart" xml:space="preserve">
+    <value>Licence Type: T1-T4</value>
+  </data>
+  <data name="title_units_of_measure" xml:space="preserve">
+    <value>Units of measure</value>
+  </data>
+  <data name="title_vehicle_trip_activity_chart" xml:space="preserve">
+    <value>Vehicle Group Trip Activity</value>
+  </data>
+  <data name="title_vehicle_utilisation_distance_duration" xml:space="preserve">
+    <value>Vehicle Utilisation by Distance and Duration</value>
+  </data>
+  <data name="title_vehicle_utilization" xml:space="preserve">
+    <value>Vehicles</value>
+  </data>
+  <data name="toast_cache_cleared" xml:space="preserve">
+    <value>Cached data cleared</value>
+  </data>
+  <data name="toast_cannot_plot_trip_locations_missing" xml:space="preserve">
+    <value>Cannot plot the trip. Location data missing.</value>
+  </data>
+  <data name="toast_favourite_report_removed" xml:space="preserve">
+    <value>Report removed from dashboard</value>
+  </data>
+  <data name="toast_google_maps_not_available" xml:space="preserve">
+    <value>Map is not available on your device</value>
+  </data>
+  <data name="toast_locating_vehicles" xml:space="preserve">
+    <value>Locating vehicles…</value>
+  </data>
+  <data name="toast_report_added_to_favourites" xml:space="preserve">
+    <value>Report added to dashboard</value>
+  </data>
+  <data name="toast_report_sharing_failed" xml:space="preserve">
+    <value>Failed to export the report</value>
+  </data>
+  <data name="toast_user_settings_updated" xml:space="preserve">
+    <value>User settings updated</value>
+  </data>
+  <data name="toast_vehicle_X_location_unknown" xml:space="preserve">
+    <value>Cannot locate vehicle %1$s</value>
+  </data>
+  <data name="toast_x_vehicles_located" xml:space="preserve">
+    <value>%1$d vehicles located</value>
+  </data>
+  <data name="today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="top_5_best_utilized" xml:space="preserve">
+    <value>Top 5: Best utilized</value>
+  </data>
+  <data name="top_5_best_utilized_subtitle" xml:space="preserve">
+    <value>(least overtime driving)</value>
+  </data>
+  <data name="top_5_current_fuel_level" xml:space="preserve">
+    <value>Top 5: Current fuel level</value>
+  </data>
+  <data name="top_5_current_fuel_level_subtitle" xml:space="preserve">
+    <value>(vehicles with greatest distance)</value>
+  </data>
+  <data name="top_5_drivers" xml:space="preserve">
+    <value>Most Active Drivers</value>
+  </data>
+  <data name="top_5_driving_distance" xml:space="preserve">
+    <value>Top 5: Driving distance</value>
+  </data>
+  <data name="top_5_driving_time" xml:space="preserve">
+    <value>Top 5: Driving time</value>
+  </data>
+  <data name="top_5_fuel_consumption" xml:space="preserve">
+    <value>Top 5: Fuel consumption</value>
+  </data>
+  <data name="top_5_fuel_volume" xml:space="preserve">
+    <value>Top 5: Fuel volume</value>
+  </data>
+  <data name="top_5_least_utilized" xml:space="preserve">
+    <value>Top 5: Least utilized</value>
+  </data>
+  <data name="top_5_most_utilized" xml:space="preserve">
+    <value>Top 5: Most utilized</value>
+  </data>
+  <data name="top_5_worst_utilized" xml:space="preserve">
+    <value>Top 5: Worst utilized</value>
+  </data>
+  <data name="top_5_worst_utilized_subtitle" xml:space="preserve">
+    <value>(most overtime driving)</value>
+  </data>
+  <data name="total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="total_cost" xml:space="preserve">
+    <value>Total cost</value>
+  </data>
+  <data name="total_cost_of_ownership_description" xml:space="preserve">
+    <value>The report identifies the TCO by providing the Cost per KM/Miles value to each vehicle. Both fixed &amp; Variable costs are captured.</value>
+  </data>
+  <data name="total_count" xml:space="preserve">
+    <value>Total Count</value>
+  </data>
+  <data name="total_distance" xml:space="preserve">
+    <value>Total distance</value>
+  </data>
+  <data name="total_driving_time" xml:space="preserve">
+    <value>Total driving time</value>
+  </data>
+  <data name="total_time" xml:space="preserve">
+    <value>Total time</value>
+  </data>
+  <data name="total_volume" xml:space="preserve">
+    <value>Total volume</value>
+  </data>
+  <data name="to_label" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="trip_end_label" xml:space="preserve">
+    <value>Trip End:</value>
+  </data>
+  <data name="trip_logbook_title" xml:space="preserve">
+    <value>Personal Logbook (Beta)</value>
+  </data>
+  <data name="trip_logbook_title_short" xml:space="preserve">
+    <value>Logbook (Beta)</value>
+  </data>
+  <data name="trip_recording" xml:space="preserve">
+    <value>Trip Recording</value>
+  </data>
+  <data name="trip_start_label" xml:space="preserve">
+    <value>Trip Start:</value>
+  </data>
+  <data name="ubi_exceptions" xml:space="preserve">
+    <value>Plot UBI Exceptions</value>
+  </data>
+  <data name="unknown_location" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="unknown_service_error" xml:space="preserve">
+    <value>An error occurred while connecting to the server</value>
+  </data>
+  <data name="updating_report" xml:space="preserve">
+    <value>Updating report…</value>
+  </data>
+  <data name="updating_reports" xml:space="preserve">
+    <value>Updating reports…</value>
+  </data>
+  <data name="utilisation_period_percent" xml:space="preserve">
+    <value>Utilisation Period %</value>
+  </data>
+  <data name="utilization" xml:space="preserve">
+    <value>Utilization</value>
+  </data>
+  <data name="utilization_histogram" xml:space="preserve">
+    <value>Utilization histogram</value>
+  </data>
+  <data name="vehicle" xml:space="preserve">
+    <value>Vehicle</value>
+  </data>
+  <data name="vehicle_description" xml:space="preserve">
+    <value>Vehicle Description</value>
+  </data>
+  <data name="vehicle_dtc_dashboard" xml:space="preserve">
+    <value>Vehicle DTC (count)</value>
+  </data>
+  <data name="vehicle_group" xml:space="preserve">
+    <value>Vehicle group</value>
+  </data>
+  <data name="vehicle_group_average" xml:space="preserve">
+    <value>Average</value>
+  </data>
+  <data name="vehicle_score_description" xml:space="preserve">
+    <value>The report displays a vehicle score based on the formula as assigned. A feedback is also provided on how to improve this score.</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="vin_changed_dashboard" xml:space="preserve">
+    <value>VIN Changed (count)</value>
+  </data>
+  <data name="violation_label" xml:space="preserve">
+    <value>Violation</value>
+  </data>
+  <data name="volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="volume_imperial_gallons" xml:space="preserve">
+    <value>Imperial gallons</value>
+  </data>
+  <data name="volume_imperial_gallons_abbr" xml:space="preserve">
+    <value>gal.</value>
+  </data>
+  <data name="volume_litres" xml:space="preserve">
+    <value>Litres</value>
+  </data>
+  <data name="volume_litres_abbr" xml:space="preserve">
+    <value>l</value>
+  </data>
+  <data name="volume_us_gallons" xml:space="preserve">
+    <value>U.S. gallons</value>
+  </data>
+  <data name="volume_us_gallons_abbr" xml:space="preserve">
+    <value>gal.</value>
+  </data>
+  <data name="welcome_label" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="work_hours" xml:space="preserve">
+    <value>Work hours</value>
+  </data>
+  <data name="work_time_driving" xml:space="preserve">
+    <value>Work time driving</value>
+  </data>
+  <data name="x_vehicles" xml:space="preserve">
+    <value>{0} vehicles</value>
+  </data>
+  <data name="yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="start_timer" xml:space="preserve">
+    <value>Start Timer</value>
+  </data>
+  <data name="stop_timer" xml:space="preserve">
+    <value>Stop Timer</value>
+  </data>
+  <data name="guardian_angel_title" xml:space="preserve">
+    <value>Guardian Angel</value>
+  </data>
+  <data name="amber_alert_up_message" xml:space="preserve">
+    <value>Your amber alert run down, would you like to send SOS event?</value>
+  </data>
+  <data name="guardian_angel_up_message" xml:space="preserve">
+    <value>Your guardian angel alert run down, would you like to send SOS event?</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="not_connected_to_internet" xml:space="preserve">
+    <value>You are not connected to internet</value>
+  </data>
+  <data name="sending_event" xml:space="preserve">
+    <value>Sending Event</value>
+  </data>
+  <data name="sos_event_sent" xml:space="preserve">
+    <value>SOS Event Sent!</value>
+  </data>
+  <data name="location_permission_required" xml:space="preserve">
+    <value>Please allow location access to use this feature</value>
+  </data>
+  <data name="nfc" xml:space="preserve">
+    <value>NFC</value>
+  </data>
+  <data name="emergency_number_not_found" xml:space="preserve">
+    <value>Emergency number not found</value>
+  </data>
+  <data name="add_mzone_account" xml:space="preserve">
+    <value>Add MZone Account</value>
+  </data>
+  <data name="proceed" xml:space="preserve">
+    <value>Proceed</value>
+  </data>
+  <data name="add_salus_account" xml:space="preserve">
+    <value>Add Salus Account</value>
+  </data>
+  <data name="flic" xml:space="preserve">
+    <value>Flic</value>
+  </data>
+  <data name="flic_not_installed" xml:space="preserve">
+    <value>Flic app is not installed</value>
+  </data>
+  <data name="connected_to_flic" xml:space="preserve">
+    <value>Connected to Flic {0}</value>
+  </data>
+  <data name="amber_alert_title" xml:space="preserve">
+    <value>Amber Alert</value>
+  </data>
+  <data name="sos" xml:space="preserve">
+    <value>SOS</value>
+  </data>
+  <data name="check_in" xml:space="preserve">
+    <value>Check In</value>
+  </data>
+  <data name="check_out" xml:space="preserve">
+    <value>Check Out</value>
+  </data>
+  <data name="checkin_event_sent" xml:space="preserve">
+    <value>Check-IN Event Sent!</value>
+  </data>
+  <data name="checkout_event_sent" xml:space="preserve">
+    <value>Check-OUT Event Sent!</value>
+  </data>
+  <data name="send_position_event" xml:space="preserve">
+    <value>Send Position/Event</value>
+  </data>
+  <data name="beacon_tagging" xml:space="preserve">
+    <value>Beacon Tagging</value>
+  </data>
+  <data name="covid_19" xml:space="preserve">
+    <value>Covid-19</value>
+  </data>
+  <data name="driver_id" xml:space="preserve">
+    <value>Driver ID</value>
+  </data>
+  <data name="show_qr" xml:space="preserve">
+    <value>Show QR</value>
+  </data>
+  <data name="email_address" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="first_name" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="last_name" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="phone_number" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="sos_number" xml:space="preserve">
+    <value>SOS Number</value>
+  </data>
+  <data name="priority_number" xml:space="preserve">
+    <value>Priority Number</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="user_details" xml:space="preserve">
+    <value>User Details</value>
+  </data>
+  <data name="start_scan" xml:space="preserve">
+    <value>Start Scan</value>
+  </data>
+  <data name="stop_scan" xml:space="preserve">
+    <value>Stop Scan</value>
+  </data>
+  <data name="no_beacons_found" xml:space="preserve">
+    <value>No beacons in range were found. Please try again.</value>
+  </data>
+  <data name="not_supported" xml:space="preserve">
+    <value>Feature not supported</value>
+  </data>
+  <data name="phone_number_not_exist" xml:space="preserve">
+    <value>Please provide phone number in settings page</value>
+  </data>
+</root>

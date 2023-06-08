@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+	<!-- General -->
+    <data name="app_name" xml:space="preserve">
+    <value>J.Siam GPS Solutions</value></data>
+    <data name="button_ok" xml:space="preserve">
+    <value>OK</value></data>
+    <data name="button_cancel" xml:space="preserve">
+    <value>Stornieren</value></data>
+    <data name="loading" xml:space="preserve">
+    <value>Laedt</value></data>
+    <data name="loading_report" xml:space="preserve">
+    <value>Bericht wird geladen&#8230;</value></data>
+    <data name="updating_report" xml:space="preserve">
+    <value>Bericht wird aktualisiert&#8230;</value></data>
+    <data name="updating_reports" xml:space="preserve">
+    <value>Berichte werden aktualisiert&#8230;</value></data>
+    <data name="please_wait" xml:space="preserve">
+    <value>Bitte warten&#8230;</value></data>
+    <data name="error_loading_report" xml:space="preserve">
+    <value>Berichtsdaten konnten nicht geladen werden</value></data>
+    <data name="icon" xml:space="preserve">
+    <value>Icon</value></data>
+
+    <!-- Menu items -->
+    <data name="action_share_report" xml:space="preserve">
+    <value>Bericht teilen</value></data>
+    <data name="action_add_to_favourites" xml:space="preserve">
+    <value>Zu den Favoriten hinzufuegen</value></data>
+    <data name="action_remove_from_favourites" xml:space="preserve">
+    <value>Aus Favoriten entfernen</value></data>
+    <data name="action_account_settings" xml:space="preserve">
+    <value>Account Einstellungen</value></data>
+    <data name="action_refresh" xml:space="preserve">
+    <value>Erfrischen</value></data>
+    <data name="action_change_map_type" xml:space="preserve">
+    <value>Karte veraendern</value></data>
+
+    <!-- Errors -->
+    <data name="server_connection_error" xml:space="preserve">
+    <value>Es konnte keine Verbindung zum Server erstellt werden</value></data>
+    <data name="authentication_error" xml:space="preserve">
+    <value>Der Benutzername oder das Passwort ist nicht korrekt</value></data>
+    <data name="parse_error" xml:space="preserve">
+    <value>Fehler mit der antwort des Servers</value></data>
+    <data name="no_data_error" xml:space="preserve">
+    <value>Es wurden keine Daten zurückgegeben</value></data>
+    <data name="unknown_service_error" xml:space="preserve">
+    <value>Fehler mit der Verbindung zum Server</value></data>
+    <data name="start_date_after_end_date_error" xml:space="preserve">
+    <value>Startdatum darf nicht größer sein als Enddatum</value></data>
+
+    <!-- Login page -->
+    <data name="label_login_to_mzone" xml:space="preserve">
+    <value>Login zu <b>J.Siam</b></value></data>
+    <data name="label_server" xml:space="preserve">
+    <value>Server</value></data>
+    <data name="label_login" xml:space="preserve">
+    <value>Login</value></data>
+    <data name="label_username" xml:space="preserve">
+    <value>Benutzername</value></data>
+    <data name="label_password" xml:space="preserve">
+    <value>Passwort</value></data>
+    <data name="button_login" xml:space="preserve">
+    <value>Log in</value></data>
+    <data name="login_progress_signing_in" xml:space="preserve">
+    <value>Logging in&#8230;</value></data>
+    <data name="login_error_credentials_missing" xml:space="preserve">
+    <value>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein.</value></data>
+    <data name="copyright" xml:space="preserve">
+    <value>Copyright &#169; 2013, Scope Technologies Holdings Limited. All rights reserved.</value></data>
+
+    <!-- Home page -->
+    <data name="title_favourite_reports" xml:space="preserve">
+    <value>Bevorzugte Berichte</value></data>
+    <data name="title_vehicle_utilization" xml:space="preserve">
+    <value>Fahrzeuge</value></data>
+    <data name="title_fuel_consumption" xml:space="preserve">
+    <value>Kraftstoff</value></data>
+    <data name="title_map" xml:space="preserve">
+    <value>Karte</value></data>
+
+    <!-- Vehicles -->
+    <data name="last_event_received" xml:space="preserve">
+    <value>Letztes Ereignis vor %1$s empfangen</value></data>
+    <data name="seconds" xml:space="preserve">
+    <value>Sekunden</value></data>
+    <data name="minutes" xml:space="preserve">
+    <value>Minuten</value></data>
+    <data name="hours" xml:space="preserve">
+    <value>Stunden</value></data>
+    <data name="days" xml:space="preserve">
+    <value>Tage</value></data>
+    <data name="more_than_year" xml:space="preserve">
+    <value>mehr als 1 Jahr</value></data>
+    <data name="unknown_location" xml:space="preserve">
+    <value>Unbekannt</value></data>
+    <data name="last_trips" xml:space="preserve">
+    <value>Letzte Fahrten</value></data>
+    <data name="no_trips_found" xml:space="preserve">
+    <value>Keine Fahrten für dieses Fahrzeug gefunden</value></data>
+    <data name="start" xml:space="preserve">
+    <value>Starten</value></data>
+    <data name="end" xml:space="preserve">
+    <value>Ende</value></data>
+    <data name="distance_with_value" xml:space="preserve">
+    <value>Entfernung: %1$s</value></data>
+    <data name="duration_with_value" xml:space="preserve">
+    <value>Dauer: %1$s</value></data>
+    <data name="exceptions" xml:space="preserve">
+    <value>Ausnahmen: %1$d</value></data>
+    <data name="button_plot" xml:space="preserve">
+    <value>Plot</value></data>
+    <data name="button_poll" xml:space="preserve">
+    <value>Poll</value></data>
+    <data name="poll_command_sent" xml:space="preserve">
+    <value>Poll Befehl gesendet</value></data>
+    <data name="marker_color_codes" xml:space="preserve">
+    <value>Marker Farbcodes</value></data>
+    <data name="green_marker_definition" xml:space="preserve">
+    <value>Grün: Einheit berichtet weniger als  <b>24 Stunden</b></value></data>
+    <data name="amber_marker_definition" xml:space="preserve">
+    <value>Bernstein: Einheit berichtet weniger als <b>7 Tage</b></value></data>
+    <data name="red_marker_definition" xml:space="preserve">
+    <value>Rot: Einheit berichtet weniger als <b>1 Monat</b></value></data>
+    <data name="gray_marker_definition" xml:space="preserve">
+    <value>Grau: Alle anderen Fahrzeuge</value></data>
+
+    <!-- Report settings -->
+    <data name="date_range" xml:space="preserve">
+    <value>Datumsbereich</value></data>
+    <data name="title_custom_date_range" xml:space="preserve">
+    <value>Datumsbereich waehlen</value></data>
+    <data name="start_date" xml:space="preserve">
+    <value>Startdatum</value></data>
+    <data name="end_date" xml:space="preserve">
+    <value>Enddatum</value></data>
+    <data name="custom_start_date" xml:space="preserve">
+    <value>Startdatum waehlen</value></data>
+    <data name="custom_end_date" xml:space="preserve">
+    <value>Enddatum waehlen</value></data>
+    <data name="today" xml:space="preserve">
+    <value>Heute</value></data>
+    <data name="yesterday" xml:space="preserve">
+    <value>Gestern</value></data>
+    <data name="this_week" xml:space="preserve">
+    <value>Diese Woche</value></data>
+    <data name="previous_week" xml:space="preserve">
+    <value>Vorherige Woche</value></data>
+    <data name="this_month" xml:space="preserve">
+    <value>Dieser Monat</value></data>
+    <data name="previous_month" xml:space="preserve">
+    <value>Vorheriger Monat</value></data>
+    <data name="custom" xml:space="preserve">
+    <value>Brauch</value></data>
+    <data name="vehicle_group" xml:space="preserve">
+    <value>Fahrzeuggruppe</value></data>
+
+    <!-- Account settings -->
+    <data name="title_activity_account_settings" xml:space="preserve">
+    <value>Account Einstellungen</value></data>
+    <data name="action_logout" xml:space="preserve">
+    <value>Log out</value></data>
+    <data name="title_units_of_measure" xml:space="preserve">
+    <value>Maßeinheiten</value></data>
+    <data name="pref_currency" xml:space="preserve">
+    <value>Währung</value></data>
+    <data name="pref_distance_measurement_unit" xml:space="preserve">
+    <value>Distanz</value></data>
+    <data name="pref_fluid_measurement_unit" xml:space="preserve">
+    <value>Flüssigkeit</value></data>
+    <data name="action_refresh_user_settings" xml:space="preserve">
+    <value>Einstellungen aktualisieren </value></data>
+    <data name="logout_confirmation_question" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie sich vom aktuellen Benutzer ausloggen wollen?</value></data>
+    <data name="title_application" xml:space="preserve">
+    <value>Application</value></data>
+    <data name="version" xml:space="preserve">
+    <value>Version</value></data>
+    <data name="action_clear_cache" xml:space="preserve">
+    <value>Cache loeschen</value></data>
+
+    <!-- Toasts -->
+    <data name="toast_report_added_to_favourites" xml:space="preserve">
+    <value>Bericht zu den Favoriten hinzugefügt</value></data>
+    <data name="toast_favourite_report_removed" xml:space="preserve">
+    <value>Bericht von den Favoriten entfernt</value></data>
+    <data name="toast_user_settings_updated" xml:space="preserve">
+    <value>Benutzereinstellungen aktualisiert</value></data>
+    <data name="toast_cache_cleared" xml:space="preserve">
+    <value>Cache geloescht</value></data>
+    <data name="toast_locating_vehicles" xml:space="preserve">
+    <value>Fahrzeuge  lokalisieren&#8230;</value></data>
+    <data name="toast_x_vehicles_located" xml:space="preserve">
+    <value>%1$d Fahrzeuge identifiziert</value></data>
+    <data name="toast_report_sharing_failed" xml:space="preserve">
+    <value>Fehler beim Exportieren des Berichts</value></data>
+    <data name="toast_cannot_plot_trip_locations_missing" xml:space="preserve">
+    <value>Fahrten koennen nicht gezeichnet weredn. Daten fehlen.</value></data>
+    <data name="toast_vehicle_X_location_unknown" xml:space="preserve">
+    <value>Fahrzeug nicht gefunden %1$s</value></data>
+    <data name="toast_google_maps_not_available" xml:space="preserve">
+    <value>Karte ist auf Ihrem Gerät nicht verfügbar</value></data>
+
+    <!-- Units of measure -->
+    <data name="time_h" xml:space="preserve">
+    <value>h</value></data>
+    <data name="time_min" xml:space="preserve">
+    <value>min</value></data>
+    <data name="distance_km" xml:space="preserve">
+    <value>Kilometer</value></data>
+    <data name="distance_km_abbr" xml:space="preserve">
+    <value>km</value></data>
+    <data name="distance_miles" xml:space="preserve">
+    <value>Internationale Meilen</value></data>
+    <data name="distance_miles_abbr" xml:space="preserve">
+    <value>mi.</value></data>
+    <data name="distance_nautical_miles" xml:space="preserve">
+    <value>Nautische Meilen</value></data>
+    <data name="distance_nautical_miles_abbr" xml:space="preserve">
+    <value>mi.</value></data>
+    <data name="volume_litres" xml:space="preserve">
+    <value>Liter</value></data>
+    <data name="volume_litres_abbr" xml:space="preserve">
+    <value>l</value></data>
+    <data name="volume_imperial_gallons" xml:space="preserve">
+    <value>Imperiale Gallonen</value></data>
+    <data name="volume_imperial_gallons_abbr" xml:space="preserve">
+    <value>gal.</value></data>
+    <data name="volume_us_gallons" xml:space="preserve">
+    <value>US-Gallonen</value></data>
+    <data name="volume_us_gallons_abbr" xml:space="preserve">
+    <value>gal.</value></data>
+    <data name="speed_mph_abbr" xml:space="preserve">
+    <value>mph</value></data>
+    <data name="speed_km_h_abbr" xml:space="preserve">
+    <value>km/h</value></data>
+
+    <!-- Reports -->
+    <data name="no_favourite_reports" xml:space="preserve">
+    <value>Noch keine Favoriten Berichte</value></data>
+    <data name="no_favourite_reports_description" xml:space="preserve">
+    <value>Um einen Bericht zu dieser Seite hinzuzufügen, öffnen Sie einen Bericht und drücken Sie die Aktionstaste</value></data>
+    <data name="remove_report_confirmation" xml:space="preserve">
+    <value>Bericht von Favoriten entfernen?</value></data>
+    <data name="title_share_report" xml:space="preserve">
+    <value>Bericht teilen</value></data>
+    <data name="label_updated" xml:space="preserve">
+    <value>Aktualisiert:</value></data>
+    <data name="label_try_again" xml:space="preserve">
+    <value><u>Versuchen Sie es erneut</u></value></data>
+    <data name="label_unknown_vehicle_group" xml:space="preserve">
+    <value>Fahrzeuggruppe nicht erkannt</value></data>
+
+    <!-- Report titles -->
+    <data name="report_title_driving_summary" xml:space="preserve">
+    <value>Zusammenfassung des Fahren</value></data>
+    <data name="report_title_time_profile_utilization" xml:space="preserve">
+    <value>Auslastung des Fahrzeugs</value></data>
+    <data name="report_title_overtime_utilization" xml:space="preserve">
+    <value>Ueberstunden</value></data>
+    <data name="report_title_fuel_summary" xml:space="preserve">
+    <value>Kraftstoff Zusammenfassung</value></data>
+    <data name="report_title_fuel_volume" xml:space="preserve">
+    <value>Kraftstoff Volumen</value></data>
+    <data name="report_title_fuel_cost" xml:space="preserve">
+    <value>Treibstoffkosten</value></data>
+    <data name="report_title_fuel_consumption" xml:space="preserve">
+    <value>Kraftstoffverbrauch</value></data>
+
+    <!-- Report data -->
+    <data name="total" xml:space="preserve">
+    <value>Insgesamt</value></data>
+    <data name="average" xml:space="preserve">
+    <value>Durchschnitt</value></data>
+    <data name="daily_avg" xml:space="preserve">
+    <value>Tagesdurchschnitt</value></data>
+    <data name="per_vehicle" xml:space="preserve">
+    <value>pro Fahrzeug</value></data>
+    <data name="x_vehicles" xml:space="preserve">
+    <value>%1$d Fahrzeuge</value></data>
+    <data name="distance" xml:space="preserve">
+    <value>Distanz</value></data>
+    <data name="time" xml:space="preserve">
+    <value>Zeit</value></data>
+    <data name="average_speed" xml:space="preserve">
+    <value>Durchschnittliche Geschwindigkeit</value></data>
+    <data name="vehicle" xml:space="preserve">
+    <value>Fahrzeug</value></data>
+    <data name="number" xml:space="preserve">
+    <value>#</value></data>
+    <data name="work_time_driving" xml:space="preserve">
+    <value>Fahren waehrend der Arbeitszeit</value></data>
+    <data name="overtime_driving" xml:space="preserve">
+    <value>Überstunden gefahren</value></data>
+    <data name="total_driving_time" xml:space="preserve">
+    <value>Insgesamt gefahren</value></data>
+    <data name="driver_count" xml:space="preserve">
+    <value>Anzahl der Fahrer</value></data>
+    <data name="ratio" xml:space="preserve">
+    <value>Verhältnis</value></data>
+    <data name="work_hours" xml:space="preserve">
+    <value>Arbeitszeit</value></data>
+    <data name="overtime" xml:space="preserve">
+    <value>Überstunden</value></data>
+    <data name="total_distance" xml:space="preserve">
+    <value>insgesamte Distanz</value></data>
+    <data name="total_time" xml:space="preserve">
+    <value>insgesamte Zeit</value></data>
+    <data name="total_volume" xml:space="preserve">
+    <value>insgesamte Volumen</value></data>
+    <data name="total_cost" xml:space="preserve">
+    <value>insgesamte Kosten</value></data>
+    <data name="average_consumption" xml:space="preserve">
+    <value>Durchschnittsverbrauch</value></data>
+    <data name="volume" xml:space="preserve">
+    <value>Volumen</value></data>
+    <data name="cost" xml:space="preserve">
+    <value>Kosten</value></data>
+    <data name="consumption" xml:space="preserve">
+    <value>Verbrauch</value></data>
+    <data name="fuel_level" xml:space="preserve">
+    <value>Kraftstoffstand</value></data>
+    <data name="last_x_days" xml:space="preserve">
+    <value>Letzten %1$d Tage</value></data>
+    <data name="last_x_weeks" xml:space="preserve">
+    <value>Letzten %1$d Wochen</value></data>
+    <data name="last_x_months" xml:space="preserve">
+    <value>Letzten %1$d Monate</value></data>
+    <data name="driving" xml:space="preserve">
+    <value>Fahren</value></data>
+    <data name="idling" xml:space="preserve">
+    <value>Leerlauf</value></data>
+    <data name="parked" xml:space="preserve">
+    <value>Geparkt</value></data>
+    <data name="utilization" xml:space="preserve">
+    <value>Gebrauch</value></data>
+    <data name="idle_time" xml:space="preserve">
+    <value>Leerlauf Zeit</value></data>
+    <data name="driving_time" xml:space="preserve">
+    <value>Fahrzeit</value></data>
+    <data name="number_of_vehicles" xml:space="preserve">
+    <value>Anzahl der Fahrzeuge</value></data>
+    <data name="utilization_histogram" xml:space="preserve">
+    <value>Gebrauch Histogramm</value></data>
+
+    <!-- Top 5 tables -->
+    <data name="top_5_driving_distance" xml:space="preserve">
+    <value>Top 5: Fahrt Distanz</value></data>
+    <data name="top_5_driving_time" xml:space="preserve">
+    <value>Top 5: Fahrzeit</value></data>
+    <data name="top_5_most_utilized" xml:space="preserve">
+    <value>Top 5: Die meisten genutzt</value></data>
+    <data name="top_5_least_utilized" xml:space="preserve">
+    <value>Top 5: Die wenigsten genutzt</value></data>
+    <data name="top_5_best_utilized" xml:space="preserve">
+    <value>Top 5: Die besten genutzt</value></data>
+    <data name="top_5_best_utilized_subtitle" xml:space="preserve">
+    <value>(Wenigsten Überstunden gefahren)</value></data>
+    <data name="top_5_worst_utilized" xml:space="preserve">
+    <value>Top 5: Schlechtesten genutzt</value></data>
+    <data name="top_5_worst_utilized_subtitle" xml:space="preserve">
+    <value>(Die meisten Überstunden gefahren)</value></data>
+    <data name="top_5_current_fuel_level" xml:space="preserve">
+    <value>Aktueller Kraftstoffstand</value></data>
+    <data name="top_5_current_fuel_level_subtitle" xml:space="preserve">
+    <value>(Fahrzeuge mit der groessten Distanz)</value></data>
+    <data name="top_5_fuel_volume" xml:space="preserve">
+    <value>Top 5: Kraftstoff Volumen</value></data>
+    <data name="top_5_fuel_consumption" xml:space="preserve">
+    <value>Top 5: Kraftstoffverbrauch</value></data>
+
+</root>
+
+

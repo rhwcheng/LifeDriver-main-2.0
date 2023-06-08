@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CustomControls:ReportPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:CustomControls="clr-namespace:StyexFleetManagement.CustomControls"
+             x:Class="StyexFleetManagement.Pages.Reports.DLTDriverReport"
+             xmlns:Gestures="clr-namespace:StyexFleetManagement.CustomControls;assembly=StyexFleetManagement" 
+             xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+            xmlns:converters="clr-namespace:StyexFleetManagement.Converters">
+    <CustomControls:ReportPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBooleanConverter x:Key="inverseBooleanConverter" />
+        </ResourceDictionary>
+    </CustomControls:ReportPage.Resources>
+    <ScrollView>
+        <StackLayout Padding="5" Orientation="Vertical" VerticalOptions="Fill" x:Name="mainStack">
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions ="FillAndExpand" x:Name="MainGrid">
+                <Grid.ColumnSpacing>
+                    <OnIdiom x:TypeArguments="x:Double"
+                   Phone="10"
+                   Tablet="10"/>
+                </Grid.ColumnSpacing>
+                <Grid.RowSpacing>
+                    <OnIdiom x:TypeArguments="x:Double"
+                   Phone="10"
+                   Tablet="10"/>
+                </Grid.RowSpacing>
+                <Grid.Padding>
+                    <OnIdiom x:TypeArguments="Thickness"
+                   Phone="10, 10, 10, 0"
+                   Tablet="10, 10, 10, 0"/>
+                </Grid.Padding>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <ScrollView Orientation="Horizontal" x:Name="GraphScrollView" HorizontalOptions="Fill" Grid.Row="0" Grid.Column="0" VerticalOptions="Center">
+                    <Grid VerticalOptions="CenterAndExpand" HorizontalOptions ="Fill" x:Name="GraphGrid" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <AbsoluteLayout Grid.Row="0" Grid.Column="0" x:Name="tLicenceLayout" >
+                            <StackLayout x:Name="tLicenceStack" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                                <Label Text="{i18n:Translate title_t_licence_chart}" IsVisible="{Binding TLicenseOverlayIsVisible, Converter={StaticResource inverseBooleanConverter}}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+
+                            </StackLayout>
+                            <BoxView x:Name="tOverlay" IsVisible="{Binding TLicenseOverlayIsVisible}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#ffffff" HorizontalOptions = "LayoutOptions.FillAndExpand" VerticalOptions = "LayoutOptions.FillAndExpand"></BoxView>
+                            <Label Text="{i18n:Translate no_t_licences}" IsVisible="{Binding TLicenseOverlayIsVisible}" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                        </AbsoluteLayout>
+                        <AbsoluteLayout Grid.Row="0" Grid.Column="1" x:Name="bLicenceLayout" >
+                            <StackLayout x:Name="bLicenceStack" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                                <Label Text="{i18n:Translate title_b_licence_chart}" IsVisible="{Binding BLicenseOverlayIsVisible, Converter={StaticResource inverseBooleanConverter}}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+
+                            </StackLayout>
+                            <BoxView x:Name="bOverlay" IsVisible="{Binding BLicenseOverlayIsVisible}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#ffffff" HorizontalOptions = "LayoutOptions.FillAndExpand" VerticalOptions = "LayoutOptions.FillAndExpand"></BoxView>
+                            <Label Text="{i18n:Translate no_b_licences}" IsVisible="{Binding BLicenseOverlayIsVisible}" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                        </AbsoluteLayout>
+                        <AbsoluteLayout Grid.Row="0" Grid.Column="2" x:Name="personalLicenceLayout" >
+                            <StackLayout x:Name="personalLicenceStack" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                                <Label Text="{i18n:Translate title_personal_licence_chart}" IsVisible="{Binding PersonalLicenseOverlayIsVisible, Converter={StaticResource inverseBooleanConverter}}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"></Label>
+
+                            </StackLayout>
+                            <BoxView x:Name="personalOverlay" IsVisible="{Binding PersonalLicenseOverlayIsVisible}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#ffffff" HorizontalOptions = "LayoutOptions.FillAndExpand" VerticalOptions = "LayoutOptions.FillAndExpand"></BoxView>
+                            <Label Text="{i18n:Translate no_personal_licences}" IsVisible="{Binding PersonalLicenseOverlayIsVisible}" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                        </AbsoluteLayout>
+                    </Grid>
+                </ScrollView>
+
+                <StackLayout Grid.Row="1" Grid.Column="0" x:Name="TableStack" BackgroundColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+                    <Label Text="{i18n:Translate top_5_drivers}" x:Name="TableLabel" FontAttributes="Bold" Margin="6"></Label>
+
+                    <!--<ScrollView  x:Name="TableScrollView" Orientation="Both" HorizontalOptions="CenterAndExpand" VerticalOptions ="FillAndExpand">
+          <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="1"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="1"  />
+              <ColumnDefinition Width="1" />
+              <ColumnDefinition Width="3*" />
+              <ColumnDefinition Width="1" />
+              <ColumnDefinition Width="2*" />
+              <ColumnDefinition Width="1" />
+              <ColumnDefinition Width="2*" />
+              <ColumnDefinition Width="1" />
+              <ColumnDefinition Width="2*" />
+              <ColumnDefinition Width="1" />
+              <ColumnDefinition Width="2*" />
+              <ColumnDefinition Width="1" />
+              <ColumnDefinition Width="2*" />
+              <ColumnDefinition Width="1" />
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="1" />
+            </Grid.ColumnDefinitions>
+            <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="Black" Grid.ColumnSpan="16" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+
+            Headers
+            <Label Grid.Row="0" Grid.Column="2" TextColor="Black" FontAttributes="Bold" Text="{i18n:Translate label_driverId}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="0" Grid.Column="4" TextColor="Black" FontAttributes="Bold" Text="{i18n:Translate label_gender}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="0" Grid.Column="6" TextColor="Black" FontAttributes="Bold" Text="{i18n:Translate label_birthDate}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="0" Grid.Column="8" TextColor="Black" FontAttributes="Bold" Text="{i18n:Translate label_expiraryDate}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="0" Grid.Column="10" TextColor="Black" FontAttributes="Bold" Text="{i18n:Translate label_licenceNumber}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="0" Grid.Column="12" TextColor="Black" FontAttributes="Bold" Text="{i18n:Translate label_licenceType}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="0" Grid.Column="14" TextColor="Black" FontAttributes="Bold" Text="{i18n:Translate label_vehicles}" HorizontalOptions="CenterAndExpand"></Label>
+
+            Row 1
+            <Label Grid.Row="2" Grid.Column="2" Text="{Binding TopFiveDrivers[0].DriverId}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="2" Grid.Column="4" Text="{Binding TopFiveDrivers[0].GenderString}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="2" Grid.Column="6" Text="{Binding TopFiveDrivers[0].BirthDate}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="2" Grid.Column="8" Text="{Binding TopFiveDrivers[0].LicenceExpiraryDate}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="2" Grid.Column="10" Text="{Binding TopFiveDrivers[0].LicenseId}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="2" Grid.Column="12" Text="{Binding TopFiveDrivers[0].LicenseType}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="2" Grid.Column="14" Text="{Binding TopFiveDrivers[0].NumberOfTrips}" HorizontalOptions="CenterAndExpand"></Label>
+
+            Row 2
+            <Label Grid.Row="3" Grid.Column="2" Text="{Binding TopFiveDrivers[1].DriverId}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="3" Grid.Column="4" Text="Driving" TextColor="Green" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="3" Grid.Column="6" Text="00d00h01m" HorizontalOptions="CenterAndExpand"></Label>
+            <Image Grid.Row="3" Grid.Column="8" Source="ic_sat_icon.png" HeightRequest="24" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"></Image>
+            <Label Grid.Row="3" Grid.Column="10" Text="Non-trip position" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="3" Grid.Column="12" Text="29 Curzon Road, Bryanston" HorizontalOptions="CenterAndExpand"></Label>
+
+            Row 3
+            <Label Grid.Row="4" Grid.Column="2" Text="{Binding TopFiveDrivers[2].DriverId}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="4" Grid.Column="4" Text="Idling" TextColor="#FF7F27" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="4" Grid.Column="6" Text="00d00h01m" HorizontalOptions="CenterAndExpand"></Label>
+            <Image Grid.Row="4" Grid.Column="8" Source="ic_sat_icon.png" HeightRequest="24" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"></Image>
+            <Label Grid.Row="4" Grid.Column="10" Text="Non-trip position" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="4" Grid.Column="12" Text="29 Curzon Road, Bryanston" HorizontalOptions="CenterAndExpand"></Label>
+
+            Row 4
+            <Label Grid.Row="5" Grid.Column="2" Text="{Binding TopFiveDrivers[3].DriverId}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="5" Grid.Column="4" Text="Unknown" TextColor="Pink" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="5" Grid.Column="6" Text="00d00h01m" HorizontalOptions="CenterAndExpand"></Label>
+            <Image Grid.Row="5" Grid.Column="8" Source="ic_sat_icon.png" HeightRequest="24" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"></Image>
+            <Label Grid.Row="5" Grid.Column="10" Text="Non-trip position" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="5" Grid.Column="12" Text="29 Curzon Road, Bryanston" HorizontalOptions="CenterAndExpand"></Label>
+
+            Row 5
+            <Label Grid.Row="6" Grid.Column="2" Text="{Binding TopFiveDrivers[4].DriverId}" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="6" Grid.Column="4" Text="Parked" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="6" Grid.Column="6" Text="00d00h01m" HorizontalOptions="CenterAndExpand"></Label>
+            <Image Grid.Row="6" Grid.Column="8" Source="ic_sat_icon.png" HeightRequest="24" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"></Image>
+            <Label Grid.Row="6" Grid.Column="10" Text="Non-trip position" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="6" Grid.Column="12" Text="29 Curzon Road, Bryanston" HorizontalOptions="CenterAndExpand"></Label>
+
+            Vertical lines and no "stuff"
+            <BoxView Grid.Column="1" Grid.Row="1" Grid.RowSpan="5"  BackgroundColor="Transparent" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+            <BoxView Grid.Column="3" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+            <BoxView Grid.Column="5" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+            <BoxView Grid.Column="7" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+            <BoxView Grid.Column="9" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+            <BoxView Grid.Column="11" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+            <BoxView Grid.Column="13" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+          </Grid>
+        </ScrollView>-->
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</CustomControls:ReportPage>

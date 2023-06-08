@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="StyexFleetManagement.FavouriteReportsPage"
+			 xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+			 xmlns:local="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement">
+	<ContentPage.Content>
+    
+    <Grid VerticalOptions="FillAndExpand" x:Name="MainGrid">
+      <Grid.ColumnSpacing>
+        <OnIdiom x:TypeArguments="x:Double"
+                 Phone="10"
+                 Tablet="10"/>
+      </Grid.ColumnSpacing>
+      <Grid.RowSpacing>
+        <OnIdiom x:TypeArguments="x:Double"
+                 Phone="10"
+                 Tablet="10"/>
+      </Grid.RowSpacing>
+      <Grid.Padding>
+        <OnIdiom x:TypeArguments="Thickness"
+                 Phone="10, 10, 10, 0"
+                 Tablet="10, 10, 10, 0"/>
+      </Grid.Padding>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="2*" />
+        <RowDefinition Height="2*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+
+      <Grid Margin="8" x:Name="TileGrid" Grid.Row="0" Grid.Column="0"
+
+			RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Frame Margin="5" OutlineColor="#3F51B5" VerticalOptions="FillAndExpand" Grid.Column="0">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="2*" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Row="0" Grid.Column="0" Text="1" FontAttributes="Bold" FontSize="26" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Green"></Label>
+
+              <Label Grid.Row="0" Grid.Column="1" Text="&#x25B2; 0.7%" HorizontalTextAlignment="Center" TextColor="Red"></Label>
+
+            </Grid>
+
+            <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="CenterAndExpand" FontSize="13" Text="Accident Count"></Label>
+          </Grid>
+          
+          
+          
+        </Frame>
+
+        <Frame Margin="5" OutlineColor="#3F51B5" VerticalOptions="FillAndExpand" Grid.Column="1">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="2*" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Row="0" Grid.Column="0" x:Name="aveDurationLabel" FontSize="26" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Green"></Label>
+
+              <Label Grid.Row="0" Grid.Column="1" Text="&#x25BC; 0.7%" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Red"></Label>
+
+            </Grid>
+
+            <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="CenterAndExpand" FontSize="13" Text="Ave. Duration"></Label>
+          </Grid>
+        </Frame>
+
+        <Frame Margin="5" OutlineColor="#3F51B5" VerticalOptions="FillAndExpand" Grid.Column="2">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="2*" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Row="0" Grid.Column="0" x:Name="aveDistanceLabel"  FontSize="26" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Green"></Label>
+
+              <Label Grid.Row="0" Grid.Column="1" Text="&#x25BC; 0.7%" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Red"></Label>
+
+            </Grid>
+
+            <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="CenterAndExpand" FontSize="13" Text="Ave. Distance"></Label>
+          </Grid>
+        </Frame>
+
+        <Frame Margin="5" OutlineColor="#3F51B5" VerticalOptions="FillAndExpand" Grid.Column="3">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="2*" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Row="0" Grid.Column="0" Text="5"  FontAttributes="Bold" FontSize="26" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Green"></Label>
+
+              <Label Grid.Row="0" Grid.Column="1" Text="&#x25B2; 6.31%" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Green"></Label>
+
+            </Grid>
+
+            <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="CenterAndExpand" FontSize="13" Text="Alert Count"></Label>
+          </Grid>
+        </Frame>
+
+        <Frame Margin="5" OutlineColor="#3F51B5" VerticalOptions="FillAndExpand" Grid.Column="4">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="2*" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Row="0" Grid.Column="0" Text="8" FontAttributes="Bold" FontSize="26" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Green"></Label>
+
+              <Label Grid.Row="0" Grid.Column="1" Text="&#x25BC; 0.7%" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Red"></Label>
+
+            </Grid>
+
+            <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="CenterAndExpand" FontSize="13" Text="Non-Reported"></Label>
+          </Grid>
+        </Frame>
+
+        <Frame Margin="5" OutlineColor="#3F51B5" VerticalOptions="FillAndExpand" Grid.Column="5">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="2*" />
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Row="0" Grid.Column="0" Text="12.2" FontAttributes="Bold" FontSize="26" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Green"></Label>
+
+              <Label Grid.Row="0" Grid.Column="1" Text="&#x25BC; 0.7%" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Red"></Label>
+
+            </Grid>
+
+            <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="CenterAndExpand" FontSize="13" Text="Consumption"></Label>
+          </Grid>
+        </Frame>
+        
+        
+      </Grid>
+
+
+      <Frame Margin="5" OutlineColor="#3F51B5" VerticalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0">
+        <StackLayout x:Name="GraphContainer" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+        </StackLayout>
+      </Frame>
+
+      <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0">
+        <Grid BackgroundColor="White">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1"  />
+            <ColumnDefinition Width="1" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1" />
+            <ColumnDefinition Width="2*" />
+          </Grid.ColumnDefinitions>
+          <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="Black" Grid.ColumnSpan="13" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+
+          <!--Headers-->
+          <Label Grid.Row="0" Grid.Column="2" TextColor="Black" FontAttributes="Bold" Text="Description" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="0" Grid.Column="4" TextColor="Black" FontAttributes="Bold" Text="Status" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="0" Grid.Column="6" TextColor="Black" FontAttributes="Bold" Text="Last Reported" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="0" Grid.Column="8" TextColor="Black" FontAttributes="Bold" Text="GPS" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="0" Grid.Column="10" TextColor="Black" FontAttributes="Bold" Text="Last Event" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="0" Grid.Column="12" TextColor="Black" FontAttributes="Bold" Text="Last Location" HorizontalOptions="CenterAndExpand"></Label>
+          
+          <!--Row 1-->
+          <Label Grid.Row="2" Grid.Column="2" Text="ST001 - Richard" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="2" Grid.Column="4" Text="Parked" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="2" Grid.Column="6" Text="00d00h01m" HorizontalOptions="CenterAndExpand"></Label>
+          <Image Grid.Row="2" Grid.Column="8" Source="ic_sat_icon.png" HeightRequest="24" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"></Image>
+          <Label Grid.Row="2" Grid.Column="10" Text="Non-trip position" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="2" Grid.Column="12" Text="29 Curzon Road, Bryanston" HorizontalOptions="CenterAndExpand"></Label>
+
+          <!--Row 2-->
+          <Label Grid.Row="3" Grid.Column="2" Text="ST001 - Richard" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="3" Grid.Column="4" Text="Driving" TextColor="Green" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="3" Grid.Column="6" Text="00d00h01m" HorizontalOptions="CenterAndExpand"></Label>
+          <Image Grid.Row="3" Grid.Column="8" Source="ic_sat_icon.png" HeightRequest="24" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"></Image>
+          <Label Grid.Row="3" Grid.Column="10" Text="Non-trip position" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="3" Grid.Column="12" Text="29 Curzon Road, Bryanston" HorizontalOptions="CenterAndExpand"></Label>
+
+          <!--Row 3-->
+          <Label Grid.Row="4" Grid.Column="2" Text="ST001 - Richard" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="4" Grid.Column="4" Text="Idling" TextColor="#FF7F27" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="4" Grid.Column="6" Text="00d00h01m" HorizontalOptions="CenterAndExpand"></Label>
+          <Image Grid.Row="4" Grid.Column="8" Source="ic_sat_icon.png" HeightRequest="24" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"></Image>
+          <Label Grid.Row="4" Grid.Column="10" Text="Non-trip position" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="4" Grid.Column="12" Text="29 Curzon Road, Bryanston" HorizontalOptions="CenterAndExpand"></Label>
+
+          <!--Row 4-->
+          <Label Grid.Row="5" Grid.Column="2" Text="ST001 - Richard" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="5" Grid.Column="4" Text="Unknown" TextColor="Pink" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="5" Grid.Column="6" Text="00d00h01m" HorizontalOptions="CenterAndExpand"></Label>
+          <Image Grid.Row="5" Grid.Column="8" Source="ic_sat_icon.png" HeightRequest="24" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"></Image>
+          <Label Grid.Row="5" Grid.Column="10" Text="Non-trip position" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="5" Grid.Column="12" Text="29 Curzon Road, Bryanston" HorizontalOptions="CenterAndExpand"></Label>
+
+          <!--Row 5-->
+          <Label Grid.Row="6" Grid.Column="2" Text="ST001 - Richard" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="6" Grid.Column="4" Text="Parked" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="6" Grid.Column="6" Text="00d00h01m" HorizontalOptions="CenterAndExpand"></Label>
+          <Image Grid.Row="6" Grid.Column="8" Source="ic_sat_icon.png" HeightRequest="24" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"></Image>
+          <Label Grid.Row="6" Grid.Column="10" Text="Non-trip position" HorizontalOptions="CenterAndExpand"></Label>
+          <Label Grid.Row="6" Grid.Column="12" Text="29 Curzon Road, Bryanston" HorizontalOptions="CenterAndExpand"></Label>
+
+          <!--Vertical lines and no "stuff"-->
+          <!--<BoxView Grid.Column="1" Grid.Row="1" Grid.RowSpan="5"  BackgroundColor="Transparent" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>-->
+          <BoxView Grid.Column="3" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+          <BoxView Grid.Column="5" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+          <BoxView Grid.Column="7" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+          <BoxView Grid.Column="9" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+          <BoxView Grid.Column="11" Grid.Row="1" Grid.RowSpan="6"  BackgroundColor="Black" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="End"/>
+        </Grid>
+      </ScrollView>
+
+    </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

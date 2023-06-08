@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="StyexFleetManagement.LoginPageStyex"
+			 Title="Login Page"
+			 xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+             xmlns:local="clr-namespace:StyexFleetManagement.CustomControls;assembly=StyexFleetManagement"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+    <ContentPage.Content>
+        <RelativeLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="15">
+
+                <StackLayout >
+                    <Label HorizontalTextAlignment="Center" Text="Welcome to My Driver" TextColor="Black" FontSize="24"/>
+                    <ffimageloadingsvg:SvgCachedImage WidthRequest="200" HeightRequest="160" Margin="10"  Source="resource://StyexFleetManagement.Images.ic_splash.svg"/>
+                    <Label HorizontalTextAlignment="Center" Text="Please add your MZone credentials below:" Padding="5" TextColor="Black"/>
+                </StackLayout>
+
+                <StackLayout x:Name="errorContainer" BackgroundColor="#ebebeb" Opacity="0.9" IsVisible="false">
+                    <Label x:Name="messageLabel" HorizontalTextAlignment="Center" TextColor="#D84315"/>
+                </StackLayout>
+
+
+                <local:MaterialEntry x:Name="serverEntry" AccentColor="Black" TextColor="Black" Placeholder="live.mzoneweb.net"></local:MaterialEntry>
+                <local:MaterialEntry x:Name="usernameEntry" BackgroundColor="Transparent" AccentColor="Black" TextColor="Black" Placeholder="{i18n:Translate label_username}"></local:MaterialEntry>
+
+                <local:MaterialEntry x:Name="passwordEntry" BackgroundColor="Transparent" AccentColor="Black" TextColor="Black" IsPassword="true" Placeholder="{i18n:Translate label_password}"></local:MaterialEntry>
+                <Button Text="Proceed" TextColor="Black" BackgroundColor="#b71c1c" Clicked="OnLoginButtonClicked"/>
+                <!--TODO CHANGE TO TRANSLATABLE-->
+
+            </StackLayout>
+
+        </RelativeLayout>
+
+    </ContentPage.Content>
+</ContentPage>

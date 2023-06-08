@@ -1,0 +1,7 @@
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:StyexFleetManagement.Pages.AlertNotifications;assembly=StyexFleetManagement"
+            x:Class="StyexFleetManagement.Pages.AlertNotifications.AlertNotificationsPage">
+    <local:AlertsPage />
+    <local:EventsPage />
+</TabbedPage>

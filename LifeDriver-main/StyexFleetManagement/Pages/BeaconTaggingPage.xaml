@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:styexFleetManagement="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+             mc:Ignorable="d"
+             x:Class="StyexFleetManagement.Pages.BeaconTaggingPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="{styexFleetManagement:Translate start_scan}" IsVisible="{Binding ShowStartScan}" TextColor="White" BackgroundColor="#7f0000" Clicked="OnStartScanClicked" Margin="10"/>
+            <Button Text="{styexFleetManagement:Translate stop_scan}" IsVisible="{Binding ShowStopScan}" TextColor="White" BackgroundColor="#7f0000" Clicked="OnStopScanClicked" Margin="10"/>
+            <ActivityIndicator IsVisible="{Binding Scanning}" IsRunning="true" Margin="5"/>
+            <Label Text="{styexFleetManagement:Translate no_beacons_found}" IsVisible="{Binding NoBeaconsFound}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Padding="10"></Label>
+            <ListView ItemsSource="{Binding Beacons}"  HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HeightRequest="50" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Padding="5" Orientation="Vertical">
+                                <Label Text="{Binding Address}" TextColor="#737273" FontSize="Small"></Label>
+                                <Label Text="{Binding Identifier}" TextColor="#737273" FontSize="Small"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="{styexFleetManagement:Translate email}" TextColor="White" BackgroundColor="#7f0000" Clicked="OnSendEmailClicked" Margin="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

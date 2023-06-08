@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:appSettings="clr-namespace:StyexFleetManagement.Pages.AppSettings;assembly=StyexFleetManagement"
+             x:Class="StyexFleetManagement.Pages.AppSettings.SettingsPageStandalone">
+    <ContentPage.Content>
+        <appSettings:SettingsContent></appSettings:SettingsContent>
+    </ContentPage.Content>
+</ContentPage>

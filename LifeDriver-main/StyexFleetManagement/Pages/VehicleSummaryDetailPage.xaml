@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StyexFleetManagement.Pages.VehicleSummaryDetailPage" xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement" xmlns:Gestures="clr-namespace:StyexFleetManagement.CustomControls;assembly=StyexFleetManagement">
+	<ContentPage.Content>
+    <Gestures:GestureFrame x:Name="gestureFrame" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+		<ScrollView InputTransparent="true">
+		<StackLayout>
+			
+			<StackLayout Padding="5" Orientation="Horizontal" VerticalOptions="Fill">
+			<Image WidthRequest="35" Source="calendar.png"></Image>
+			<Picker x:Name="datePicker" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+			<Picker.Items>
+            	<x:String>Today</x:String> 
+            	<x:String>Yesterday</x:String>
+            	<x:String>This Week</x:String>
+            	<x:String>Previous Week</x:String>
+            	<x:String>This Month</x:String>
+            	<x:String>Previous Month</x:String>
+            	<x:String>Custom</x:String>
+        	</Picker.Items>
+			</Picker>
+			<Image WidthRequest="35" Source="truck.png"></Image>
+			<Picker x:Name="VehicleGroupPicker" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+			</Picker>
+			</StackLayout>
+
+			<Grid Margin="8" x:Name="UtilizationGrid"
+
+			RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}">
+            <Grid.RowDefinitions>
+    			<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+    			<RowDefinition Height="*" />
+				<RowDefinition Height="2*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="2*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="2*" />
+  			</Grid.RowDefinitions>
+  			<Grid.ColumnDefinitions>
+    			<ColumnDefinition Width="*" />
+    			<ColumnDefinition Width="*" />
+    			<ColumnDefinition Width="*" />
+  			</Grid.ColumnDefinitions>
+				<Label Text="{i18n:Translate total}" Grid.Row="0" Grid.Column="1"></Label>
+				<Label Text="{i18n:Translate average}" Grid.Row="0" Grid.Column="2"></Label>
+
+				<Label x:Name="TotalVehicleCountLabel" Text="vehicles" TextColor="Gray" FontSize="10" Grid.Row="1" Grid.Column="1"></Label>
+				<Label Text="per vehicle" TextColor="Gray" FontSize="10" Grid.Row="1" Grid.Column="2"></Label>
+				
+				<Image Source="menu_map.png" WidthRequest="25" Grid.Row="2" Grid.Column="0"></Image>
+				<Label x:Name="TotalDistance"  Grid.Row="2" Grid.Column="1"></Label>
+				<Label x:Name="AverageDistance" Grid.Row="2" Grid.Column="2"></Label>
+				
+				<Label FontSize="12" HorizontalOptions="Center" Text="Distance" Grid.Row="3" Grid.Column="0"></Label>
+				
+				<Label x:Name="TotalTime" Grid.Row="4" Grid.Column="1"></Label>
+				<Label x:Name="AverageTime" Grid.Row="4" Grid.Column="2"></Label>
+				<Image Source="truck.png" WidthRequest="25" Grid.Row="4" Grid.Column="0"></Image>
+				
+				<Label FontSize="12" HorizontalOptions="Center" Text="Time" Grid.Row="5" Grid.Column="0"></Label>
+				
+				<Image Source="idle.png" WidthRequest="25" Grid.Row="6" Grid.Column="0"></Image>
+				<Label x:Name="AverageSpeed" Grid.Row="6" Grid.Column="1"></Label>
+				
+				<Label FontSize="12" HorizontalOptions="Center" Text="Average Speed" Grid.Row="7" Grid.Column="0"></Label>
+				
+					
+
+			</Grid>
+
+			
+			<Label Text="{i18n:Translate top_5_driving_distance}" TextColor="#3F51B5" Margin="5"></Label>
+			<Grid Margin="10" HorizontalOptions="CenterAndExpand" x:Name="TopFiveDistanceGrid">
+
+            <Grid.RowDefinitions>
+    			<RowDefinition Height="*" />
+    			<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+  			</Grid.RowDefinitions>
+  			<Grid.ColumnDefinitions>
+    			<ColumnDefinition Width="*" />
+    			<ColumnDefinition Width="3*" />
+    			<ColumnDefinition Width="3*" />
+    			<ColumnDefinition Width="3*" />
+  			</Grid.ColumnDefinitions>
+				<Label Text="#" Grid.Row="0" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="{i18n:Translate vehicle}" Grid.Row="0" Grid.Column="1"></Label>
+				<Label Text="{i18n:Translate distance}"  HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2"></Label>
+				<Label Text="{i18n:Translate daily_avg}" HorizontalTextAlignment="Center" x:Name="dailyAverageHeader" Grid.Row="0" Grid.Column="3"></Label>
+
+				<Label Text="1" FontSize="12" Grid.Row="1" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="2" FontSize="12" Grid.Row="2" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="3" FontSize="12" Grid.Row="3" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="4" FontSize="12" Grid.Row="4" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="5" FontSize="12" Grid.Row="5" Grid.Column="0" TextColor="Gray"></Label>
+				
+				<Label x:Name="FirstDistanceVehicleLabel" Grid.Row="1" Grid.Column="1"></Label>
+				<Label x:Name="SecondDistanceVehicleLabel" Grid.Row="2" Grid.Column="1"></Label>
+				<Label x:Name="ThirdDistanceVehicleLabel" Grid.Row="3" Grid.Column="1"></Label>
+				<Label x:Name="FourthDistanceVehicleLabel" Grid.Row="4" Grid.Column="1"></Label>
+				<Label x:Name="FifthDistanceVehicleLabel" Grid.Row="5" Grid.Column="1"></Label>
+
+				<Label x:Name="FirstDistanceTimeLabel" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="2"></Label>
+				<Label x:Name="SecondDistanceTimeLabel" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="2"></Label>
+				<Label x:Name="ThirdDistanceTimeLabel" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="2"></Label>
+				<Label x:Name="FourthDistanceTimeLabel" HorizontalTextAlignment="Center" Grid.Row="4" Grid.Column="2"></Label>
+				<Label x:Name="FifthDistanceTimeLabel" HorizontalTextAlignment="Center" Grid.Row="5" Grid.Column="2"></Label>
+
+
+				<Label x:Name="FirstDistanceAvgLabel" HorizontalTextAlignment="Center"  TextColor="#3F51B5" Grid.Row="1" Grid.Column="3"></Label>
+				<Label x:Name="SecondDistanceAvgLabel" HorizontalTextAlignment="Center"  TextColor="#3F51B5" Grid.Row="2" Grid.Column="3"></Label>
+				<Label x:Name="ThirdDistanceAvgLabel" HorizontalTextAlignment="Center"  TextColor="#3F51B5" Grid.Row="3" Grid.Column="3"></Label>
+				<Label x:Name="FourthDistanceAvgLabel" HorizontalTextAlignment="Center" TextColor="#3F51B5" Grid.Row="4" Grid.Column="3"></Label>
+				<Label x:Name="FifthDistanceAvgLabel" HorizontalTextAlignment="Center"  TextColor="#3F51B5" Grid.Row="5" Grid.Column="3"></Label>
+				
+			</Grid>
+
+
+			<Label Text="{i18n:Translate top_5_driving_time}" TextColor="#3F51B5" Margin="5"></Label>
+			<Grid Margin="10" HorizontalOptions="CenterAndExpand" x:Name="TopFiveTimeGrid">
+
+            <Grid.RowDefinitions>
+    			<RowDefinition Height="*" />
+    			<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+  			</Grid.RowDefinitions>
+  			<Grid.ColumnDefinitions>
+    			<ColumnDefinition Width="*" />
+    			<ColumnDefinition Width="3*" />
+    			<ColumnDefinition Width="3*" />
+    			<ColumnDefinition Width="3*" />
+  			</Grid.ColumnDefinitions>
+				<Label Text="#" Grid.Row="0" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="{i18n:Translate vehicle}" Grid.Row="0" Grid.Column="1"></Label>
+				<Label Text="{i18n:Translate time}"  HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2"></Label>
+				<Label Text="{i18n:Translate daily_avg}" HorizontalTextAlignment="Center" x:Name="timeDailyAverageHeader" Grid.Row="0" Grid.Column="3"></Label>
+
+				<Label Text="1" FontSize="12" Grid.Row="1" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="2" FontSize="12" Grid.Row="2" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="3" FontSize="12" Grid.Row="3" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="4" FontSize="12" Grid.Row="4" Grid.Column="0" TextColor="Gray"></Label>
+				<Label Text="5" FontSize="12" Grid.Row="5" Grid.Column="0" TextColor="Gray"></Label>
+				
+				<Label x:Name="FirstTimeVehicleLabel" Grid.Row="1" Grid.Column="1"></Label>
+				<Label x:Name="SecondTimeVehicleLabel" Grid.Row="2" Grid.Column="1"></Label>
+				<Label x:Name="ThirdTimeVehicleLabel" Grid.Row="3" Grid.Column="1"></Label>
+				<Label x:Name="FourthTimeVehicleLabel" Grid.Row="4" Grid.Column="1"></Label>
+				<Label x:Name="FifthTimeVehicleLabel" Grid.Row="5" Grid.Column="1"></Label>
+
+				<Label x:Name="FirstTimeTimeLabel" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="2"></Label>
+				<Label x:Name="SecondTimeTimeLabel" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="2"></Label>
+				<Label x:Name="ThirdTimeTimeLabel" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="2"></Label>
+				<Label x:Name="FourthTimeTimeLabel" HorizontalTextAlignment="Center" Grid.Row="4" Grid.Column="2"></Label>
+				<Label x:Name="FifthTimeTimeLabel" HorizontalTextAlignment="Center" Grid.Row="5" Grid.Column="2"></Label>
+
+				<Label x:Name="FirstTimeAvgLabel" HorizontalTextAlignment="Center"  TextColor="#3F51B5" Grid.Row="1" Grid.Column="3"></Label>
+				<Label x:Name="SecondTimeAvgLabel" HorizontalTextAlignment="Center"  TextColor="#3F51B5" Grid.Row="2" Grid.Column="3"></Label>
+				<Label x:Name="ThirdTimeAvgLabel" HorizontalTextAlignment="Center"  TextColor="#3F51B5" Grid.Row="3" Grid.Column="3"></Label>
+				<Label x:Name="FourthTimeAvgLabel" HorizontalTextAlignment="Center" TextColor="#3F51B5" Grid.Row="4" Grid.Column="3"></Label>
+				<Label x:Name="FifthTimeAvgLabel" HorizontalTextAlignment="Center"  TextColor="#3F51B5" Grid.Row="5" Grid.Column="3"></Label>
+				
+				
+			</Grid>
+
+
+		</StackLayout>
+		</ScrollView>
+
+    </Gestures:GestureFrame>
+	</ContentPage.Content>
+</ContentPage>

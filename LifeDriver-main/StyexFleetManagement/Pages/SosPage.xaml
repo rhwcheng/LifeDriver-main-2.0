@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i18n="clr-namespace:StyexFleetManagement;assembly=StyexFleetManagement"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             mc:Ignorable="d"
+             x:Class="StyexFleetManagement.Pages.SosPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" CornerRadius="5" Text="{i18n:Translate driver_id}" HeightRequest="50" WidthRequest="100" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" BackgroundColor="Gray" Clicked="DriverId_OnClicked" ></Button>
+            <ffimageloading:CachedImage x:Name="DriverIdImage"  Grid.Row ="0" Grid.Column="1" Margin="5, 25, 10, 0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Source="{Binding DriverIdImageSource}">
+            </ffimageloading:CachedImage>
+
+            <ffimageloading:CachedImage x:Name="SosImage" Grid.Row ="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="30" Source="resource://StyexFleetManagement.Images.sos_background.png">
+            </ffimageloading:CachedImage>
+
+            <ffimageloading:CachedImage x:Name="CovidHotlineImage"  Grid.Row ="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Source="resource://StyexFleetManagement.Images.covid_hotline.png">
+            </ffimageloading:CachedImage>
+
+            <Button Grid.Row="3" Grid.Column="0" Text="{i18n:Translate check_in}" Margin="25, 25, 0, 25" HeightRequest="60" WidthRequest="100" HorizontalOptions="EndAndExpand" BackgroundColor="Black" TextColor="White" Clicked="CheckIn_OnClicked"></Button>
+            <Button Grid.Row="3" Grid.Column="1" Text="{i18n:Translate check_out}" Margin="0, 25, 25, 25" HeightRequest="60" WidthRequest="100" HorizontalOptions="Start" BackgroundColor="White" TextColor="Black" Clicked="CheckOut_OnClicked"></Button>
+
+            <Label x:Name="PoweredByLabel" Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Powered by " Style="{DynamicResource BodyStyle}" />
+                        <Span Text="SALUS " TextColor="Red" FontAttributes="Bold" />
+                        <Span Text="TECHNOLOGY" TextColor="Black" FontAttributes="Bold" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

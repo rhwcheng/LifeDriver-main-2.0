@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                         xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                         x:Class="StyexFleetManagement.Pages.VehicleSummary.Tiles.FuelConsumptionTile"
+                         xmlns:customControls="clr-namespace:StyexFleetManagement.CustomControls">
+    <Frame BackgroundColor="White" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="False" OutlineColor="Black" HeightRequest="240">
+        <StackLayout BackgroundColor="Transparent" Margin="0" Spacing="0" Padding="0" x:Name="mainStack">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <StackLayout BackgroundColor="#37474F" Padding="3,0,0,1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" x:Name="header">
+                        <ffimageloading:CachedImage WidthRequest="24" HorizontalOptions="Start" x:Name="headerImage">
+                        </ffimageloading:CachedImage>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="titleLabel" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center">
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout x:Name="contentStack" Margin="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+                <Label Text="Last 3 Trips" FontAttributes="Bold" VerticalOptions="Start"></Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <!-- Grid Content -->
+
+                    <Label Margin="4,0,0,0" Grid.Row="1" Grid.Column="0" Text="{Binding LatestTripOne.TimeStamp}" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding LatestTripOne.FuelUsed}" TextColor="#4481a4" FontSize="16" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+                    
+                    <Label Margin="4,0,0,0" Grid.Row="2" Grid.Column="0" Text="{Binding LatestTripTwo.TimeStamp}" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding LatestTripTwo.FuelUsed}" TextColor="#4481a4" FontSize="16" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+              
+                    <Label Margin="4,0,0,0" Grid.Row="3" Grid.Column="0" Text="{Binding LatestTripThree.TimeStamp}" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding LatestTripThree.FuelUsed}" TextColor="#4481a4" FontSize="16" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+
+                </Grid>
+
+                    <Label Text="Fuel Source: MAF" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand" VerticalTextAlignment="End"></Label>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ContentView>
